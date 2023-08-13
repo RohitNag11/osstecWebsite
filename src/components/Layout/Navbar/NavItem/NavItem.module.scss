@@ -1,0 +1,30 @@
+.navItem {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: background-color var(--speed-medium);
+    display: flex;
+    gap: 0.5rem;
+    overflow: hidden;
+
+    .text {
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        color: var(--color-text-secondary);
+        transition: color var(--speed-medium);
+    }
+
+    &:hover {
+        background-color: var(--color-background-secondary);
+
+        .text {
+            color: var(--color-accent-primary);
+        }
+    }
+
+    &.active {
+        .text {
+            color: var(--color-text-primary);
+            font-weight: 600;
+        }
+    }
+}
