@@ -1,11 +1,13 @@
 import './globals.scss'
 import { Inter } from 'next/font/google'
-import { Josefin_Sans } from 'next/font/google'
+// import { Poppins } from 'next/font/google'
 // import { Navbar } from '@/components/Layout'
-import Navbar from '@/components/Layout/Navbar'
+import Navbar from '@/components/layout/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
-const josefinSans = Josefin_Sans({ subsets: ['latin'] })
+// const poppins = Poppins({ 
+//   subsets: ['latin'] 
+// })
 
 export const metadata = {
   title: 'OSSTEC',

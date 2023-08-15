@@ -35,7 +35,7 @@ function MeshBallScene({ ...props }) {
             position="relative"
         >
             <Canvas
-                shadows
+                // shadows
                 style={{ canvasStyles }}
                 camera={{ position: [0, 1, 0], fov: 30 }}
             >

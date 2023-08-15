@@ -13,7 +13,7 @@ const customMaterial = new THREE.MeshPhysicalMaterial({
     clearcoat: 1,
     clearcoatRoughness: 0,
     metalness: 0,
-    roughness: 0.3,
+    roughness: 0,
     reflectivity: 1,
     envMapIntensity: 1,
     emissive: '#6A9DE4',
@@ -43,7 +43,7 @@ export function MeshBall({ scrollY, ...props }) {
             <Float
                 floatingRange={[0, 0, 0]}
                 rotationIntensity={2}
-                frustumCulled
+                // frustumCulled
                 speed={1}
             >
                 {/* <axesHelper args={[1]} /> */}

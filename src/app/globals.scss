@@ -8,19 +8,22 @@
   --navbar-total-height: 5rem;
 
   --color-background-primary: #f1f1f2;
-  --color-background-secondary: #fafafa;
-  --color-background-tertiary: #3d7f9c15;
-  --color-text-primary: #302f36;
+  --color-background-secondary: #e1f0fe;
+  --color-background-tertiary: #819fac15;
+  --color-text-primary: rgb(40, 60, 83);
   --color-text-secondary: #6a6d7e;
-  --color-text-tertiary: #878991;
+  --color-text-tertiary: #81818158;
   --color-accent-primary: #134063;
   --color-glass: #ffffff79;
 
   --bg-tertiary-glow: radial-gradient(rgba(6, 89, 134, 0.213),
       rgba(255, 255, 255, 0));
+  --bg-text-gradient-primary: linear-gradient(45deg, #013c6d, #91b1db);
+  --bg-text-gradient-secondary: linear-gradient(45deg, #798d9d, #91b1db);
 
-  --border-primary: 2px solid #ffffff;
-  --border-secondary: 1px solid #ffffff46;
+
+  --border-primary: 2px outset #ffffff;
+  --border-secondary: 0.5px outset #d6e4f823;
   --radius-extra-large: 2rem;
   --radius-large: 1rem;
   --radius-medium: 0.5rem;
@@ -28,7 +31,8 @@
 
   --blur-glass: blur(10px);
 
-  --shadow-primary: 0px 0px 10px rgba(0, 0, 0, 0.061);
+  --shadow-high: 0px 0px 10px rgba(0, 0, 0, 0.061);
+  --shadow-medium: 0px 0px 5px rgba(0, 0, 0, 0.061);
 
   --logo-aspect: 19.55/7.73;
 
@@ -51,7 +55,10 @@ body {
 
 body {
   color: var(--color-text-secondary);
-  background: var(--color-background-primary);
+  // background: var(--color-background-primary);
+  background: linear-gradient(180deg,
+      var(--color-background-primary) 0%,
+      var(--color-background-secondary) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -3,9 +3,11 @@
 import Image from 'next/image'
 import styles from './page.module.scss'
 import MeshPattern from '@/components/patterns/MeshPattern'
-import NavbarSpacer from '@/components/Layout/Navbar/navBarSpacer'
 import { useInView } from 'react-intersection-observer';
 import { MeshBallScene } from '@/components/3d'
+import { HorizontalSwiper } from '@/components/swipers'
+import { productData, aboutData } from '../../data'
+
 
 export default function Home() {
   const [card1ref, card1InView] = useInView({
@@ -63,7 +65,7 @@ export default function Home() {
           </div>
           <div className={styles.tagLine}>
             <div className={styles.tagLineMain}>
-              <span>Regenarative</span>
+              <span>Regenerative</span>
               <span className={styles.emph}>BoneTech.</span>
             </div>
             <div className={styles.tagLineSub}>
@@ -82,17 +84,21 @@ export default function Home() {
       </div>
       <div
         ref={card1ref}
-        className={[styles.pageCard, styles.stacked].join(' ')}
+        className={[
+          styles.pageCard,
+          styles.stacked,
+          styles.productCard
+        ].join(' ')}
         style={getCardDynamicStyle(1)}
       >
         <div className={styles.cardHeader}>
-          <div className={styles.number}>01/05</div>
-          <div className={styles.title}>Innovation</div>
+          <div className={styles.title}>about</div>
         </div>
-        <div className={styles.slider}>
-          <div className={styles.sliderItem} />
-          <div className={[styles.sliderItem, styles.active].join(' ')} />
-          <div className={styles.sliderItem} />
+        <div className={styles.cardMain}>
+          <HorizontalSwiper data={aboutData} />
+        </div>
+        <div className={styles.cardFooter}>
+
         </div>
       </div>
       <div
@@ -102,7 +108,7 @@ export default function Home() {
       >
         <div className={styles.cardHeader}>
           <div className={styles.number}>01/05</div>
-          <div className={styles.title}>Innovation</div>
+          <div className={styles.title}>Technology</div>
         </div>
         <div className={styles.slider}>
           <div className={styles.sliderItem} />
@@ -117,7 +123,7 @@ export default function Home() {
       >
         <div className={styles.cardHeader}>
           <div className={styles.number}>01/05</div>
-          <div className={styles.title}>Innovation</div>
+          <div className={styles.title}>Innovation </div>
         </div>
         <div className={styles.slider}>
           <div className={styles.sliderItem} />

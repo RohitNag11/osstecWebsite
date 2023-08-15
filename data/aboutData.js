@@ -1,0 +1,35 @@
+export const aboutData = [
+    {
+        title: "Our Mission",
+        subtitle: "Bridging innovation and care: Advancing orthopaedics for an active tomorrow.",
+        description: "OSSTEC's aims to empower people to be the best they can be. We are developing leading technology from the lab to the operating room to improve patient care. Our additive manufactured bone healing platform technology will change orthopaedics, helping to keep patients healthy, active and enjoying life.",
+        image: "/images/general/3d_printer.jpg",
+        stylesConfig: {
+            titleStyle: {
+                backgroundImage: "linear-gradient(180deg, #4FB4CB,#4890A68E)",
+            }
+        }
+    },
+    {
+        title: "Clinical Needs",
+        subtitle: `“More and more patients require partial knee replacements, and it is critical to achieve a solution that can maintain bone quality to allow patients to continue living active, happy lives” \n\n  \- Dr. Alex Liddle"`,
+        description: "The number of knee replacement surgeries is increasing, with over 1 million surgeries performed in the US alone. This is due to an aging population and increased demand for improved mobility. However, current solutions are not ideal, with high failure rates and poor patient satisfaction. OSSTEC is developing a solution to address these needs.",
+        image: "/images/general/surgery.jpg",
+        stylesConfig: {
+            titleStyle: {
+                backgroundImage: "linear-gradient(180deg,#0795A28C,#024D5888)",
+            }
+        }
+    },
+    {
+        title: "About Us",
+        description: "OSSTEC's founding team combines engineers, surgeons and commercial experience. We have decades of experience in developing and commercialising technologies at the forefront of science and bringing innovations from ideas in the lab to a full solution surgeons can use.",
+        image: "/images/general/team.jpeg",
+        href: "/team",
+        stylesConfig: {
+            titleStyle: {
+                backgroundImage: "linear-gradient(180deg,#BAB0AA,#958C879B)",
+            }
+        }
+    }
+]
