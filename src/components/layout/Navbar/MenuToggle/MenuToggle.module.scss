@@ -1,0 +1,67 @@
+.menuToggle {
+    z-index: 10;
+    display: flex;
+    position: relative;
+    width: 1.2rem;
+    border-radius: 0.2rem;
+    aspect-ratio: 1;
+
+    * {
+        position: absolute;
+        width: 70%;
+        height: 0.1rem;
+        border-radius: 0.05rem;
+        background-color: var(--color-text-secondary);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        transition: all var(--speed-medium);
+    }
+
+    .topBar {
+        top: 25%;
+    }
+
+    .bottomBar {
+        bottom: 25%;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        * {
+            background-color: var(--color-text-primary);
+        }
+
+        .topBar {
+            transform: translate(-50%, -50%);
+        }
+
+        .bottomBar {
+            transform: translate(-50%, 50%);
+        }
+    }
+
+    &.expanded {
+        * {
+            transform: translate(-50%, -50%);
+        }
+
+        .topBar {
+            top: 50%;
+            rotate: 45deg;
+            transform-origin: top left;
+        }
+
+        .bottomBar {
+            top: 50%;
+            rotate: -45deg;
+            transform-origin: top left;
+        }
+
+        &:hover {
+            * {
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
