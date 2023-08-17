@@ -20,14 +20,13 @@ export default function HorizontalSwiper({ data }) {
         <Swiper
             spaceBetween={5}
             slidesPerView={1.2}
-            // centeredSlides
+            centeredSlides
             // mousewheel
             grabCursor
-            modules={[Keyboard, Mousewheel, Controller]}
+            modules={[Keyboard, Controller]}
             onSwiper={setSwiper}
             keyboard={{ enabled: true }}
             initialSlide={0}
-            // onSlideChange={() => console.log('slide change')}
             style={{ height: '100%', width: '100%', borderRadius: 'var(--radius-extra-large)', overflow: 'hidden' }}
             // onReachEnd={handleReachEnd}
             speed={800}

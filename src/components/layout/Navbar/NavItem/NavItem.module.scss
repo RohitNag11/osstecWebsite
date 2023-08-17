@@ -30,7 +30,15 @@
 }
 
 @media (max-width: 600px) {
-    .hiddenInMobile {
-        display: none;
+    .navItem {
+        padding: 0.4rem 0.6rem;
+
+        &.hiddenInMobile {
+            display: none;
+        }
+
+        .text {
+            font-size: 0.6rem;
+        }
     }
 }
