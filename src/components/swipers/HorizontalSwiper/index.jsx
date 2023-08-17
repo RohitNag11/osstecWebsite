@@ -19,18 +19,18 @@ export default function HorizontalSwiper({ data }) {
     return (
         <Swiper
             spaceBetween={5}
-            slidesPerView={1.5}
+            slidesPerView={1.2}
             // centeredSlides
-            mousewheel
+            // mousewheel
             grabCursor
             modules={[Keyboard, Mousewheel, Controller]}
             onSwiper={setSwiper}
             keyboard={{ enabled: true }}
             initialSlide={0}
             // onSlideChange={() => console.log('slide change')}
-            style={{ height: '100%', width: '100%' }}
-            onReachEnd={handleReachEnd}
-        // speed={1000}
+            style={{ height: '100%', width: '100%', borderRadius: 'var(--radius-extra-large)', overflow: 'hidden' }}
+            // onReachEnd={handleReachEnd}
+            speed={800}
         >
             {data.map((itemData, index) => {
                 return (

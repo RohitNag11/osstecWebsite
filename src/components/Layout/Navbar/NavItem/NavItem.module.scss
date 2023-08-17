@@ -1,5 +1,5 @@
 .navItem {
-    border-radius: 0.5rem;
+    border-radius: var(--radius-large);
     padding: 0.5rem 1rem;
     transition: background-color var(--speed-medium);
     display: flex;
@@ -8,7 +8,7 @@
 
     .text {
         text-transform: uppercase;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         color: var(--color-text-secondary);
         transition: color var(--speed-medium);
     }
@@ -26,5 +26,11 @@
             color: var(--color-text-primary);
             font-weight: 600;
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .hiddenInMobile {
+        display: none;
     }
 }

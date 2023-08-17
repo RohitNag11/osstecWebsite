@@ -1,22 +1,19 @@
 .main {
-  // padding: var(--padding-page-desktop);
   width: 100%;
   min-height: 100vh;
   max-width: var(--max-width-page-desktop);
   display: flex;
   flex-direction: column;
   align-items: stretch;
-
   position: relative;
 
   .meshBallSceneWrapper {
     position: fixed;
     width: 100%;
-    height: calc(100vh - 6rem);
-    top: var(--navbar-total-height);
+    height: calc(100vh - 0.5rem);
+    top: 0.5rem;
     z-index: 1;
     pointer-events: none;
-    // margin-top: 20rem;
     max-width: var(--max-width-page-desktop);
     padding: var(--padding-page-desktop);
     overflow: hidden;
@@ -24,13 +21,6 @@
     canvas {
       border-radius: var(--radius-extra-large);
       overflow: hidden;
-    }
-  }
-
-  @for $i from 1 through 8 {
-    .pageCard:nth-child(#{$i}n) {
-      top: $i * 1rem + 5rem - 2rem;
-      height: calc(100vh - $i * 1rem - 5rem + 1rem);
     }
   }
 
@@ -44,24 +34,30 @@
     align-items: flex-start;
     flex-direction: column;
     width: auto;
-    border-radius: var(--radius-extra-large);
-    // background-color: var(--color-background-secondary);
+    border-radius: var(--radius-extra-large) var(--radius-extra-large) 0 0;
     background-color: var(color-glass);
     backdrop-filter: blur(100px);
     overflow: hidden;
     min-height: 30vh;
-    position: -webkit-sticky;
+    // position: -webkit-sticky;
     position: sticky;
-    top: var(--navbar-total-height);
+    top: 0.5rem;
+    height: calc(100vh - 0.5rem);
     transition: all var(--speed-extra-slow);
-    // height: 100vh;
     transform-origin: top;
     z-index: 2;
+
+    &.notSticky {
+      position: relative;
+      min-height: 200vh;
+      margin: 0;
+    }
 
     &.heroCard {
       z-index: 0;
       margin-top: 0;
       background-color: var(--color-background-tertiary);
+      justify-content: center;
       // height: 100vh;
 
       .fancyPattern {
@@ -93,10 +89,8 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        padding: 4rem 0;
         min-height: 40rem;
         width: 100%;
-        margin-bottom: var(--navbar-total-height);
         gap: 2rem;
 
         .logo {
@@ -125,12 +119,12 @@
         }
 
         .tagLine {
-          font-size: 5rem;
+          font-size: var(--font-size-extra-large);
+          line-height: var(--line-height-extra-large);
           font-weight: 600;
           color: var(--color-text-secondary);
           margin-bottom: 1rem;
           text-align: center;
-          line-height: 4.8rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -211,8 +205,8 @@
         left: 0;
         transform: translate(-50%, -50%);
         z-index: -1;
-        animation: pattern1FloatIn var(--speed-extra-slow) ease-in-out;
-        -webkit-animation: pattern1FloatIn var(--speed-extra-slow)ease-in-out;
+        // animation: pattern1FloatIn var(--speed-extra-slow) ease-in-out;
+        // -webkit-animation: pattern1FloatIn var(--speed-extra-slow)ease-in-out;
       }
 
       .pattern2 {
@@ -223,15 +217,9 @@
         scale: 0.5;
         z-index: 0;
         opacity: 0.3;
-        animation: pattern2FloatIn var(--speed-extra-slow) ease-in-out;
-        -webkit-animation: pattern2FloatIn var(--speed-extra-slow)ease-in-out;
+        // animation: pattern2FloatIn var(--speed-extra-slow) ease-in-out;
+        // -webkit-animation: pattern2FloatIn var(--speed-extra-slow)ease-in-out;
       }
-    }
-
-    &.productCard {
-      background: linear-gradient(30deg,
-          rgba(65, 79, 145, 0.1) 0%,
-          rgba(255, 255, 255, 0.9) 100%);
     }
 
     .cardHeader {
@@ -242,7 +230,7 @@
       gap: 2rem;
       padding: 1rem 1rem 0rem 1rem;
       opacity: 0.6;
-      height: calc(var(--radius-extra-large) * 2);
+      height: calc(var(--radius-extra-large) * 2 + 0.5rem);
 
       .number {
         color: var(--color-text-secondary);
@@ -252,7 +240,7 @@
 
       .title {
         color: var(--color-text-tertiary);
-        font-size: 5rem;
+        font-size: var(--font-size-extra-large);
         font-weight: 600;
       }
     }
@@ -261,7 +249,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      // background: red;
       width: 100%;
       flex-grow: 1;
       overflow: hidden;
@@ -297,26 +284,19 @@
   }
 }
 
-@keyframes pattern1FloatIn {
-  0% {
-    transform: translate(-50%, -60%);
-    opacity: 0;
-  }
+@media (max-width: 600px) {
+  .main {
+    .pageCard {
+      &.heroCard {
+        .center {
+          .tagLine {
 
-  100% {
-    transform: translate(-50%, -50%);
-    opacity: 1;
-  }
-}
-
-@keyframes pattern2FloatIn {
-  0% {
-    transform: translate(50%, 60%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translate(50%, 50%);
-    opacity: 0.3;
+            .tagLineSub {
+              padding: 0 3rem;
+            }
+          }
+        }
+      }
+    }
   }
 }

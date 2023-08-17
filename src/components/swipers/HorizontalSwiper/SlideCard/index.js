@@ -26,11 +26,10 @@ const SlideCardContent = ({ title, subtitle, description, image, stylesConfig = 
                         objectFit="cover"
                     />
                 </div>
-                <div className={[
-                    styles.subtitle,
-                    href && styles.arrow
-                ].join(' ')}>
-                    {subtitle ? subtitle : href && <>&#10132;</>}
+                <div className={styles.subtitle}>
+                    <div className={[styles.text, href && styles.arrow].join(' ')}>
+                        {subtitle ? subtitle : href && <>&#10132;</>}
+                    </div>
                 </div>
             </div>
         </div>

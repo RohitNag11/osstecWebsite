@@ -3,15 +3,12 @@
     border-radius: var(--radius-extra-large);
     height: 100%;
     border: var(--border-secondary);
-    backdrop-filter: blur(3px);
-    transition: all var(--speed-extra-slow);
+    transition: scale var(--speed-extra-slow), box-shadow var(--speed-extra-slow);
     display: block;
     overflow: hidden;
     user-select: none;
 
     &.active {
-        background: #00000000;
-        border: none;
 
         .content {
             opacity: 1;
@@ -26,7 +23,6 @@
                 .imageContainer {
                     img {
                         scale: 1;
-                        // filter: blur(0px);
                     }
                 }
             }
@@ -37,18 +33,18 @@
         cursor: pointer;
 
         &:hover {
-            transform: scale(0.98);
+            scale: 0.98;
             box-shadow: var(--shadow-high);
-            backdrop-filter: blur(10px);
         }
     }
 
     .content {
         display: flex;
+        flex-direction: row;
         width: 100%;
         height: 100%;
         opacity: 0.1;
-        transition: all var(--speed-extra-slow);
+        transition: opacity var(--speed-extra-slow);
 
         >div {
             flex-grow: 1;
@@ -62,10 +58,12 @@
                 align-items: stretch;
                 justify-content: space-between;
                 padding: 2rem;
+                gap: 1rem;
 
                 div {
                     &.title {
-                        font-size: 5rem;
+                        font-size: var(--font-size-extra-large);
+                        line-height: var(--line-height-extra-large);
                         font-weight: 600;
                         color: white;
                         background: var(--bg-text-gradient-secondary);
@@ -91,19 +89,19 @@
 
             &.right {
                 position: relative;
+                border-radius: var(--radius-large);
+                overflow: hidden;
 
                 .imageContainer {
                     position: relative;
                     width: 100%;
                     height: 100%;
-                    border-radius: 0 var(--radius-extra-large);
                     overflow: hidden;
 
                     img {
                         box-shadow: var(--shadow-high);
                         scale: 1.05;
                         transition: all var(--speed-extra-slow);
-                        // filter: blur(20px);
                     }
                 }
 
@@ -114,20 +112,44 @@
                     width: 100%;
                     height: 100%;
                     padding: 2rem;
-                    font-weight: 600;
-                    font-size: 1.5rem;
-                    line-height: 2rem;
                     color: var(--color-text-primary);
-                    background: linear-gradient(to top,
+                    background: linear-gradient(to bottom,
                             rgba(0, 0, 0, 0),
                             rgb(7, 50, 76));
-                    color: rgba(255, 255, 255, 0.5);
-                    text-align: right;
-                    border-radius: 0 var(--radius-extra-large);
+                    display: flex;
+                    align-items: end;
 
-                    &.arrow {
-                        font-size: 5rem;
+                    .text {
+                        width: 100%;
+                        text-align: right;
+                        font-weight: 600;
+                        font-size: var(--font-size-medium);
+                        color: rgba(255, 255, 255, 0.7);
+
+
+                        &.arrow {
+                            font-size: 5rem;
+                            font-size: var(--font-size-extra-large);
+                        }
+
                     }
+
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .slideCard {
+        .content {
+            display: flex;
+            flex-direction: column;
+
+            >div {
+                &.right {
+                    border-radius: var(--radius-large) var(--radius-large) var(--radius-extra-large) var(--radius-extra-large);
                 }
             }
         }

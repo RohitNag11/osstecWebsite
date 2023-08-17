@@ -38,6 +38,7 @@ export default function Navbar() {
                                     <NavItem
                                         link={page.link}
                                         title={page.title}
+                                        hiddenInMobile={page.link == '/'}
                                         active={pathname == page.link}
                                     />
                                 </div>

@@ -85,14 +85,11 @@ export default function Home() {
       <div
         ref={card1ref}
         className={[
-          styles.pageCard,
-          styles.stacked,
-          styles.productCard
+          styles.pageCard
         ].join(' ')}
         style={getCardDynamicStyle(1)}
       >
         <div className={styles.cardHeader}>
-          <div className={styles.title}>about</div>
         </div>
         <div className={styles.cardMain}>
           <HorizontalSwiper data={aboutData} />
@@ -118,7 +115,7 @@ export default function Home() {
       </div>
       <div
         ref={card3ref}
-        className={[styles.pageCard].join(' ')}
+        className={[styles.pageCard, styles.notSticky].join(' ')}
         style={getCardDynamicStyle(3)}
       >
         <div className={styles.cardHeader}>
