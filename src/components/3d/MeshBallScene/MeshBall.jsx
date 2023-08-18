@@ -20,7 +20,7 @@ const customMaterial = new THREE.MeshPhysicalMaterial({
     emissiveIntensity: 1,
 });
 
-export function MeshBall({ scrollY, ...props }) {
+export function MeshBall({ scrollY, mobile, ...props }) {
     const { nodes } = useGLTF("/3d/meshBall.draco.glb");
 
 
@@ -37,7 +37,7 @@ export function MeshBall({ scrollY, ...props }) {
         <group
             {...props}
             dispose={null}
-            position={[0.4, radius / 2, -0.25]}
+            position={[mobile ? 0 : 0.4, radius / 2, -0.25]}
             rotation={[0, 0, 0]}
         >
             <Float

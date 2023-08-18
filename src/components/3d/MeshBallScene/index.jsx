@@ -5,7 +5,7 @@ import { SceneWrapper } from "../helpers"
 import { useState, useEffect, Suspense } from "react"
 import { MeshBall } from "./MeshBall"
 
-function MeshBallScene({ ...props }) {
+function MeshBallScene({ mobile = false, ...props }) {
     const canvasStyles = {
         width: `100%`,
         height: `100%`,
@@ -13,6 +13,7 @@ function MeshBallScene({ ...props }) {
 
     // State to store scroll position
     const [scrollY, setScrollY] = useState(0);
+    const scale = mobile ? 1 : 2;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -52,7 +53,8 @@ function MeshBallScene({ ...props }) {
                 <Suspense fallback={null}>
                     <MeshBall
                         scrollY={scrollY}
-                        scale={[2, 2, 2]}
+                        scale={[scale, scale, scale]}
+                        mobile={mobile}
                         {...props}
                     />
                 </Suspense>

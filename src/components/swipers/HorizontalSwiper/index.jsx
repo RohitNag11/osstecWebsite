@@ -7,34 +7,12 @@ import SlideCard from './SlideCard';
 import 'swiper/css';
 import 'swiper/css/mousewheel';
 
-export default function HorizontalSwiper({ data, setSwiper }) {
-    const [slidesPerView, setSlidesPerView] = useState(1.2);
-
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth < 600) {
-                setSlidesPerView(1);
-            } else {
-                setSlidesPerView(1.2);
-            }
-        }
-
-        // Set initial slidesPerView based on current window size
-        handleResize();
-
-        // Add the event listener
-        window.addEventListener('resize', handleResize);
-
-        // Cleanup on component unmount
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        }
-    }, []);
+export default function HorizontalSwiper({ data, setSwiper, mobile }) {
 
     return (
         <Swiper
             spaceBetween={5}
-            slidesPerView={slidesPerView}
+            slidesPerView={mobile ? 1 : 1.2}
             centeredSlides
             // mousewheel
             grabCursor

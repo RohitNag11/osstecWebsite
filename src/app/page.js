@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import { MeshBallScene } from '@/components/3d'
 import { HorizontalSwiper } from '@/components/swipers'
 import { productData, aboutData } from '../../data'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 export default function Home() {
@@ -39,11 +39,27 @@ export default function Home() {
 
 
   const [aboutSwiper, setAboutSwiper] = useState(null);
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600) {
+        setMobile(true);
+      } else {
+        setMobile(false);
+      }
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
 
   return (
     <main className={styles.main}>
       <div className={styles.meshBallSceneWrapper}>
-        <MeshBallScene visible={!card2InView} />
+        <MeshBallScene visible={!card2InView} mobile={mobile} />
       </div>
       <div
         className={[
@@ -96,7 +112,7 @@ export default function Home() {
         <div className={styles.cardHeader}>
         </div>
         <div className={styles.cardMain}>
-          <HorizontalSwiper data={aboutData} setSwiper={setAboutSwiper} />
+          <HorizontalSwiper data={aboutData} setSwiper={setAboutSwiper} mobile={mobile} />
         </div>
         <div className={styles.cardFooter}>
 
