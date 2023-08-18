@@ -26,7 +26,7 @@ export function MeshBall({ scrollY, mobile, ...props }) {
 
 
     const { position, rotation } = useSpring({
-        position: [0, 0, radius * Math.PI * scrollY / 2],
+        position: [0, 0, mobile ? 0 : radius * Math.PI * scrollY / 2],
         rotation: [scrollY * Math.PI / 2, 0, 0],
         config: config.molasses,
     });
