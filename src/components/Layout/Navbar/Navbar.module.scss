@@ -17,7 +17,7 @@
     .navContainer {
         display: flex;
         // min-width: 95%;
-        padding: 0.5rem 0.5rem;
+        padding: 0.4rem 0.4rem;
         justify-content: center;
         align-items: center;
         background-color: var(--color-glass);
@@ -70,6 +70,11 @@
 @media (max-width: 600px) {
     .navWrapper {
         top: 0.5rem;
+
+        .navContainer {
+            flex-grow: 1;
+            border-radius: var(--radius-large);
+        }
     }
 
     // .navContainer {

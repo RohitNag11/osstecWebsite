@@ -1,25 +1,40 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard, Mousewheel, Controller } from 'swiper/modules';
-import { useState, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import SlideCard from './SlideCard';
-import Link from 'next/link';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/mousewheel';
 
-export default function HorizontalSwiper({ data }) {
-    const [swiper, setSwiper] = useState(null);
+export default function HorizontalSwiper({ data, setSwiper }) {
+    const [slidesPerView, setSlidesPerView] = useState(1.2);
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 600) {
+                setSlidesPerView(1);
+            } else {
+                setSlidesPerView(1.2);
+            }
+        }
 
-    const handleReachEnd = () => {
-        swiper.mousewheel.disable();
-    }
+        // Set initial slidesPerView based on current window size
+        handleResize();
+
+        // Add the event listener
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, []);
 
     return (
         <Swiper
             spaceBetween={5}
-            slidesPerView={1.2}
+            slidesPerView={slidesPerView}
             centeredSlides
             // mousewheel
             grabCursor

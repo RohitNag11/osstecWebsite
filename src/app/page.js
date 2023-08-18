@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import { MeshBallScene } from '@/components/3d'
 import { HorizontalSwiper } from '@/components/swipers'
 import { productData, aboutData } from '../../data'
+import { useState } from 'react';
 
 
 export default function Home() {
@@ -35,6 +36,9 @@ export default function Home() {
       // filter: `grayscale(${noCardsOntop * 100 / noCards}%)`,
     }
   };
+
+
+  const [aboutSwiper, setAboutSwiper] = useState(null);
 
   return (
     <main className={styles.main}>
@@ -92,7 +96,7 @@ export default function Home() {
         <div className={styles.cardHeader}>
         </div>
         <div className={styles.cardMain}>
-          <HorizontalSwiper data={aboutData} />
+          <HorizontalSwiper data={aboutData} setSwiper={setAboutSwiper} />
         </div>
         <div className={styles.cardFooter}>
 
