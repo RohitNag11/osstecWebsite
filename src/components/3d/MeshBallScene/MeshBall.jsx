@@ -45,6 +45,7 @@ export function MeshBall({ scrollY, mobile, ...props }) {
                 rotationIntensity={2}
                 // frustumCulled
                 speed={1}
+                enabled={!mobile}
             >
                 {/* <axesHelper args={[1]} /> */}
                 <a.group position={position} rotation={rotation}>
