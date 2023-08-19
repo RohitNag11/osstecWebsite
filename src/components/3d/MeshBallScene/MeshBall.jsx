@@ -1,26 +1,12 @@
-"use client"
-
 import { useMemo } from "react";
 import { useGLTF, Float } from "@react-three/drei";
 import * as THREE from "three";
 import { useSpring, animated as a, config } from '@react-spring/three';
-import { FlakesTexture } from 'three/addons/textures/FlakesTexture.js';
-
-const normalMap3 = new THREE.CanvasTexture(new FlakesTexture());
-normalMap3.wrapS = THREE.RepeatWrapping;
-normalMap3.wrapT = THREE.RepeatWrapping;
-normalMap3.repeat.x = 10;
-normalMap3.repeat.y = 6;
-normalMap3.anisotropy = 16;
 
 export function MeshBall({ scrollY, mobile, ...props }) {
     const customMaterial = useMemo(() => new THREE.MeshNormalMaterial({
         side: THREE.DoubleSide,
-        normalMap: normalMap3,
-        normalScale: new THREE.Vector2(0.15, 0.15),
     }), []);
-
-
 
     // const customMaterial = useMemo(() => new THREE.MeshPhysicalMaterial({
     //     clearcoat: 1.0,
@@ -53,7 +39,6 @@ export function MeshBall({ scrollY, mobile, ...props }) {
                 floatingRange={[0, 0, 0]}
                 rotationIntensity={2}
                 speed={1}
-            // enabled={!mobile}
             >
                 {/* <axesHelper args={[1]} /> */}
                 <a.group position={position} rotation={rotation}>
