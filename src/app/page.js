@@ -2,44 +2,45 @@
 
 import Image from 'next/image'
 import styles from './page.module.scss'
-import MeshPattern from '@/components/patterns/MeshPattern'
 import { useInView } from 'react-intersection-observer';
 import { MeshBallScene } from '@/components/3d'
-import { HorizontalSwiper } from '@/components/swipers'
+import { HorizontalSwiper, SwiperControls } from '@/components/swipers'
 import { productData, aboutData } from '../../data'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { PrimaryButton } from '../components/buttons';
 
 
 export default function Home() {
-  const [card1ref, card1InView] = useInView({
+  const card1Ref = useRef(null);
+  const card2Ref = useRef(null);
+  const [card1ViewRef, card1InView] = useInView({
     threshold: 0.2,
     triggerOnce: false
   });
 
-  const [card2ref, card2InView] = useInView({
+  const [card2ViewRef, card2InView] = useInView({
     threshold: 0.2,
     triggerOnce: false
   });
 
-  const [card3ref, card3InView] = useInView({
+  const [card3ViewRef, card3InView] = useInView({
     threshold: 0.2,
     triggerOnce: false
   });
 
   const cardsInView = [card1InView, card2InView, card3InView];
   const noCardsInView = cardsInView.filter(card => card === true).length;
-  const noCards = cardsInView.length;
   const getCardDynamicStyle = (index) => {
     const noCardsOntop = Math.max(0, noCardsInView - index);
     return {
       scale: 1 - noCardsOntop * 0.02,
-      // filter: `grayscale(${noCardsOntop * 100 / noCards}%)`,
     }
   };
 
 
   const [aboutSwiper, setAboutSwiper] = useState(null);
   const [mobile, setMobile] = useState(false);
+  const aboutSwiperRef = useRef(aboutSwiper);
 
   useEffect(() => {
     const handleResize = () => {
@@ -56,8 +57,28 @@ export default function Home() {
     }
   }, []);
 
+  const handleScrollToNextCard = () => {
+    card1Ref.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <main className={styles.main}>
+      <div className={styles.scrollButton}>
+        <PrimaryButton
+          onClick={() => {
+            card1Ref.current.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }}
+        >
+          <div>Find out More</div>
+          <div>&darr;</div>
+        </PrimaryButton>
+      </div>
       <div className={styles.meshBallSceneWrapper}>
         <MeshBallScene visible={!card2InView} mobile={mobile} />
       </div>
@@ -85,8 +106,8 @@ export default function Home() {
           </div>
           <div className={styles.tagLine}>
             <div className={styles.tagLineMain}>
-              <span>Regenerative</span>
-              <span className={styles.emph}>BoneTech.</span>
+              <span>One Step</span>
+              <span className={styles.emph}>Further.</span>
             </div>
             <div className={styles.tagLineSub}>
               <p>
@@ -95,35 +116,39 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={styles.pattern1}>
-          <MeshPattern layers={5} />
-        </div>
-        <div className={styles.pattern2}>
-          <MeshPattern layers={4} />
-        </div>
       </div>
       <div
-        ref={card1ref}
+        ref={card1ViewRef}
         className={[
           styles.pageCard
         ].join(' ')}
         style={getCardDynamicStyle(1)}
       >
-        <div className={styles.cardHeader}>
+        <div className={styles.cardHeader} ref={card1Ref}>
         </div>
         <div className={styles.cardMain}>
-          <HorizontalSwiper data={aboutData} setSwiper={setAboutSwiper} mobile={mobile} />
+          <HorizontalSwiper data={aboutData} swiper={aboutSwiper} setSwiper={setAboutSwiper} mobile={mobile} />
         </div>
         <div className={styles.cardFooter}>
-
+          <PrimaryButton
+            onClick={() => {
+              card2Ref.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }}
+          >
+            <div>Technology</div>
+            <div>&darr;</div>
+          </PrimaryButton>
         </div>
       </div>
       <div
-        ref={card2ref}
+        ref={card2ViewRef}
         className={[styles.pageCard].join(' ')}
         style={getCardDynamicStyle(2)}
       >
-        <div className={styles.cardHeader}>
+        <div className={styles.cardHeader} ref={card2Ref}>
           <div className={styles.number}>01/05</div>
           <div className={styles.title}>Technology</div>
         </div>
@@ -134,7 +159,7 @@ export default function Home() {
         </div>
       </div>
       <div
-        ref={card3ref}
+        ref={card3ViewRef}
         className={[styles.pageCard, styles.notSticky].join(' ')}
         style={getCardDynamicStyle(3)}
       >

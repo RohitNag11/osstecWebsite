@@ -6,7 +6,7 @@ export const aboutData = [
         image: "/images/general/3d_printer.jpg",
         stylesConfig: {
             titleStyle: {
-                backgroundImage: "linear-gradient(180deg, #4FB4CB,#4890A68E)",
+                backgroundImage: "linear-gradient(180deg, #5D858E,#4890A6)",
             }
         }
     },
@@ -17,7 +17,7 @@ export const aboutData = [
         image: "/images/general/surgery.jpg",
         stylesConfig: {
             titleStyle: {
-                backgroundImage: "linear-gradient(180deg,#0795A28C,#024D5888)",
+                backgroundImage: "linear-gradient(180deg,#478E95,#024D58)",
             }
         }
     },
@@ -28,7 +28,7 @@ export const aboutData = [
         href: "/team",
         stylesConfig: {
             titleStyle: {
-                backgroundImage: "linear-gradient(180deg,#BAB0AA,#958C879B)",
+                backgroundImage: "linear-gradient(180deg,#87776E,#906851)",
             }
         }
     }

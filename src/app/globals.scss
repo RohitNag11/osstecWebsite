@@ -1,4 +1,7 @@
 :root {
+  --font-default: -apple-system, BlinkMacSystemFont, Helvetica, Inter, Neue, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
@@ -25,9 +28,9 @@
   --color-accent-glass: #13406377;
   --color-glass: #ffffff79;
 
-  --bg-tertiary-glow: radial-gradient(rgba(6, 89, 134, 0.213),
+  --bg-tertiary-glow: radial-gradient(rgba(29, 30, 31, 0.213),
       rgba(255, 255, 255, 0));
-  --bg-text-gradient-primary: linear-gradient(45deg, #013c6d, #91b1db);
+  --bg-text-gradient-primary: linear-gradient(45deg, rgba(213, 99, 255, 1) 0%, rgba(143, 101, 255, 1) 25%, rgba(84, 147, 255, 1) 50%, rgba(73, 200, 255, 1) 75%, rgba(76, 255, 233, 1) 100%);
   --bg-text-gradient-secondary: linear-gradient(45deg, #798d9d, #91b1db);
 
 
@@ -40,8 +43,8 @@
 
   --blur-glass: blur(10px);
 
-  --shadow-high: 0px 0px 10px rgba(0, 0, 0, 0.061);
-  --shadow-medium: 0px 0px 5px rgba(0, 0, 0, 0.061);
+  --shadow-high: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0px 0px 5px rgba(0, 0, 0, 0.2);
 
   --logo-aspect: 19.55/7.73;
 
@@ -60,6 +63,7 @@
 html,
 body {
   max-width: 100vw;
+  font-family: var(--font-default);
 }
 
 body {

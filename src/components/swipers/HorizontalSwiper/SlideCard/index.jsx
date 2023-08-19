@@ -37,7 +37,8 @@ const SlideCardContent = ({ title, subtitle, description, image, stylesConfig = 
 }
 
 export default function SlideCard({ slideData, ...props }) {
-    const swiperSlideRef = useSwiperSlide();
+    const swiperSlide = useSwiperSlide();
+
     return (
         slideData.href ?
             <Link
@@ -45,7 +46,7 @@ export default function SlideCard({ slideData, ...props }) {
                 className={[
                     styles.slideCard,
                     styles.link,
-                    swiperSlideRef.isActive && styles.active
+                    swiperSlide.isActive && styles.active
                 ].join(' ')}
                 {...props}
             >
@@ -55,9 +56,10 @@ export default function SlideCard({ slideData, ...props }) {
             <div
                 className={[
                     styles.slideCard,
-                    swiperSlideRef.isActive && styles.active
+                    swiperSlide.isActive && styles.active
                 ].join(' ')}
                 {...props}
+
             >
                 <SlideCardContent {...slideData} />
             </div>

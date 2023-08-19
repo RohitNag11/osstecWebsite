@@ -7,40 +7,34 @@
     overflow: hidden;
 
     .text {
-        // text-transform: uppercase;
         font-size: 0.8rem;
         color: var(--color-text-secondary);
         transition: color var(--speed-medium);
     }
 
     &:hover {
-        background-color: var(--color-accent-secondary);
+        background-color: var(--color-accent-primary);
 
         .text {
-            color: var(--color-accent-primary);
+            color: white;
         }
     }
 
     &.active {
-        background-color: var(--color-accent-glass);
+        background-color: var(--color-accent-secondary);
+        border: var(--border-secondary);
 
         .text {
-            color: var(--color-background-primary);
-            // font-weight: 600;
+            color: white;
         }
     }
 }
 
 @media (max-width: 600px) {
     .navItem {
-        padding: 0.4rem 0.6rem;
 
         &.hiddenInMobile {
             display: none;
-        }
-
-        .text {
-            font-size: 0.6rem;
         }
     }
 }

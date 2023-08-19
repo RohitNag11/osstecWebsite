@@ -10,7 +10,7 @@ export const pagesData = [
     //     link: "/innovation"
     // },
     {
-        title: "The Team",
+        title: "Team",
         description: "",
         link: "/team"
     },

@@ -1,0 +1,21 @@
+.primaryButton {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: var(--radius-extra-large);
+    padding: 0.5rem 1rem;
+    color: var(--color-background-primary);
+    background-color: var(--color-accent-secondary);
+    box-shadow: var(--shadow-high);
+    font-size: 0.9rem;
+    transition: box-shadow var(--speed-slow), background-color var(--speed-slow);
+    gap: 1rem;
+
+
+    &:hover {
+        box-shadow: var(--shadow-medium);
+        background-color: var(--color-accent-primary);
+    }
+}

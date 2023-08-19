@@ -1,0 +1,48 @@
+.swiperControls {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 8.33%;
+
+    .button {
+        background-color: var(--color-accent-secondary);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-radius: var(--radius-extra-large);
+        cursor: pointer;
+        user-select: none;
+        min-width: 25vw;
+        max-width: 35vw;
+        transition: all var(--speed-extra-slow);
+        box-shadow: var(--shadow-high);
+
+        &.prevButton {
+            opacity: 0.5;
+        }
+
+        &.nextButton {
+            opacity: 0.8;
+        }
+
+        &:hover {
+            opacity: 1;
+            box-shadow: var(--shadow-medium);
+        }
+
+        &.hidden {
+            opacity: 0;
+            cursor: default;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .swiperControls {
+        padding: 0.5rem 2.38%;
+    }
+}

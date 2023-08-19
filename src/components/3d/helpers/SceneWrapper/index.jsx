@@ -5,6 +5,7 @@ function SceneWrapper({ aspectRatio = null, position = 'relative', children, ...
         aspectRatio: aspectRatio && `${aspectRatio}`,
         height: !aspectRatio && `100%`,
         position: `${position}`,
+        pointerEvents: 'none',
     }
     return (
         <div style={styles} {...props}>

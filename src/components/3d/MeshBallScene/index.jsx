@@ -4,31 +4,29 @@ import { Canvas } from "@react-three/fiber"
 import { SceneWrapper } from "../helpers"
 import { useState, useEffect, Suspense } from "react"
 import { MeshBall } from "./MeshBall"
+import { throttle } from 'lodash';
+import { OrbitControls } from "@react-three/drei"
 
 function MeshBallScene({ mobile = false, ...props }) {
     const canvasStyles = {
         width: `100%`,
         height: `100%`,
+        pointerEvents: 'none'
     }
-
     // State to store scroll position
     const [scrollY, setScrollY] = useState(0);
     const scale = mobile ? 1 : 2;
 
     useEffect(() => {
-        const handleScroll = () => {
+        const handleScroll = throttle(() => {
             const fractionOfViewportHeight = window.scrollY / window.innerHeight;
-            // fractionOfViewportHeight = Math.max(0, Math.min(1, fractionOfViewportHeight));
             setScrollY(fractionOfViewportHeight);
-        };
+        }, 100);  // Execute once every 100ms
 
-        // Attach the scroll event listener
         window.addEventListener('scroll', handleScroll);
-
-        // Clean up the listener when the component is unmounted
         return () => {
             window.removeEventListener('scroll', handleScroll);
-        }
+        };
     }, []);
 
     return (
@@ -36,20 +34,16 @@ function MeshBallScene({ mobile = false, ...props }) {
             position="relative"
         >
             <Canvas
-                // shadows
                 style={{ canvasStyles }}
-                camera={{ position: [0, 1, 0], fov: 30 }}
+                camera={{ position: [0, 30, 0], fov: 10 }}
+                dpr={[2, 1.5]}
             >
                 {/* <axesHelper args={[1]} /> */}
-                <ambientLight intensity={0.2} />
-                <spotLight position={[0.5, 2, 0.5]} intensity={5} castShadow />
-                <mesh receiveShadow castShadow rotation={[-Math.PI / 2, 0, 0]}>
-                    <planeGeometry args={[100, 100]} scale={[100, 100, 100]} />
-                    <shadowMaterial
-                        transparent
-                        opacity={0.2}
-                        color={'#284E5E'} />
-                </mesh>
+                <ambientLight intensity={10} />
+                <spotLight
+                    position={[10, 10, 10]}
+                    intensity={50}
+                />
                 <Suspense fallback={null}>
                     <MeshBall
                         scrollY={scrollY}
@@ -58,6 +52,7 @@ function MeshBallScene({ mobile = false, ...props }) {
                         {...props}
                     />
                 </Suspense>
+                {/* <OrbitControls /> */}
             </Canvas>
         </SceneWrapper>
     )
