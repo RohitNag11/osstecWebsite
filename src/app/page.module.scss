@@ -20,8 +20,6 @@
     height: calc(100vh - 0.5rem);
     top: 0;
     z-index: 1;
-    pointer-events: none;
-    touch-action: none;
     user-select: none;
     max-width: var(--max-width-page-desktop);
     overflow: hidden;

@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { Suspense, useMemo } from "react";
 import { useGLTF, Float } from "@react-three/drei";
 import * as THREE from "three";
 import { useSpring, animated as a, config } from '@react-spring/three';
@@ -39,18 +39,23 @@ export function MeshBall({ scrollY, mobile, ...props }) {
                 floatingRange={[0, 0, 0]}
                 rotationIntensity={2}
                 speed={1}
+                enabled={!mobile}
             >
                 {/* <axesHelper args={[1]} /> */}
                 <a.group position={position} rotation={rotation}>
-                    {/* <mesh material={customMaterial}>
-                        <sphereGeometry args={[radius, 64, 64]} />
-                    </mesh> */}
-                    <mesh
-                        castShadow
-                        receiveShadow
-                        geometry={nodes.Cube.geometry}
-                        material={customMaterial}
-                    />
+                    <Suspense
+                        fallback={
+                            <mesh material={customMaterial}>
+                                <sphereGeometry args={[radius, 64, 64]} />
+                            </mesh>}
+                    >
+                        <mesh
+                            castShadow
+                            receiveShadow
+                            geometry={nodes.Cube.geometry}
+                            material={customMaterial}
+                        />
+                    </Suspense>
                 </a.group>
             </Float>
         </group >
