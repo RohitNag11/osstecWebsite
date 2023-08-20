@@ -149,8 +149,7 @@ export default function Home() {
         style={getCardDynamicStyle(2)}
       >
         <div className={styles.cardHeader} ref={card2Ref}>
-          <div className={styles.number}>01/05</div>
-          <div className={styles.title}>Technology</div>
+          <div className={styles.title}>Innovation</div>
         </div>
         <div className={styles.slider}>
           <div className={styles.sliderItem} />

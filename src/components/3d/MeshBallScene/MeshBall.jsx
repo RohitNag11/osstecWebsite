@@ -1,26 +1,9 @@
 import { Suspense, useMemo } from "react";
 import { useGLTF, Float } from "@react-three/drei";
-import * as THREE from "three";
 import { useSpring, animated as a, config } from '@react-spring/three';
 
-export function MeshBall({ scrollY, mobile, ...props }) {
-    const customMaterial = useMemo(() => new THREE.MeshNormalMaterial({
-        side: THREE.DoubleSide,
-    }), []);
-
-    // const customMaterial = useMemo(() => new THREE.MeshPhysicalMaterial({
-    //     clearcoat: 1.0,
-    //     clearcoatRoughness: 0.1,
-    //     metalness: 0.9,
-    //     roughness: 0.5,
-    //     color: '#FFFFFF',
-    //     normalMap: normalMap3,
-    //     normalScale: new THREE.Vector2(0.15, 0.15),
-    //     side: THREE.DoubleSide,
-    // }), []);
-
-    const radius = useMemo(() => 1, [])
-    const { nodes, materials } = useGLTF("/3d/meshBall2.glb");
+export function MeshBall({ posInit, material, scrollY, radius, mobile, ...props }) {
+    const { nodes } = useGLTF("/3d/meshBall2.glb");
 
     const { position, rotation } = useSpring({
         position: [0, 0, mobile ? 0 : radius * Math.PI * scrollY],
@@ -32,7 +15,7 @@ export function MeshBall({ scrollY, mobile, ...props }) {
         <group
             {...props}
             dispose={null}
-            position={[mobile ? 0 : 4, 0, -2.7]}
+            position={posInit}
             rotation={[0, 0, 0]}
         >
             <Float
@@ -43,19 +26,12 @@ export function MeshBall({ scrollY, mobile, ...props }) {
             >
                 {/* <axesHelper args={[1]} /> */}
                 <a.group position={position} rotation={rotation}>
-                    <Suspense
-                        fallback={
-                            <mesh material={customMaterial}>
-                                <sphereGeometry args={[radius, 64, 64]} />
-                            </mesh>}
-                    >
-                        <mesh
-                            castShadow
-                            receiveShadow
-                            geometry={nodes.Cube.geometry}
-                            material={customMaterial}
-                        />
-                    </Suspense>
+                    <mesh
+                        castShadow
+                        receiveShadow
+                        geometry={nodes.Cube.geometry}
+                        material={material}
+                    />
                 </a.group>
             </Float>
         </group >

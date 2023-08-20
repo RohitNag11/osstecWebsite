@@ -2,9 +2,11 @@
     border-radius: var(--radius-large);
     padding: 0.5rem 1rem;
     transition: background-color var(--speed-slow);
+    place-content: center;
     display: flex;
     gap: 0.5rem;
     overflow: hidden;
+    background-color: #00000000;
 
     .text {
         font-size: 0.8rem;
@@ -13,7 +15,7 @@
     }
 
     &:hover {
-        background-color: var(--color-accent-primary);
+        background-color: var(--color-accent-glass);
 
         .text {
             color: white;
@@ -21,8 +23,8 @@
     }
 
     &.active {
-        background-color: var(--color-accent-secondary);
         border: var(--border-secondary);
+        background-color: var(--color-accent-secondary);
 
         .text {
             color: white;

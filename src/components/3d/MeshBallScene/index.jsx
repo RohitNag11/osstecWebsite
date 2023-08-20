@@ -5,7 +5,8 @@ import { SceneWrapper } from "../helpers"
 import { useState, useEffect, Suspense } from "react"
 import { MeshBall } from "./MeshBall"
 import { throttle } from 'lodash';
-import { OrbitControls } from "@react-three/drei"
+import { useMemo } from "react"
+import * as THREE from "three";
 
 function MeshBallScene({ mobile = false, ...props }) {
     const canvasStyles = {
@@ -16,6 +17,12 @@ function MeshBallScene({ mobile = false, ...props }) {
     // State to store scroll position
     const [scrollY, setScrollY] = useState(0);
     const scale = mobile ? 1 : 2;
+    const radius = useMemo(() => 1, [])
+    const posInit = useMemo(() => [mobile ? 0 : 4, 0, -2.7], [mobile])
+
+    const customMaterial = useMemo(() => new THREE.MeshNormalMaterial({
+        side: THREE.DoubleSide,
+    }), []);
 
     useEffect(() => {
         const handleScroll = throttle(() => {
@@ -44,15 +51,27 @@ function MeshBallScene({ mobile = false, ...props }) {
                     position={[10, 10, 10]}
                     intensity={50}
                 />
-                <Suspense fallback={null}>
+                <Suspense
+                    fallback={
+                        <mesh
+                            material={customMaterial}
+                            scale={[scale, scale, scale]}
+                            position={posInit}
+                        >
+                            <sphereGeometry args={[radius, 64, 64]} />
+                        </mesh>
+                    }
+                >
                     <MeshBall
                         scrollY={scrollY}
                         scale={[scale, scale, scale]}
                         mobile={mobile}
+                        radius={radius}
+                        material={customMaterial}
+                        posInit={posInit}
                         {...props}
                     />
                 </Suspense>
-                {/* <OrbitControls /> */}
             </Canvas>
         </SceneWrapper>
     )

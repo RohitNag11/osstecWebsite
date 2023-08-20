@@ -10,7 +10,7 @@ export default function HorizontalSwiper({ data, swiper, setSwiper, mobile }) {
     return (
         <Swiper
             // spaceBetween={5}
-            slidesPerView={mobile ? 1.05 : 1.2}
+            slidesPerView={mobile ? 1.1 : 1.2}
             centeredSlides
             grabCursor
             effect='cards'

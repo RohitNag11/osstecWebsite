@@ -7,15 +7,18 @@
     border-radius: var(--radius-extra-large);
     padding: 0.5rem 1rem;
     color: var(--color-background-primary);
-    background-color: var(--color-accent-secondary);
+    background: var(--bg-text-gradient-secondary);
     box-shadow: var(--shadow-high);
     font-size: 0.9rem;
-    transition: box-shadow var(--speed-slow), background-color var(--speed-slow);
     gap: 1rem;
+
+    background: linear-gradient(90deg, var(--color-accent-secondary), transparent) var(--color-accent-primary);
+    place-content: center;
+    transition: box-shadow var(--speed-slow), background-color var(--speed-slow);
 
 
     &:hover {
-        box-shadow: var(--shadow-medium);
-        background-color: var(--color-accent-primary);
+        background-color: var(--color-accent-tertiary);
+        box-shadow: var(--shadow-glow-high);
     }
 }

@@ -25,6 +25,7 @@
   --color-text-tertiary: #81818158;
   --color-accent-primary: #134063;
   --color-accent-secondary: #5d7488;
+  --color-accent-tertiary: #65bcff;
   --color-accent-glass: #13406377;
   --color-glass: #ffffff79;
 
@@ -32,6 +33,8 @@
       rgba(255, 255, 255, 0));
   --bg-text-gradient-primary: linear-gradient(45deg, rgba(213, 99, 255, 1) 0%, rgba(143, 101, 255, 1) 25%, rgba(84, 147, 255, 1) 50%, rgba(73, 200, 255, 1) 75%, rgba(76, 255, 233, 1) 100%);
   --bg-text-gradient-secondary: linear-gradient(45deg, #798d9d, #91b1db);
+  --bg-text-gradient-tertiary: linear-gradient(45deg, #4b799f, #4788dc);
+  --bg-gradient-light: linear-gradient(to top right, #b2bbc7, #ffffff);
 
 
   --border-primary: 2px outset #ffffff;
@@ -45,6 +48,8 @@
 
   --shadow-high: 0px 0px 20px rgba(0, 0, 0, 0.2);
   --shadow-medium: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  --shadow-glow-high: 0px 0px 20px #65bcff7b;
+  --shadow-glow-medium: 0px 0px 5px #65bcff7b;
 
   --logo-aspect: 19.55/7.73;
 

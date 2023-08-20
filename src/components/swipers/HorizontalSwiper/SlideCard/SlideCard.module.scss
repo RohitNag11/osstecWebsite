@@ -1,6 +1,6 @@
 .slideCard {
     // background: var(--color-background-tertiary);
-    background: #bdc7d2;
+    background: var(--bg-gradient-light);
     border-radius: var(--radius-extra-large);
     height: 100%;
     // border: var(--border-secondary);
@@ -127,6 +127,7 @@
 
                         &.arrow {
                             font-size: 5rem;
+                            font-weight: 900;
                             font-size: var(--font-size-extra-large);
                         }
 

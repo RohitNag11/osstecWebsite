@@ -42,7 +42,7 @@
     flex-direction: column;
     width: auto;
     border-radius: var(--radius-extra-large) var(--radius-extra-large) 0 0;
-    background-color: var(color-glass);
+    background-color: var(--color-background-tertiary);
     backdrop-filter: blur(100px);
     overflow: hidden;
     min-height: 30vh;
@@ -66,6 +66,9 @@
       background-color: var(--color-background-tertiary);
       justify-content: center;
       border-radius: 0;
+      box-shadow: none;
+      border: none;
+      background-color: #00000000;
 
       .fancyPattern {
         position: absolute;

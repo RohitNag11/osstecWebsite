@@ -28,7 +28,7 @@ const SlideCardContent = ({ title, subtitle, description, image, stylesConfig = 
                 </div>
                 <div className={styles.subtitle}>
                     <div className={[styles.text, href && styles.arrow].join(' ')}>
-                        {subtitle ? subtitle : href && <>&#10132;</>}
+                        {subtitle ? subtitle : href && <>&rarr;</>}
                     </div>
                 </div>
             </div>
