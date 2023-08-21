@@ -5,7 +5,7 @@ import styles from './page.module.scss'
 import { useInView } from 'react-intersection-observer';
 import { MeshBallScene } from '@/components/3d'
 import { HorizontalSwiper, SwiperControls } from '@/components/swipers'
-import { productData, aboutData } from '../../data'
+import { innovationData, aboutData } from '../../data'
 import { useState, useEffect, useRef } from 'react';
 import { PrimaryButton } from '../components/buttons';
 
@@ -39,8 +39,8 @@ export default function Home() {
 
 
   const [aboutSwiper, setAboutSwiper] = useState(null);
+  const [innovationSwiper, setInnovationSwiper] = useState(null);
   const [mobile, setMobile] = useState(false);
-  const aboutSwiperRef = useRef(aboutSwiper);
 
   useEffect(() => {
     const handleResize = () => {
@@ -127,7 +127,13 @@ export default function Home() {
         <div className={styles.cardHeader} ref={card1Ref}>
         </div>
         <div className={styles.cardMain}>
-          <HorizontalSwiper data={aboutData} swiper={aboutSwiper} setSwiper={setAboutSwiper} mobile={mobile} />
+          <HorizontalSwiper
+            data={aboutData}
+            swiper={aboutSwiper}
+            setSwiper={setAboutSwiper}
+            mobile={mobile}
+            defaultSlidesPerView={1.2}
+            cardEffect />
         </div>
         <div className={styles.cardFooter}>
           <PrimaryButton
@@ -138,23 +144,49 @@ export default function Home() {
               });
             }}
           >
-            <div>Technology</div>
+            <div>Product</div>
             <div>&darr;</div>
           </PrimaryButton>
         </div>
       </div>
       <div
         ref={card2ViewRef}
-        className={[styles.pageCard].join(' ')}
+        className={[styles.pageCard, styles.innovationCard].join(' ')}
         style={getCardDynamicStyle(2)}
       >
         <div className={styles.cardHeader} ref={card2Ref}>
-          <div className={styles.title}>Innovation</div>
+          {/* <div className={styles.title}>STRIDE&trade;</div> */}
         </div>
-        <div className={styles.slider}>
-          <div className={styles.sliderItem} />
-          <div className={[styles.sliderItem, styles.active].join(' ')} />
-          <div className={styles.sliderItem} />
+        <div className={styles.cardMain}>
+
+          <div className={styles.title}>
+            <span className={styles.secondary}>Innovation at OSSTEC: Introducing,</span>
+            <span className={styles.primary}>Stride.</span>
+          </div>
+          <div className={styles.description}>
+            At OSSTEC, we blend engineering expertise with design brilliance. Introducing Stride™ - the zenith of knee implant innovation. Dive in to discover the cutting-edge technologies and passion that set Stride™ apart. Welcome to biomechanical excellence.
+          </div>
+          <HorizontalSwiper
+            data={innovationData}
+            swiper={innovationSwiper}
+            setSwiper={setInnovationSwiper}
+            mobile={mobile}
+            defaultSlidesPerView={1.2}
+            parallax
+          />
+        </div>
+        <div className={styles.cardFooter}>
+          <PrimaryButton
+            onClick={() => {
+              card2Ref.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }}
+          >
+            <div>Accomplishments</div>
+            <div>&darr;</div>
+          </PrimaryButton>
         </div>
       </div>
       <div
@@ -163,7 +195,6 @@ export default function Home() {
         style={getCardDynamicStyle(3)}
       >
         <div className={styles.cardHeader}>
-          <div className={styles.number}>01/05</div>
           <div className={styles.title}>Innovation </div>
         </div>
         <div className={styles.slider}>

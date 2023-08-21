@@ -1,20 +1,30 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Keyboard, EffectCards } from 'swiper/modules';
+import { Keyboard, EffectCards, Parallax, EffectCoverflow } from 'swiper/modules';
 import SlideCard from './SlideCard';
+import ParallaxSlideCard from './ParallaxSlideCard';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
+import 'swiper/css/effect-coverflow';
 import styles from './Swiper.module.scss'
+import { useMemo } from 'react';
 
-export default function HorizontalSwiper({ data, swiper, setSwiper, mobile }) {
+export default function HorizontalSwiper({ data, swiper, setSwiper, mobile, cardEffect = false, parallax = false, defaultSlidesPerView = 1.2 }) {
+    const effect = useMemo(() => {
+        if (cardEffect) {
+            return 'cards'
+        }
+        return null
+    }, [cardEffect])
 
     return (
         <Swiper
-            // spaceBetween={5}
-            slidesPerView={mobile ? 1.1 : 1.2}
+            spaceBetween={5}
+            slidesPerView={mobile ? 1.1 : defaultSlidesPerView}
             centeredSlides
             grabCursor
-            effect='cards'
-            modules={[Keyboard, EffectCards]}
+            effect={effect}
+            parallax={parallax}
+            modules={[Keyboard, EffectCards, Parallax, EffectCoverflow]}
             onSwiper={setSwiper}
             keyboard={{ enabled: true }}
             initialSlide={0}
@@ -32,12 +42,18 @@ export default function HorizontalSwiper({ data, swiper, setSwiper, mobile }) {
                         style={{
                             borderRadius: 'var(--radius-extra-large)',
                             overflow: 'hidden',
-                            border: 'var(--border-secondary)'
+                            // border: 'var(--border-secondary)'
                         }}
+
                     >
-                        <SlideCard
-                            slideData={itemData}
-                        />
+                        {parallax ?
+                            <ParallaxSlideCard
+                                slideData={itemData}
+                            /> :
+                            <SlideCard
+                                slideData={itemData}
+                            />
+                        }
                     </SwiperSlide>
                 )
             })}

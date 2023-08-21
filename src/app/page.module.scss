@@ -35,15 +35,15 @@
     border: var(--border-secondary);
     margin-top: 20rem;
     margin-bottom: 20rem;
-    box-shadow: var(--shadow-high);
+    // box-shadow: var(--shadow-high);
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     width: auto;
-    border-radius: var(--radius-extra-large) var(--radius-extra-large) 0 0;
+    // border-radius: var(--radius-extra-large) var(--radius-extra-large) 0 0;
     background-color: var(--color-background-tertiary);
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(50px);
     overflow: hidden;
     min-height: 30vh;
     position: sticky;
@@ -55,7 +55,7 @@
 
     &.notSticky {
       position: relative;
-      min-height: 200vh;
+      // min-height: 200vh;
       margin: 0;
     }
 
@@ -76,7 +76,6 @@
         transform: translateZ(0);
         aspect-ratio: 1;
         border-radius: 50%;
-        // z-index: -1;
 
         &.f1 {
           top: 0;
@@ -205,42 +204,17 @@
           transform: translateZ(0);
         }
       }
-
-
-      .pattern1 {
-        position: absolute;
-        top: 0rem;
-        left: 0;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-      }
-
-      .pattern2 {
-        position: absolute;
-        bottom: 0rem;
-        right: 0%;
-        transform: translate(50%, 50%);
-        scale: 0.5;
-        z-index: 0;
-        opacity: 0.3;
-      }
     }
 
     .cardHeader {
       display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       gap: 2rem;
       padding: 1rem 1rem 0rem 1rem;
       opacity: 0.6;
       height: 3.8rem;
-
-      .number {
-        color: var(--color-text-secondary);
-        font-size: 0.8rem;
-        padding-top: 0.8rem;
-      }
 
       .title {
         color: var(--color-text-tertiary);
@@ -253,9 +227,37 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       width: 100%;
       flex-grow: 1;
       overflow: hidden;
+      gap: 0.5rem;
+
+      .title {
+        color: white;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // opacity: 0.8;
+
+        .secondary {
+          font-size: var(--font-size-medium);
+        }
+
+        .primary {
+          font-size: var(--font-size-extra-large);
+          line-height: var(--line-height-extra-large);
+        }
+      }
+
+      .description {
+        text-align: center;
+        padding: 0 1.5rem;
+        width: clamp(min(100vw, 800px), 50vw, 800px);
+        margin-bottom: 1rem;
+      }
     }
 
     .cardFooter {
@@ -266,22 +268,26 @@
       height: calc(var(--radius-extra-large) * 2);
     }
 
-    .slider {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      gap: 0.5rem;
-      overflow-x: hidden;
+    &.innovationCard {
+      background-color: hsla(0, 0%, 0%, 0.5);
+      backdrop-filter: blur(100px);
 
-      .sliderItem {
-        min-width: 70%;
-        height: 20rem;
-        background-color: #b7b7b733;
-        border-radius: var(--radius-extra-large);
+      .cardMain {
+        padding-top: 1rem;
 
-        &.active {
-          background-color: #a8b7c4;
+        .title {
+          .primary {
+            background: linear-gradient(to bottom,
+                #ffffff 0%,
+                #dddddd92 100%, );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        .description {
+          color: rgba(255, 255, 255, 0.702);
         }
       }
     }

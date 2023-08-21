@@ -1,5 +1,5 @@
 import { aboutData } from "./aboutData";
 import { pagesData } from "./pagesData";
-import { productData } from "./productData";
+import { innovationData } from "./innovationData";
 
-export { aboutData, pagesData, productData };
+export { aboutData, pagesData, innovationData };

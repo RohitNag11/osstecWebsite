@@ -69,7 +69,7 @@
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         transform: translateY(10px);
-                        transition: all var(--speed-extra-slow);
+                        transition: transform var(--speed-extra-slow);
                     }
 
                     &.body {
@@ -99,7 +99,7 @@
                     img {
                         box-shadow: var(--shadow-high);
                         scale: 1.05;
-                        transition: all var(--speed-extra-slow);
+                        transition: scale var(--speed-extra-slow);
                     }
                 }
 
