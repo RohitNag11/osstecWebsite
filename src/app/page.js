@@ -56,13 +56,6 @@ export default function Home() {
     }
   }, []);
 
-  const handleScrollToNextCard = () => {
-    card1Ref.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
-
   return (
     <main className={styles.main}>
       <div className={styles.scrollButton}>
@@ -194,6 +187,8 @@ export default function Home() {
         <div className={styles.highlightCardsContainer}>
           <div>
             <StatCard
+              start={card3InView}
+              progressAlignment='left'
               value={800000}
               unit="£"
               description={"total UK grant funding."}
@@ -201,6 +196,9 @@ export default function Home() {
           </div>
           <div>
             <StatCard
+              decimalPlaces={2}
+              progressAlignment='right'
+              start={card3InView}
               value={1200000}
               unit="£"
               description={"seed investment."}

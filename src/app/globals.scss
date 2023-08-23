@@ -37,8 +37,8 @@
   --bg-gradient-light: linear-gradient(to top right, #b2bbc7, #ffffff);
 
 
-  --border-primary: 2px outset #ffffff;
-  --border-secondary: 0.5px outset #d6e4f823;
+  --border-primary: 2px solid #ffffff;
+  --border-secondary: 0.5px solid #d6e4f823;
   --radius-extra-large: 2rem;
   --radius-large: 1rem;
   --radius-medium: 0.5rem;
@@ -69,6 +69,29 @@ html,
 body {
   max-width: 100vw;
   font-family: var(--font-default);
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+    background: none;
+    border: none;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-accent-primary);
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-tertiary);
+  }
 }
 
 body {

@@ -1,7 +1,6 @@
 .button {
     z-index: 1;
     position: absolute;
-    top: 50%;
     background-color: var(--color-glass);
     backdrop-filter: blur(50px);
     color: var(--color-text-primary);
@@ -12,7 +11,8 @@
     cursor: pointer;
     user-select: none;
     width: 2rem;
-    padding: 0.5rem 1rem;
+    height: 2rem;
+    // padding: 0.5rem 1rem;
     transition: all var(--speed-extra-slow);
     // box-shadow: var(--shadow-medium);
 

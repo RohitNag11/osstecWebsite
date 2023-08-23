@@ -24,7 +24,7 @@ export default function HorizontalSwiper({ data, mobile, cardEffect = false, par
 
     return (
         <Swiper
-            spaceBetween={5}
+            spaceBetween={'5rem'}
             slidesPerView={mobile ? 1.1 : defaultSlidesPerView}
             centeredSlides
             grabCursor
@@ -42,16 +42,21 @@ export default function HorizontalSwiper({ data, mobile, cardEffect = false, par
                 setCurIndex(swiper.activeIndex)
             }}
         >
-            <SwiperControls slidesPerView={mobile ? 1.1 : defaultSlidesPerView} allowSlideNext={allowSlideNext} allowSlidePrev={allowSlidePrev} />
+            <SwiperControls
+                slidesPerView={mobile ? 1.1 : defaultSlidesPerView}
+                allowSlideNext={allowSlideNext}
+                allowSlidePrev={allowSlidePrev}
+                topPosition={parallax ? '40%' : '50%'}
+            />
             {data.map((itemData, index) => {
                 return (
                     <SwiperSlide
                         key={index}
                         style={{
                             borderRadius: 'var(--radius-extra-large)',
-                            overflow: 'hidden'
+                            overflow: 'hidden',
+                            boxShadow: !parallax && 'var(--shadow-high)',
                         }}
-
                     >
                         {parallax ?
                             <ParallaxSlideCard

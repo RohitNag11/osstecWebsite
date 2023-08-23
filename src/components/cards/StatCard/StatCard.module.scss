@@ -6,16 +6,30 @@
     width: 100%;
     padding: var(--radius-extra-large);
     border-radius: var(--radius-extra-large);
-    background: var(--color-text-tertiary);
+    // background: var(--color-text-tertiary);
+    position: relative;
+    overflow: hidden;
+
+    .progressBar {
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        // left: 0;
+        background: var(--color-text-tertiary);
+        border-radius: var(--radius-extra-large);
+        z-index: 0;
+    }
 
     .value {
         font-size: var(--font-size-extra-large);
         font-weight: 600;
         color: var(--color-text-primary);
+        z-index: 1;
     }
 
     .description {
         font-size: var(--font-size-medium);
         color: var(--color-text-secondary);
+        z-index: 1;
     }
 }
