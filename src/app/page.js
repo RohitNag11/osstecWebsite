@@ -182,7 +182,7 @@ export default function Home() {
         style={getCardDynamicStyle(3)}
       >
         <div className={styles.cardHeader} ref={card3Ref}>
-          <div className={styles.title}>Our Highlights </div>
+          {/* <div className={styles.title}>Our Highlights </div> */}
         </div>
         <div className={styles.highlightCardsContainer}>
           <div>

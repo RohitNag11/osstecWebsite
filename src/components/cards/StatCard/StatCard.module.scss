@@ -8,15 +8,16 @@
     border-radius: var(--radius-extra-large);
     // background: var(--color-text-tertiary);
     position: relative;
-    overflow: hidden;
 
     .progressBar {
         position: absolute;
         height: 100%;
         width: 0%;
         // left: 0;
-        background: var(--color-text-tertiary);
+        background: linear-gradient(to bottom right, #e0e0e0, #b4b4b4);
         border-radius: var(--radius-extra-large);
+        // box-shadow: var(--shadow-medium);
+        border: var(--border-secondary);
         z-index: 0;
     }
 
