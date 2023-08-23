@@ -3,8 +3,10 @@
     width: 100%;
     border-radius: var(--radius-extra-large);
     overflow: visible;
+    position: relative;
 
     .swiperWrapper {
         overflow: visible;
+        z-index: 0;
     }
 }

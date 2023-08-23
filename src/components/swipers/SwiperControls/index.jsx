@@ -2,41 +2,37 @@
 
 import styles from './SwiperControls.module.scss'
 import { useState, useEffect } from 'react'
+import { useSwiper } from 'swiper/react';
 
-export default function SwiperControls({ swiperRef, data }) {
-    // console.log(swiperRef)
+export default function SwiperControls({ slidesPerView, allowSlideNext, allowSlidePrev }) {
+    const swiper = useSwiper();
 
-    // const index = swiper ? swiper.activeIndex : 1
-    // const dataLen = data.length
-    // const prevName = swiper && data && index !== 0 && data[index - 1].title
-    // const nextName = swiper && data && index !== dataLen - 1 && data[index + 1].title
+    const handleNext = () => {
+        swiper.slideNext()
+    }
 
-    // const handleNext = () => {
-    //     // setIndex(prevVal => Math.min(prevVal + 1, dataLen - 1))
-    //     swiper.slideNext()
-    // }
+    const handlePrev = () => {
+        swiper.slidePrev()
+    }
 
-    // const handlePrev = () => {
-    //     // setIndex(prevVal => Math.max(prevVal - 1, 0))
-    //     swiper.slidePrev()
-    // }
+    const margin = (100 * (slidesPerView - 1)) / (2 * slidesPerView)
 
     return (
-        <div className={styles.swiperControls}>
-            {/* <div
-                className={[styles.button, styles.prevButton, !prevName && styles.hidden].join(' ')}
+        <>
+            <div
+                className={[styles.button, styles.prevButton, !allowSlidePrev && styles.hidden].join(' ')}
+                style={{ left: `${margin}vw` }}
                 onClick={handlePrev}
             >
                 <div className={styles.arrow}>&larr;</div>
-                <div className={styles.text}>{prevName}</div>
             </div>
             <div
-                className={[styles.button, styles.nextButton, !nextName && styles.hidden].join(' ')}
+                className={[styles.button, styles.nextButton, !allowSlideNext && styles.hidden].join(' ')}
+                style={{ right: `${margin}vw` }}
                 onClick={handleNext}
             >
-                <div className={styles.text}>{nextName}</div>
                 <div className={styles.arrow}>&rarr;</div>
-            </div> */}
-        </div>
+            </div>
+        </>
     )
 }

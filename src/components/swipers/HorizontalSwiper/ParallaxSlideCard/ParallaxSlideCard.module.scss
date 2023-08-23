@@ -182,6 +182,7 @@
 
             img {
                 box-shadow: var(--shadow-high);
+                user-select: none;
             }
         }
     }
@@ -198,7 +199,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: var(--radius-extra-large);
+        padding: var(--radius-extra-large) 0;
 
         .title {
             font-size: var(--font-size-large);
@@ -217,7 +218,7 @@
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.5);
 
-            width: clamp(min(100vw, 800px), 50vw, 800px);
+            width: clamp(min(100%, 800px), 50vw, 800px);
         }
     }
 }

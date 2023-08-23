@@ -8,11 +8,13 @@ import { HorizontalSwiper, SwiperControls } from '@/components/swipers'
 import { innovationData, aboutData } from '../../data'
 import { useState, useEffect, useRef } from 'react';
 import { PrimaryButton } from '../components/buttons';
+import { StatCard } from '@/components/cards';
 
 
 export default function Home() {
   const card1Ref = useRef(null);
   const card2Ref = useRef(null);
+  const card3Ref = useRef(null);
   const [card1ViewRef, card1InView] = useInView({
     threshold: 0.2,
     triggerOnce: false
@@ -37,9 +39,6 @@ export default function Home() {
     }
   };
 
-
-  const [aboutSwiper, setAboutSwiper] = useState(null);
-  const [innovationSwiper, setInnovationSwiper] = useState(null);
   const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
@@ -129,8 +128,6 @@ export default function Home() {
         <div className={styles.cardMain}>
           <HorizontalSwiper
             data={aboutData}
-            swiper={aboutSwiper}
-            setSwiper={setAboutSwiper}
             mobile={mobile}
             defaultSlidesPerView={1.2}
             cardEffect />
@@ -158,7 +155,6 @@ export default function Home() {
           {/* <div className={styles.title}>STRIDE&trade;</div> */}
         </div>
         <div className={styles.cardMain}>
-
           <div className={styles.title}>
             <span className={styles.secondary}>Innovation at OSSTEC: Introducing,</span>
             <span className={styles.primary}>Stride.</span>
@@ -168,8 +164,6 @@ export default function Home() {
           </div>
           <HorizontalSwiper
             data={innovationData}
-            swiper={innovationSwiper}
-            setSwiper={setInnovationSwiper}
             mobile={mobile}
             defaultSlidesPerView={1.2}
             parallax
@@ -178,29 +172,40 @@ export default function Home() {
         <div className={styles.cardFooter}>
           <PrimaryButton
             onClick={() => {
-              card2Ref.current.scrollIntoView({
+              card3Ref.current.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
               });
             }}
           >
-            <div>Accomplishments</div>
+            <div>Our Highlights</div>
             <div>&darr;</div>
           </PrimaryButton>
         </div>
       </div>
       <div
         ref={card3ViewRef}
-        className={[styles.pageCard, styles.notSticky].join(' ')}
+        className={[styles.pageCard, styles.notSticky, styles.highlightsCard].join(' ')}
         style={getCardDynamicStyle(3)}
       >
-        <div className={styles.cardHeader}>
-          <div className={styles.title}>Innovation </div>
+        <div className={styles.cardHeader} ref={card3Ref}>
+          <div className={styles.title}>Our Highlights </div>
         </div>
-        <div className={styles.slider}>
-          <div className={styles.sliderItem} />
-          <div className={[styles.sliderItem, styles.active].join(' ')} />
-          <div className={styles.sliderItem} />
+        <div className={styles.highlightCardsContainer}>
+          <div>
+            <StatCard
+              value={800000}
+              unit="£"
+              description={"total UK grant funding."}
+            />
+          </div>
+          <div>
+            <StatCard
+              value={1200000}
+              unit="£"
+              description={"seed investment."}
+            />
+          </div>
         </div>
       </div>
     </main>

@@ -230,7 +230,7 @@
       flex-direction: column;
       width: 100%;
       flex-grow: 1;
-      overflow: hidden;
+      overflow: visible;
       gap: 0.5rem;
 
       .title {
@@ -269,7 +269,7 @@
     }
 
     &.innovationCard {
-      background-color: hsla(0, 0%, 0%, 0.5);
+      background-color: hsla(0, 0%, 21%, 0.77);
       backdrop-filter: blur(100px);
 
       .cardMain {
@@ -288,6 +288,27 @@
 
         .description {
           color: rgba(255, 255, 255, 0.702);
+        }
+      }
+    }
+
+
+    &.highlightsCard {
+      background-color: var(--color-background-primary);
+      filter: none;
+
+      .highlightCardsContainer {
+        width: 100%;
+        padding: 0 1rem;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: stretch;
+        min-height: 2rem;
+
+
+        div {
+          flex-grow: 1;
+          // background-color: red;
         }
       }
     }
