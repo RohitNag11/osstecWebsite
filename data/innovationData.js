@@ -2,17 +2,17 @@ export const innovationData = [
     {
         title: "Lattice Structure",
         description: "Our innovative 3D printed lattice implants, mimic the native bone, allow for improved bone ingrowth and reduced stress shielding. This allows for healthier bone, for longer patient satisfaction and increased quality of life",
-        image: "/images/general/lattice_structure_bg.png",
+        image: "/images/general/lattice_structure_blue.png",
         stylesConfig: {
-            primaryColor: "#C0C0C0",
+            primaryColor: "#8EC4EB",
         }
     },
     {
         title: "Additive Manufacturing",
         description: "OSSTEC Stride is a next generation partial knee replacement implant. It is designed to be a minimally invasive, bone preserving, and patient specific solution for patients with osteoarthritis of the knee.",
-        image: "/images/general/3d_printing.jpg",
+        image: "/images/general/am.gif",
         stylesConfig: {
-            primaryColor: "#AFE4BB",
+            primaryColor: "#E0CF9D",
 
         }
     },
@@ -21,7 +21,7 @@ export const innovationData = [
         description: "OSSTEC Stride is a next generation partial knee replacement implant. It is designed to be a minimally invasive, bone preserving, and patient specific solution for patients with osteoarthritis of the knee.",
         image: "/images/general/bone_ingrowth.jpg",
         stylesConfig: {
-            primaryColor: "#ABD8E7",
+            primaryColor: "#ADADAD",
         }
     },
     {
@@ -29,7 +29,7 @@ export const innovationData = [
         description: "Partial knee replacement allows for improved mobility compared to traditional surgeries with increasing demand.",
         image: "/images/general/team.jpeg",
         stylesConfig: {
-            primaryColor: "#E6BEA6",
+            primaryColor: "#9AB6B8",
         }
     },
 ]

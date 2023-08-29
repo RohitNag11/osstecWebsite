@@ -24,7 +24,7 @@ export const aboutData = [
     {
         title: "About Us",
         description: "OSSTEC's founding team combines engineers, surgeons and commercial experience. We have decades of experience in developing and commercialising technologies at the forefront of science and bringing innovations from ideas in the lab to a full solution surgeons can use.",
-        image: "/images/general/team.jpeg",
+        image: "/images/general/team2.png",
         href: "/team",
         stylesConfig: {
             titleStyle: {

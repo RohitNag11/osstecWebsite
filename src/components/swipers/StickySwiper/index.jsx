@@ -90,7 +90,7 @@ export default function StickySwiper({ data, headerRef, cardGapRem = 1.5, bottom
                             top: cardTops[index],
                             height: cardHeights[index],
                             scrollMarginTop: cardTops[index],
-                            margin: `${index == 0 ? 0 : bottomMarginRem * 5}rem ${bottomMarginRem}rem 0 ${bottomMarginRem}rem`,
+                            margin: `${index == 0 ? 0 : 20}rem ${bottomMarginRem}rem 0 ${bottomMarginRem}rem`,
                             backgroundColor: itemData.stylesConfig.primaryColor,
                             ...getCardDynamicStyle(index)
                         }}
@@ -107,6 +107,7 @@ export default function StickySwiper({ data, headerRef, cardGapRem = 1.5, bottom
                     </div>
                 )
             })}
+            <div className={styles.spacer} style={{ height: '20rem' }}></div>
             {/* </div> */}
         </>
         // </div>

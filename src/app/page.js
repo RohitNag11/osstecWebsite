@@ -5,7 +5,7 @@ import styles from './page.module.scss'
 import { useInView } from 'react-intersection-observer';
 import { MeshBallScene } from '@/components/3d'
 import { HorizontalSwiper, StickySwiper } from '@/components/swipers'
-import { innovationData, aboutData } from '../../data'
+import { innovationData, aboutData, companyData } from '../../data'
 import { useState, useEffect, useRef, createRef } from 'react';
 import { PrimaryButton } from '../components/buttons';
 import { StatCard } from '@/components/cards';
@@ -13,6 +13,10 @@ import { TagButton } from '../components/buttons';
 
 
 export default function Home() {
+  const [innovationSecInViewRef, innovationSecInView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
   const [highlightsSecInViewRef, highlightsSecInView] = useInView({
     threshold: 0.1,
     triggerOnce: false,
@@ -37,6 +41,14 @@ export default function Home() {
 
   const [mobile, setMobile] = useState(false);
 
+  const [passedInovationSec, setPassedInovationSec] = useState(false);
+  useEffect(() => {
+    if (innovationSecInView) {
+      setPassedInovationSec((prev) => !prev);
+    }
+  }
+    , [innovationSecInView]);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 600) {
@@ -59,7 +71,7 @@ export default function Home() {
       </div> */}
       <div className={styles.heroSection}>
         <div className={styles.heroImageContainer}>
-          <Image src="/images/general/lattice_structure_bg.png" alt="OSSTEC Hero Image" layout="fill" objectFit="cover" />
+          <Image src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" layout="fill" objectFit="cover" />
         </div>
         <div className={[styles.fancyPattern, styles.f1].join(' ')} />
         <div className={[styles.fancyPattern, styles.f2].join(' ')} />
@@ -89,7 +101,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.scrollButton}>
+      {!innovationSecInView && !highlightsSecInView && <div className={styles.scrollDownButton}>
         <PrimaryButton
           onClick={() => {
             aboutSectionRef.current.scrollIntoView({
@@ -100,8 +112,10 @@ export default function Home() {
         >
           <div>Find out more</div>
           <div>&darr;</div>
+          {/* {passedInovationSec && <div>Back to top</div>}
+          {passedInovationSec && <div>&uarr;</div>} */}
         </PrimaryButton>
-      </div>
+      </div>}
       <div className={styles.aboutSection} ref={aboutSectionRef}>
         <HorizontalSwiper
           data={aboutData}
@@ -109,7 +123,7 @@ export default function Home() {
           defaultSlidesPerView={1.2}
           cardEffect />
       </div>
-      <div className={styles.innovationSection}>
+      <div className={styles.innovationSection} ref={innovationSecInViewRef}>
         <div className={styles.header} ref={innovationSectionRef}>
           <div className={styles.title}>
             <span className={styles.primary}>
@@ -161,28 +175,48 @@ export default function Home() {
           cardGapRem={mobile ? 1 : 1.5}
         />
       </div>
-      <div ref={highlightsSecInViewRef} className={styles.highlightsSection} style={{ position: 'sticky', top: '0', height: '200vh', zIndex: '2', }}>
-        <div>
-          <StatCard
-            start={highlightsSecInView}
-            progressAlignment='left'
-            value={800000}
-            unit="£"
-            description={"total UK grant funding."}
-          />
+      <div className={styles.highlightsSection}>
+        <div className={styles.header} ref={highlightsSecInViewRef}>
+          <div className={styles.title}>Unity in Motion</div>
+          <div className={styles.description}>
+            We are collaborating with the UK&apos;s leading medical institutions and organisations to develop the next generation of orthopaedic implants.
+          </div>
         </div>
-        <div>
-          <StatCard
-            decimalPlaces={2}
-            progressAlignment='right'
-            start={highlightsSecInView}
-            value={1200000}
-            unit="£"
-            description={"seed investment."}
-          />
+
+        <div className={styles.companiesContainer}>
+          {
+            companyData.map((item, index) => {
+              return (
+                <div className={styles.companyLogo} key={index}>
+                  <Image src={item.image} alt={item.name} layout="fill" objectFit="contain" />
+                </div>
+              )
+            })
+          }
+        </div>
+        <div className={styles.statsContainer}>
+          <div>
+            <StatCard
+              start={highlightsSecInView}
+              progressAlignment='left'
+              value={800000}
+              unit="£"
+              description={"total UK grant funding."}
+            />
+          </div>
+          <div>
+            <StatCard
+              decimalPlaces={2}
+              progressAlignment='right'
+              start={highlightsSecInView}
+              value={1200000}
+              unit="£"
+              description={"seed investment."}
+            />
+          </div>
         </div>
       </div>
-
     </main>
+
   )
 }
