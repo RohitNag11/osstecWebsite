@@ -59,8 +59,8 @@
 
                 div {
                     &.title {
-                        font-size: var(--font-size-extra-large);
-                        line-height: var(--line-height-extra-large);
+                        font-size: var(--font-size-large);
+                        line-height: var(--line-height-large);
                         font-weight: 600;
                         color: white;
                         background: var(--bg-text-gradient-secondary);
@@ -89,7 +89,7 @@
                 position: relative;
                 border-radius: var(--radius-extra-large);
                 overflow: hidden;
-                height: 100%;
+                // height: 100%;
 
                 .imageContainer {
                     position: relative;

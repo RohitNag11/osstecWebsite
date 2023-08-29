@@ -6,9 +6,13 @@ export function MeshBall({ posInit, material, scrollY, radius, mobile, ...props 
     const { nodes } = useGLTF("/3d/meshBall2.glb");
 
     const { position, rotation } = useSpring({
-        position: [0, 0, mobile ? 0 : radius * Math.PI * scrollY],
+        position: [0, 0, -0.3 * radius * Math.PI * scrollY],
         rotation: [scrollY * Math.PI / 2, 0, 0],
-        config: config.molasses,
+        config: {
+            tension: 100,
+            friction: 20,
+
+        },
     });
 
     return (

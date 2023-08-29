@@ -1,0 +1,106 @@
+// .cardsContainer {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     align-items: stretch;
+//     position: relative;
+//     width: 100%;
+
+.card {
+    z-index: 3;
+    display: flex;
+    flex-direction: column; // ensure the flex direction is column
+    align-items: stretch; // make sure the child elements stretch the full width
+    border-radius: var(--radius-extra-large);
+    overflow: initial;
+    box-shadow: var(--shadow-high);
+    border: var(--border-secondary);
+    position: sticky;
+    background-color: var(--color-background-primary);
+    z-index: 2;
+    padding: var(--radius-extra-large);
+    transform-origin: top center;
+    transition: scale var(--speed-extra-slow);
+    overflow: hidden;
+
+    .cardContent {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        align-items: stretch;
+        justify-content: space-between;
+        height: 100%;
+
+        .imageContainer {
+            background-color: black;
+            border-radius: var(--radius-extra-large);
+
+            flex: 0 0 45%;
+            height: 100%;
+            position: relative;
+
+            // overflow: hidden;
+            img {
+                border-radius: var(--radius-extra-large);
+                box-shadow: var(--shadow-high);
+            }
+
+        }
+
+        .description {
+            flex-grow: 1;
+            font-size: var(--font-size-medium);
+            // line-height: 3rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+
+            // line-height: var(--line-height-medium);
+        }
+    }
+
+    &:nth-child(1) {
+        margin-top: 0;
+    }
+
+    &:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        // padding: 0;
+
+        .cardContent {
+
+            .imageContainer {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 0;
+
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    background: linear-gradient(to bottom, var(--color-background-primary), #00000000);
+                }
+
+                img {
+                    z-index: 0;
+                }
+            }
+
+            .description {
+                z-index: 2;
+            }
+
+        }
+    }
+}
