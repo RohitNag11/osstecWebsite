@@ -123,9 +123,11 @@ export default function Home() {
           defaultSlidesPerView={1.2}
           cardEffect />
       </div>
+      <div className={styles.technologySectionBadge}>
+        <SectionBadge>Technology</SectionBadge>
+      </div>
       <div className={styles.innovationSection} ref={innovationSecInViewRef}>
         <div className={styles.header} ref={innovationSectionRef}>
-          <SectionBadge>Technology</SectionBadge>
           <div className={styles.title}>
             <span className={styles.primary}>
               Innovation in Care
@@ -178,7 +180,10 @@ export default function Home() {
       </div>
       <div className={styles.highlightsSection} ref={highlightsSecInViewRef}>
         <div className={styles.header}>
-          <SectionBadge>Partners</SectionBadge>
+
+          <div className={styles.sectionBadge}>
+            <SectionBadge>Partners</SectionBadge>
+          </div>
           <div className={styles.title}>Unity in Motion</div>
           <div className={styles.description}>
             We are collaborating with the UK&apos;s leading medical institutions and organisations to develop the next generation of orthopaedic implants.

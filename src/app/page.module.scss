@@ -197,6 +197,13 @@
     border-radius: var(--radius-extra-large) var(--radius-extra-large) 0 0;
   }
 
+  .technologySectionBadge {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(3rem);
+  }
+
   .innovationSection {
     display: flex;
     flex-direction: column;
@@ -278,7 +285,7 @@
     margin-top: -5rem;
     z-index: 2;
     padding: var(--radius-extra-large);
-    padding-top: 10rem;
+    padding-top: 8rem;
     border-radius: var(--radius-extra-large);
     background: linear-gradient(to bottom, #55646e, #7b7f86);
     // height: 200vh;
