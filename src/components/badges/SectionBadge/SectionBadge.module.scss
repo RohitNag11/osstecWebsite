@@ -1,0 +1,19 @@
+.sectionBadge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-extra-large);
+    background-color: #395c6c84;
+    color: white;
+    font-size: 0.8rem;
+    // font-weight: 700;
+    text-transform: uppercase;
+    // letter-spacing: 0.1rem;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem 1rem;
+    // cursor: pointer;
+    // &:hover {
+    //     background-color: #000;
+    //     color: #fff;
+    // }
+}

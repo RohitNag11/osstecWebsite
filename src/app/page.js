@@ -7,9 +7,9 @@ import { MeshBallScene } from '@/components/3d'
 import { HorizontalSwiper, StickySwiper } from '@/components/swipers'
 import { innovationData, aboutData, companyData } from '../../data'
 import { useState, useEffect, useRef, createRef } from 'react';
-import { PrimaryButton } from '../components/buttons';
+import { PrimaryButton, TagButton } from '../components/buttons';
 import { StatCard } from '@/components/cards';
-import { TagButton } from '../components/buttons';
+import { SectionBadge } from '@/components/badges';
 
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
     triggerOnce: false,
   });
   const [highlightsSecInViewRef, highlightsSecInView] = useInView({
-    threshold: 0.1,
+    threshold: 0.5,
     triggerOnce: false,
   });
   const aboutSectionRef = useRef(null);
@@ -125,6 +125,7 @@ export default function Home() {
       </div>
       <div className={styles.innovationSection} ref={innovationSecInViewRef}>
         <div className={styles.header} ref={innovationSectionRef}>
+          <SectionBadge>Technology</SectionBadge>
           <div className={styles.title}>
             <span className={styles.primary}>
               Innovation in Care
@@ -175,8 +176,9 @@ export default function Home() {
           cardGapRem={mobile ? 1 : 1.5}
         />
       </div>
-      <div className={styles.highlightsSection}>
-        <div className={styles.header} ref={highlightsSecInViewRef}>
+      <div className={styles.highlightsSection} ref={highlightsSecInViewRef}>
+        <div className={styles.header}>
+          <SectionBadge>Partners</SectionBadge>
           <div className={styles.title}>Unity in Motion</div>
           <div className={styles.description}>
             We are collaborating with the UK&apos;s leading medical institutions and organisations to develop the next generation of orthopaedic implants.
@@ -215,6 +217,9 @@ export default function Home() {
             />
           </div>
         </div>
+      </div>
+      <div className={styles.newsSection}>
+
       </div>
     </main>
 

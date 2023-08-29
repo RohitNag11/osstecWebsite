@@ -176,7 +176,7 @@
   }
 
   .scrollDownButton {
-    position: fixed;
+    position: absolute;
     bottom: 2rem;
     left: 50%;
     transform: translate(-50%, 0);
@@ -191,8 +191,8 @@
     padding: 5rem 2rem 2rem 2rem;
     gap: 2rem;
     width: 100%;
-    background-color: var(--color-background-secondary);
-    background: linear-gradient(to bottom, #00000000 50%, var(--color-background-secondary) 100%);
+    // background-color: var(--color-background-secondary);
+    // background: linear-gradient(to bottom, #00000000 50%, var(--color-background-secondary) 100%);
     z-index: 2;
     border-radius: var(--radius-extra-large) var(--radius-extra-large) 0 0;
   }
@@ -204,8 +204,8 @@
     align-items: stretch;
     // gap: 1rem;
     width: 100%;
-    background-color: var(--color-background-secondary);
-    background: linear-gradient(to bottom, var(--color-background-secondary) 0%, #00000000 100%);
+    // background-color: var(--color-background-secondary);
+    // background: linear-gradient(to bottom, var(--color-background-secondary) 0%, #00000000 100%);
     // background-color: red;
     // margin-top: 3rem;
     z-index: 3;
@@ -306,7 +306,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         white-space: nowrap;
-        padding-bottom: 2rem;
+        padding: 2rem 0;
         // text-shadow: var(--shadow-high);
       }
 
@@ -350,6 +350,10 @@
       }
     }
   }
+
+  .newsSection {
+    height: 100vh;
+  }
 }
 
 .scrollToTopButton {
@@ -388,6 +392,14 @@
     }
 
     .highlightsSection {
+      gap: 2rem;
+
+      .header {
+        .title {
+          padding: 1rem 0;
+        }
+      }
+
       .companiesContainer {
         padding: 0;
 
@@ -395,6 +407,10 @@
           height: 4rem;
           width: 10rem;
         }
+      }
+
+      .statsContainer {
+        gap: 1rem;
       }
     }
   }
