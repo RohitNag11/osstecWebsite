@@ -14,7 +14,7 @@
         height: 100%;
         width: 0%;
         // left: 0;
-        background: linear-gradient(to bottom right, #ebebeb84, #d3d3d376);
+        background: linear-gradient(to bottom right, #44444484, #40455576);
         border-radius: var(--radius-extra-large);
         // box-shadow: var(--shadow-medium);
         // border: var(--border-secondary);
@@ -24,7 +24,7 @@
     .value {
         font-size: var(--font-size-large);
         font-weight: 600;
-        color: var(--color-text-primary);
+        color: #ffffffd0;
         z-index: 1;
         min-width: 6ch;
         text-align: center;
@@ -32,7 +32,7 @@
 
     .description {
         font-size: var(--font-size-medium);
-        color: var(--color-text-primary);
+        color: #ffffffd0;
         z-index: 1;
         text-align: center;
         font-weight: 500;

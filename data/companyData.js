@@ -1,11 +1,11 @@
 export const companyData = [
     {
         name: 'imperial',
-        image: '/images/icons/companies/imperial.png',
+        image: '/images/icons/companies/imperialcollege.png',
     },
     {
         name: 'UKRI',
-        image: '/images/icons/companies/ukri.png',
+        image: '/images/icons/companies/ukri_greyscale.png',
     },
     {
         name: 'RAEng',

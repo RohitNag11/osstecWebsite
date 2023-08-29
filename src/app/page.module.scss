@@ -280,7 +280,7 @@
     padding: var(--radius-extra-large);
     padding-top: 10rem;
     border-radius: var(--radius-extra-large);
-    background: linear-gradient(to bottom, #6e818e, #989da5);
+    background: linear-gradient(to bottom, #55646e, #7b7f86);
     // height: 200vh;
     flex-direction: column;
     justify-content: stretch;
@@ -346,6 +346,7 @@
         width: 15rem;
         overflow: hidden;
         position: relative;
+        filter: invert(1);
       }
     }
   }
