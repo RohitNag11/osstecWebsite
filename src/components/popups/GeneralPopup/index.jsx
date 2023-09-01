@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import styles from './GeneralPopup.module.scss';
 
 export function GeneralPopup({ isOpen, onClose, children }) {
+    const document = typeof window !== 'undefined' ? window.document : null;
     if (isOpen) {
         // Prevent background scrolling
         document.body.style.overflowY = 'hidden';
