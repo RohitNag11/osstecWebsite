@@ -10,7 +10,8 @@ import { useState, useEffect, useRef, createRef } from 'react';
 import { PrimaryButton, TagButton } from '../components/buttons';
 import { StatCard } from '@/components/cards';
 import { SectionBadge } from '@/components/badges';
-import { ParallaxImage } from '@/components/imageComponents';
+// import { ParallaxImage } from '@/components/imageComponents';
+import { CoverImage } from '@/components/imageComponents';
 
 
 export default function Home() {
@@ -73,17 +74,29 @@ export default function Home() {
       <div className={styles.heroSection}>
         <div className={styles.heroImageContainer}>
           {/* <ParallaxImage src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" /> */}
-          <Image src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" layout="fill" objectFit="cover" />
+          {/* <Image src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" layout="fill" objectFit="cover" /> */}
+          <CoverImage
+            src="/images/general/lattice_structure_blue.png"
+            alt="OSSTEC Hero Image"
+            placeholderColor='#222c42'
+            shimmerPlaceholder={false}
+            borderRadius='0 0 var(--radius-extra-large) var(--radius-extra-large)' />
         </div>
         <div className={[styles.fancyPattern, styles.f1].join(' ')} />
         <div className={[styles.fancyPattern, styles.f2].join(' ')} />
         <div className={styles.center}>
           <div className={styles.logo}>
             <div className={styles.imageContainer}>
-              <Image
+              {/* <Image
                 src="/images/icons/logo_without_text_white.png"
                 alt="OSSTEC Logo"
                 fill
+              /> */}
+              <CoverImage
+                src="/images/icons/logo_without_text_white.png"
+                alt="OSSTEC Logo"
+                shimmerPlaceholder={false}
+                placeholderColor='transparent'
               />
             </div>
             <div className={styles.text}>
@@ -198,6 +211,7 @@ export default function Home() {
               return (
                 <div className={styles.companyLogo} key={index}>
                   <Image src={item.image} alt={item.name} layout="fill" objectFit="contain" />
+                  {/* <CoverImage src={item.image} alt={item.name} /> */}
                 </div>
               )
             })

@@ -1,11 +1,11 @@
 import styles from './PersonCard.module.scss'
-import Image from 'next/image';
+import { CoverImage } from '@/components/imageComponents';
 
 export default function PersonCard({ mobile, name, position, shortSummary, longSummary, linkedin, image, ...props }) {
     return (
         <div className={styles.personCard} {...props}>
             <div className={styles.imageContainer}>
-                {image && <Image src={image} layout="fill" objectFit="cover" alt={name} />}
+                {image && <CoverImage src={image} alt={name} />}
                 {!mobile && <div className={styles.summary}>
                     {shortSummary}
                 </div>}

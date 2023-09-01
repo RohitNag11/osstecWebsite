@@ -6,6 +6,7 @@ import { aboutData, teamData } from '../../../data'
 import { PersonCard } from '@/components/cards'
 import { useState, useEffect } from 'react'
 import { GeneralPopup } from '@/components/popups'
+import { CoverImage } from '@/components/imageComponents'
 
 export default function About() {
     const [showPopup, setShowPopup] = useState(false);
@@ -38,10 +39,11 @@ export default function About() {
             <GeneralPopup isOpen={showPopup} onClose={() => setShowPopup(false)}>
                 <div className={styles.personDetailsPopup}>
                     <div className={styles.imageContainer}>
-                        <Image src={teamData[popupPersonIndex].image} alt={teamData[popupPersonIndex].name}
+                        {/* <Image src={teamData[popupPersonIndex].image} alt={teamData[popupPersonIndex].name}
                             objectFit='cover'
 
-                            layout='fill' />
+                            layout='fill' /> */}
+                        <CoverImage src={teamData[popupPersonIndex].image} alt={teamData[popupPersonIndex].name} />
                     </div>
                     <div className={styles.text}>
                         <div className={styles.name}>
@@ -60,7 +62,8 @@ export default function About() {
                 <div className={styles.header}>
 
                     <div className={styles.imageContainer}>
-                        <Image src='/images/general/team2.png' alt='OSSTEC team' layout='fill' objectFit='cover' />
+                        {/* <Image src='/images/general/team2.png' alt='OSSTEC team' layout='fill' objectFit='cover' /> */}
+                        <CoverImage src='/images/general/team2.png' alt='OSSTEC team' />
                     </div>
                     <div className={styles.title}>
                         <h1>About Us</h1>

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import styles from './StickySwiper.module.scss'
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
+import { CoverImage } from '@/components/imageComponents';
 
 function CardContent({ data, index, setInViewIndex }) {
     const [inViewRef, inView] = useInView({
@@ -28,12 +29,14 @@ function CardContent({ data, index, setInViewIndex }) {
                         background: `linear-gradient(to bottom, ${data.stylesConfig.primaryColor} 20%, rgba(0,0,0,0) 100%)`
                     }}
                 />
-                <Image
+                {/* <Image
                     src={data.image}
                     layout="fill"
                     objectFit="cover"
                     alt={data.title}
-                />
+                /> */}
+                <CoverImage src={data.image} alt={data.title} placeholderColor={data.stylesConfig.primaryColor} />
+
             </div>
             <div className={styles.description}>
                 {data.description}

@@ -1,7 +1,8 @@
 import styles from './SlideCard.module.scss';
 import { useSwiperSlide } from 'swiper/react';
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
+import { CoverImage } from '@/components/imageComponents';
 
 const SlideCardContent = ({ title, subtitle, description, image, stylesConfig = null, href = null }) => {
     return (
@@ -19,12 +20,13 @@ const SlideCardContent = ({ title, subtitle, description, image, stylesConfig = 
             </div>
             <div className={styles.right}>
                 <div className={styles.imageContainer}>
-                    <Image
+                    {/* <Image
                         src={image}
                         alt={title}
                         layout="fill"
                         objectFit="cover"
-                    />
+                    /> */}
+                    <CoverImage src={image} alt={title} />
                 </div>
                 <div className={styles.subtitle}>
                     <div className={[styles.text, href && styles.arrow].join(' ')}>
