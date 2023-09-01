@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import styles from './page.module.scss'
+import styles from './Home.module.scss'
 import { useInView } from 'react-intersection-observer';
 import { MeshBallScene } from '@/components/3d'
 import { HorizontalSwiper, StickySwiper } from '@/components/swipers'
@@ -10,6 +10,7 @@ import { useState, useEffect, useRef, createRef } from 'react';
 import { PrimaryButton, TagButton } from '../components/buttons';
 import { StatCard } from '@/components/cards';
 import { SectionBadge } from '@/components/badges';
+import { ParallaxImage } from '@/components/imageComponents';
 
 
 export default function Home() {
@@ -71,6 +72,7 @@ export default function Home() {
       </div> */}
       <div className={styles.heroSection}>
         <div className={styles.heroImageContainer}>
+          {/* <ParallaxImage src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" /> */}
           <Image src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" layout="fill" objectFit="cover" />
         </div>
         <div className={[styles.fancyPattern, styles.f1].join(' ')} />
@@ -95,7 +97,7 @@ export default function Home() {
             </div>
             <div className={styles.tagLineSub}>
               <p>
-                Knee implants with innovative patented lattice technology closely matching native bone properties.
+                Knee implants with innovative lattice technology closely matching native bone properties, improving fixation and long term bone health.
               </p>
             </div>
           </div>
@@ -134,7 +136,7 @@ export default function Home() {
             </span>
           </div>
           <div className={styles.description}>
-            At OSSTEC, we blend engineering expertise with design brilliance. Introducing Stride™ - the zenith of knee implant innovation. Dive in to discover the cutting-edge technologies and passion that set Stride™ apart. Welcome to biomechanical excellence.
+            At OSSTEC, we have spent years pushing the boundaries of engineering and medical research to introduce STRIDE&trade;, a new generation of partial knee implant.
           </div>
           <div className={styles.cardControlButtons}>
             {innovationData.map((item, index) => {
@@ -224,7 +226,12 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.newsSection}>
-
+        <div className={styles.header}>
+          <div className={styles.sectionBadge}>
+            <SectionBadge>Updates</SectionBadge>
+          </div>
+        </div>
+        {/* <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7074394213618003968" width="200px" height='200px' frameborder="0" allowfullscreen="true" title="Embedded post"></iframe> */}
       </div>
     </main>
 

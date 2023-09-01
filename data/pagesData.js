@@ -10,9 +10,9 @@ export const pagesData = [
     //     link: "/innovation"
     // },
     {
-        title: "Team",
+        title: "About",
         description: "",
-        link: "/team"
+        link: "/about"
     },
     {
         title: "Contact",
