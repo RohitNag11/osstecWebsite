@@ -71,6 +71,10 @@ body {
   max-width: 100%;
   color: var(--color-text-secondary);
   background: var(--color-background-primary);
+}
+
+body {
+  height: 100vh;
   overflow-x: clip;
 }
 
@@ -94,7 +98,6 @@ a {
     --font-size-medium: 1.8rem;
     --line-height-medium: 1.7rem;
   }
-
 }
 
 @media (max-width: 600px) {

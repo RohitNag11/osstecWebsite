@@ -5,6 +5,9 @@
     gap: 0.6rem;
     padding-bottom: 2rem;
     align-items: stretch;
+    cursor: pointer;
+    transform: translateY(0);
+    transition: transform var(--speed-slow);
 
     .imageContainer {
         width: 100%;
@@ -31,6 +34,45 @@
             border-radius: var(--radius-extra-large);
             opacity: 0;
             text-shadow: var(--shadow-medium);
+            line-height: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .openPopUpButton {
+            position: absolute;
+            z-index: 3;
+            bottom: 1rem;
+            right: 1rem;
+            color: rgb(255, 255, 255);
+            transition: color var(--speed-slow);
+            display: flex;
+            gap: 0.5rem;
+            text-shadow: var(--shadow-medium);
+            border-radius: var(--radius-extra-large);
+
+            .arrow {
+                transform: rotate(0deg);
+                transition: transform var(--speed-slow), color var(--speed-slow);
+                background-color: rgb(52, 59, 70);
+                border-radius: var(--radius-extra-large);
+                height: 2rem;
+                width: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .text {
+                transform: translateX(100%);
+                opacity: 0;
+                transition: transform var(--speed-slow), opacity var(--speed-slow), color var(--speed-slow);
+                padding: 1rem;
+                padding-right: 0;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 
@@ -57,12 +99,28 @@
 
 
     &:hover {
+        transform: translateY(-0.5rem);
+
         .imageContainer {
             box-shadow: var(--shadow-high);
 
             .summary {
                 transform: translateY(0);
                 opacity: 1;
+            }
+
+            .openPopUpButton {
+                color: rgb(199, 218, 255);
+                background-color: rgb(52, 59, 70);
+
+                .arrow {
+                    transform: rotate(-45deg);
+                }
+
+                .text {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
             }
         }
 
