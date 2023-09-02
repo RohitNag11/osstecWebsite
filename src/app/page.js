@@ -190,6 +190,7 @@ export default function Home() {
                 <TagButton
                   key={index}
                   active={index === inViewInvCardIndex}
+                  clickable={index > inViewInvCardIndex}
                   color={item.stylesConfig.primaryColor}
                   onClick={() => {
                     invCardsRefs[index].current.scrollIntoView({

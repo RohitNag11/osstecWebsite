@@ -14,9 +14,9 @@ export const pagesData = [
         description: "",
         link: "/about"
     },
-    {
-        title: "Contact",
-        description: "",
-        link: "/contact"
-    },
+    // {
+    //     title: "Contact",
+    //     description: "",
+    //     link: "/contact"
+    // },
 ]
