@@ -10,7 +10,7 @@
 
     .text {
         font-size: 0.8rem;
-        color: var(--color-text-secondary);
+        color: var(--color-text-primary);
         transition: color var(--speed-slow);
     }
 
@@ -23,7 +23,6 @@
     }
 
     &.active {
-        border: var(--border-secondary);
         background-color: var(--color-accent-secondary);
 
         .text {

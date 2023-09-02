@@ -8,7 +8,8 @@ export function CoverImage({
     alt,
     shimmerPlaceholder = true,
     placeholderColor = '#222F4165',
-    borderRadius = 'var(--radius-extra-large)'
+    borderRadius = 'var(--radius-extra-large)',
+    objectFit = 'cover',
 }) {
     const [loaded, setLoaded] = useState(false);
 
@@ -23,7 +24,7 @@ export function CoverImage({
             <Image
                 src={src}
                 layout="fill"
-                objectFit="cover"
+                objectFit={objectFit}
                 alt={alt}
                 onLoad={() => setLoaded(true)}
             />

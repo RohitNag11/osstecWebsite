@@ -239,14 +239,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.newsSection}>
+      {/* <div className={styles.newsSection}>
         <div className={styles.header}>
           <div className={styles.sectionBadge}>
             <SectionBadge>Updates</SectionBadge>
           </div>
         </div>
-        {/* <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7074394213618003968" width="200px" height='200px' frameborder="0" allowfullscreen="true" title="Embedded post"></iframe> */}
-      </div>
+      </div> */}
     </main>
 
   )

@@ -21,7 +21,7 @@ export const teamData = [
         shortSummary: "to do...",
         longSummary: "to do...",
         linkedin: "https://www.linkedin.com/in/alexdliddle/",
-        image: ""
+        image: "/images/headshots/AL.jpg"
     },
     {
         name: "Dominique Kleyn",
