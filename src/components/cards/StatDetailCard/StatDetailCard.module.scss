@@ -1,0 +1,64 @@
+.statDetailCard {
+    // flex-grow: 1;
+    // flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+    padding: var(--radius-extra-large);
+    border-radius: var(--radius-extra-large);
+    background: rgba(255, 255, 255, 0.4);
+    // background: rgba(255, 255, 255, 0.259);
+    backdrop-filter: blur(10px);
+    gap: 1rem;
+
+    .title {
+        font-size: var(--font-size-medium);
+        font-weight: 300;
+        color: var(--color-text-primary);
+    }
+
+    .value {
+        color: var(--color-text-primary);
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .arrow {
+            font-size: var(--font-size-extra-large);
+            font-weight: 100;
+            color: rgb(0, 152, 76);
+        }
+
+        .text {
+            font-size: var(--font-size-extra-large);
+            font-weight: 600;
+            color: rgb(0, 59, 29);
+            text-align: right;
+            flex-grow: 1;
+            opacity: 0.6;
+        }
+
+    }
+
+    .description {
+        color: var(--color-text-secondary);
+        font-weight: 400;
+    }
+
+
+    &.isProblem {
+
+        .value {
+            .arrow {
+                color: hsl(0, 100%, 28%);
+            }
+
+            .text {
+                color: hsl(0, 100%, 12%);
+            }
+        }
+    }
+}

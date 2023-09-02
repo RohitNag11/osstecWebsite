@@ -40,18 +40,18 @@ export default function Footer() {
             <div className={styles.bottom}>
                 <div className={styles.column}>
                     <div className={styles.text}>
-                        {footerData.about.copyrightNote}
+                        {footerData.about.companyNote}
                     </div>
                     <div className={styles.text}>
-                        Designed and developed by <a href={footerData.about.designer.link}>{footerData.about.designer.name}</a>
+                        Company No: {footerData.about.companyNumber}
                     </div>
                 </div>
                 <div className={styles.column}>
                     <div className={styles.text}>
-                        Company No: {footerData.about.companyNumber}
+                        {footerData.about.copyrightNote}
                     </div>
                     <div className={styles.text}>
-                        {footerData.about.companyNote}
+                        Designed and developed by <a href={footerData.about.designer.link} target='_blank'>{footerData.about.designer.name}</a>
                     </div>
                 </div>
             </div>

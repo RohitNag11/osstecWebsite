@@ -52,40 +52,42 @@
       }
     }
 
-    // .fancyPattern {
-    //   position: fixed;
-    //   filter: blur(50px);
-    //   transform: translateZ(0);
-    //   aspect-ratio: 1;
-    //   border-radius: 50%;
-    //   z-index: 0;
-    //   // animation: rotate 5s linear infinite;
-    //   width: 60%;
-    //   opacity: 0.5;
+    .fancyPattern {
+      position: fixed;
+      filter: blur(50px);
+      transform: translateZ(0);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      z-index: -1;
+      // animation: rotate 5s linear infinite;
+      width: 60%;
+      opacity: 0.5;
+      user-select: none;
+      pointer-events: none;
 
-    //   &.f1 {
-    //     top: 0;
-    //     left: 0;
-    //     // background: var(--bg-primary-glow);
-    //     background: conic-gradient(from 180deg at 50% 50%,
-    //         #16f7ff4f 0deg,
-    //         #0885ff33 55deg,
-    //         #2be0f033 120deg,
-    //         #0088ff5e 160deg,
-    //         transparent 360deg);
-    //   }
+      &.f1 {
+        top: 0;
+        left: 0;
+        // background: var(--bg-primary-glow);
+        background: conic-gradient(from 180deg at 50% 50%,
+            #16f7ff4f 0deg,
+            #0885ff33 55deg,
+            #2be0f033 120deg,
+            #0088ff5e 160deg,
+            transparent 360deg);
+      }
 
-    //   &.f2 {
-    //     bottom: 0;
-    //     right: 0;
-    //     background: conic-gradient(from 180deg at 50% 50%,
-    //         #f04fff20 0deg,
-    //         #08f3ff26 55deg,
-    //         #2b2ef01d 120deg,
-    //         #0099ff36 160deg,
-    //         transparent 360deg);
-    //   }
-    // }
+      &.f2 {
+        bottom: 0;
+        right: 0;
+        background: conic-gradient(from 180deg at 50% 50%,
+            #f04fff20 0deg,
+            #08f3ff26 55deg,
+            #2b2ef01d 120deg,
+            #0099ff36 160deg,
+            transparent 360deg);
+      }
+    }
 
     .center {
       display: flex;
@@ -202,6 +204,52 @@
     border-radius: var(--radius-extra-large) var(--radius-extra-large) 0 0;
   }
 
+  .clinicalNeedsSection {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    padding-top: 5rem;
+    z-index: 2;
+
+    .sideBar {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 5rem;
+      font-size: var(--font-size-extra-large);
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 0rem 2rem;
+      text-align: left;
+
+      h2 {
+        font-weight: 300;
+        font-size: var(--font-size-large);
+      }
+
+      p {
+        font-size: 1rem;
+        // font-weight: 300;
+        font-style: italic;
+        line-height: 1.5rem;
+      }
+    }
+
+    .grid {
+      flex-grow: 1;
+      // background: linear-gradient(to bottom, black, red);
+      // height: 400vh;
+      padding: 0 2rem;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      width: calc(100vw - 300px);
+    }
+  }
+
   .technologySectionBadge {
     width: 100%;
     display: flex;
@@ -250,7 +298,7 @@
           &.primary {
             font-size: var(--font-size-extra-large);
             line-height: var(--line-height-extra-large);
-            font-weight: 600;
+            font-weight: 300;
             color: var(--color-text-primary);
             background: linear-gradient(45deg, var(--color-text-secondary), var(--color-accent-primary));
             background-clip: text;
@@ -311,7 +359,7 @@
       .title {
         font-size: var(--font-size-extra-large);
         line-height: var(--line-height-extra-large);
-        font-weight: 600;
+        font-weight: 300;
         color: var(--color-text-primary);
         background: linear-gradient(to bottom right, rgb(220, 228, 231), rgb(186, 206, 219));
         background-clip: text;
@@ -392,6 +440,22 @@
             padding: 0 3rem;
           }
         }
+      }
+    }
+
+    .clinicalNeedsSection {
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+      padding-top: 5rem;
+      z-index: 2;
+
+      .sideBar {
+        width: 200px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
       }
     }
 

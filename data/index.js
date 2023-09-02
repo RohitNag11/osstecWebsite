@@ -4,6 +4,7 @@ import { innovationData } from "./innovationData";
 import { companyData } from "./companyData";
 import { teamData } from "./teamData";
 import { footerData } from "./footerData";
+import { clinicalNeedsData } from "./clinicalNeedsData";
 
 export {
     aboutData,
@@ -11,5 +12,6 @@ export {
     innovationData,
     companyData,
     teamData,
-    footerData
+    footerData,
+    clinicalNeedsData
 };

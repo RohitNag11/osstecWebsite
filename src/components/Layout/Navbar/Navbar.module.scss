@@ -5,7 +5,7 @@
 
 .navWrapper {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     top: 0.5rem;
     left: 0;
     z-index: 1000;
@@ -16,6 +16,7 @@
     align-items: center;
 
     .navContainer {
+        height: 2.5rem;
         display: flex;
         padding: 0.4rem 0.4rem;
         justify-content: center;

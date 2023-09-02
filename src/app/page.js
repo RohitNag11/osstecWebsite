@@ -5,13 +5,14 @@ import styles from './Home.module.scss'
 import { useInView } from 'react-intersection-observer';
 import { MeshBallScene } from '@/components/3d'
 import { HorizontalSwiper, StickySwiper } from '@/components/swipers'
-import { innovationData, aboutData, companyData } from '../../data'
+import { innovationData, aboutData, companyData, clinicalNeedsData } from '../../data'
 import { useState, useEffect, useRef, createRef } from 'react';
 import { PrimaryButton, TagButton } from '../components/buttons';
 import { StatCard } from '@/components/cards';
 import { SectionBadge } from '@/components/badges';
 // import { ParallaxImage } from '@/components/imageComponents';
 import { CoverImage } from '@/components/imageComponents';
+import { StatDetailCard } from '@/components/cards';
 
 
 export default function Home() {
@@ -137,6 +138,27 @@ export default function Home() {
           mobile={mobile}
           defaultSlidesPerView={1.2}
           cardEffect />
+      </div>
+      <div className={styles.clinicalNeedsSection}>
+        <div className={styles.sideBar}>
+          <SectionBadge>WHy OSSTEC</SectionBadge>
+          <h2>Clinical Needs & Future of Knee Implants</h2>
+          <p>“More and more patients require partial knee replacements, and it is critical to achieve a solution that can maintain bone quality to allow patients to continue living active, happy lives” - Mr. Alex </p>
+        </div>
+        <div className={styles.grid}>
+          {/* <div className={styles.card}>
+            <StatCard value={1000000} decimalPlaces={2} description="knee replacements per year in the US." style={{ height: '100%' }} />
+          </div>
+          <div className={styles.card} />
+          <div className={styles.card} />
+          <div className={styles.card} /> */}
+          {clinicalNeedsData.map((item, index) => {
+            return (
+              <StatDetailCard key={index} {...item} {...item.stat} />
+            )
+          }
+          )}
+        </div>
       </div>
       <div className={styles.technologySectionBadge}>
         <SectionBadge>Technology</SectionBadge>
