@@ -66,7 +66,7 @@ const Timeline = ({ events, name }) => {
                 className={[styles.stickyYear].join(' ')}
                 style={{
                     transition: shouldTransition ? "width var(--speed-extra-slow), box-shadow var(--speed-extra-slow)" : "",
-                    width: flash ? "5rem" : "4.5rem",
+                    width: flash ? "5rem" : "4rem",
                     boxShadow: flash ? "var(--shadow-high)" : "var(--shadow-medium)",
                 }}
             >

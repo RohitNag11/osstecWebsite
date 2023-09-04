@@ -5,7 +5,7 @@ export const teamData = [
         shortSummary: "As OSSTEC's Founder and Chief Executive Officer, Max's role focuses on company vision, strategy and growing OSSTEC's team.\nPrior to founding OSSTEC, Max worked with OSSTEC's founding team to research and develop OSSTEC's underlying technology; biomimetic 3D printed structures for orthopaedics.",
         longSummary: "Max completed his PhD at Imperial College London, developing biomimetic 3D printing for use in orthopaedics. His research has won awards across the field including places on some of Europe's best venture accelerator programs.\n\nAt OSSTEC, Max is the Founder and Chief Executive Officer. His role focuses on company vision, strategy and growing OSSTEC's team.\n\nMax has a passion for learning, growing the bounds of technology and for delivering impact across MedTech. These interests align perfectly with OSSTEC's values, so leading such a company is a previlege for him.",
         linkedin: "https://www.linkedin.com/in/mjmunford/",
-        image: ""
+        image: "/images/headshots/MM.webp"
     },
     {
         name: "Prof. Jonathan Jeffers",
@@ -29,7 +29,7 @@ export const teamData = [
         shortSummary: "As Chair at OSSTEC, Dominique brings to the Board her experience as a non-executive director, life sciences company founder, angel investor and venture mentor, along with practical understanding of product and business development in the medtech sector",
         longSummary: "With a background in technology commercialisation, Dominique is well-placed to support the growth of OSSTEC as it transitions from development to commercialisation. As well as bringing to market ClearBlue pregnancy test (Unilever), Anotop filters (Alcan) and DNA diagnostics (GSK/Murex), Dominique has co-founded her own company (Orthonika), been a founder director of 12 other university start-ups and venture mentor for a further 6, involving fundraising, strategic planning and business development. She is currently a member of the Court of Imperial College London and Chair of Imperial's Venture mentoring programme. Dominique has a BSc in Life Sciences and an MBA from Imperial",
         linkedin: "https://www.linkedin.com/in/dominique-kleyn-90ba90/",
-        image: ""
+        image: "/images/headshots/DK.jpg"
     },
     {
         name: "Arron Hughes",

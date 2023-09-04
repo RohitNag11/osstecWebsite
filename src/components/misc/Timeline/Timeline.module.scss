@@ -1,5 +1,5 @@
 .timeline {
-    --timeline-width: 4px;
+    --timeline-width: 12px;
     --dot-size: 12px;
     --dot-border: 4px;
     --dot-total-size: calc(var(--dot-size) + 2 * var(--dot-border));
@@ -50,7 +50,8 @@
         border-radius: var(--radius-extra-large);
         left: 50%;
         transform: translateX(-50%);
-        width: 4.5rem;
+        width: 4rem;
+        font-size: 0.8rem;
 
         &.flashAnimation {
             background-color: yellow;
