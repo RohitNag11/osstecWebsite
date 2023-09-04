@@ -37,8 +37,8 @@ export const footerData = {
                 },
                 {
                     type: 'externalLink',
-                    title: "osstec@gmail.com",
-                    link: "mailto:osstec@gmail.com",
+                    title: "info@osstec.uk",
+                    link: "mailto:info@osstec.uk",
                 }
             ]
         },

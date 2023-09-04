@@ -10,6 +10,8 @@
     background: rgba(255, 255, 255, 0.4);
     // background: rgba(255, 255, 255, 0.259);
     backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-high);
+    border: var(--border-secondary);
     gap: 1rem;
 
     .title {
@@ -39,6 +41,12 @@
             text-align: right;
             flex-grow: 1;
             opacity: 0.6;
+
+            .units {
+                font-size: calc(0.6*var(--font-size-extra-large));
+                // line-height: var(--font-size-extra-large);
+                // vertical-align: text-top;
+            }
         }
 
     }

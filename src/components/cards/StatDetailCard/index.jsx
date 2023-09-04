@@ -33,7 +33,7 @@ export default function StatDetailCard({ title, value, decimalPlaces, unit, desc
                         decimalSeparator='.'
                         easing="easeOutCubic"
                     />
-                    {suffix}{unit}
+                    <span className={styles.units}>{suffix}{unit}</span>
                 </div>
             </div>
             <div className={styles.description}>

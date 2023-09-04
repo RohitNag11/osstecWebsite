@@ -2,11 +2,13 @@
 import styles from './About.module.scss'
 import Image from 'next/image'
 import { SectionBadge } from '@/components/badges'
-import { aboutData, teamData } from '../../../data'
+import { timelineData, teamData } from '../../../data'
 import { PersonCard } from '@/components/cards'
 import { useState, useEffect } from 'react'
 import { GeneralPopup } from '@/components/popups'
 import { CoverImage } from '@/components/imageComponents'
+import { Timeline } from '@/components/misc'
+
 
 export default function About() {
     const [showPopup, setShowPopup] = useState(false);
@@ -91,6 +93,16 @@ export default function About() {
                         }
                         )}
                     </div>
+                </div>
+                <div className={styles.timelineSection}>
+                    <Timeline
+                        events={timelineData.filter(event => event.complete)}
+                        name='Our Story' />
+                </div>
+                <div className={styles.timelineSection}>
+                    <Timeline
+                        events={timelineData.filter(event => !event.complete)}
+                        name='Future Plans' />
                 </div>
             </main>
         </>

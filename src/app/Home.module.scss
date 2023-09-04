@@ -444,18 +444,22 @@
     }
 
     .clinicalNeedsSection {
-      display: flex;
-      width: 100%;
-      align-items: flex-start;
-      padding-top: 5rem;
-      z-index: 2;
+      flex-direction: column;
+      gap: 2rem;
+      padding-top: 3rem;
 
       .sideBar {
-        width: 200px;
+        width: 100%;
+        position: relative;
+        align-items: center;
+        text-align: center;
+        top: 0;
       }
 
       .grid {
+        width: 100%;
         grid-template-columns: repeat(1, 1fr);
+        padding: 0 2rem;
       }
     }
 
