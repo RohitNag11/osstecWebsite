@@ -2,10 +2,9 @@
     padding: 0 3rem;
     margin-bottom: 5rem;
     position: relative;
-    background-color: inherit;
     width: 50%;
     color: #ddd;
-    transition: color var(--speed-slow);
+    transition: color var(--speed-extra-slow);
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -27,7 +26,9 @@
         border-radius: var(--radius-large);
         opacity: 0;
         font-size: 0.8rem;
-        transition: opacity var(--speed-slow);
+        transform: translateY(1rem);
+        transition: opacity var(--speed-extra-slow), transform var(--speed-extra-slow);
+
 
         &.complete {
 
@@ -49,7 +50,7 @@
         border: var(--dot-border) solid #ddd;
         border-radius: 50%;
         z-index: 1;
-        transition: border-color var(--speed-slow);
+        transition: border-color var(--speed-extra-slow);
     }
 
     &.right {
@@ -87,6 +88,7 @@
 
         .tag {
             opacity: 1;
+            transform: translateY(0);
         }
     }
 
