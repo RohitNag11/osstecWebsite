@@ -1,0 +1,12 @@
+.swiper {
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    // background-color: red;
+
+    .swiperWrapper {
+        overflow: visible;
+        z-index: 0;
+    }
+}

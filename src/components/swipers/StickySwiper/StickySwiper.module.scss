@@ -33,7 +33,7 @@
 
         .imageContainer {
             background-color: black;
-            border-radius: var(--radius-extra-large);
+            border-radius: calc(var(--radius-extra-large) - 0.5rem);
 
             flex: 0 0 45%;
             height: 100%;
@@ -51,7 +51,7 @@
             flex-grow: 1;
             font-size: var(--font-size-medium);
             // line-height: 3rem;
-            font-weight: 300;
+            font-weight: 400;
             color: var(--color-text-primary);
 
             // line-height: var(--line-height-medium);

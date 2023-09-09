@@ -6,6 +6,8 @@ import { teamData } from "./teamData";
 import { footerData } from "./footerData";
 import { clinicalNeedsData } from "./clinicalNeedsData";
 import { timelineData } from "./timelineData";
+import { fundingData } from "./fundingData";
+import { newsData } from "./newsData";
 
 export {
     aboutData,
@@ -15,5 +17,7 @@ export {
     teamData,
     footerData,
     clinicalNeedsData,
-    timelineData
+    timelineData,
+    fundingData,
+    newsData
 };

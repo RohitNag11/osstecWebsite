@@ -1,13 +1,13 @@
 export const clinicalNeedsData = [
     {
-        title: 'Increasing Osteoarthritis Population',
+        title: 'Increasing Prevalence of Knee Osteoarthritis',
         stat: {
-            value: 27000000,
-            decimalPlaces: 0,
+            value: 1300000,
+            decimalPlaces: 1,
             unit: '',
             arrow: 'up'
         },
-        description: 'Osteoarthritis affects over 27 million people with increasing numbers and a younger population causing debilitating pain and lack of knee function.',
+        description: 'One in three people globally suffer with musculoskeletal disease and the number who receive knee replacement surgery has increased to 1.3M per year.',
         isProblem: true,
     },
     {
@@ -28,18 +28,18 @@ export const clinicalNeedsData = [
             unit: '%',
             arrow: 'up'
         },
-        description: '25% growth in patients under 65 in the last 10 years. Cementless knee market growing 24%. 85% of surgeons want to preserve bone with porous implants. ',
+        description: '25% growth in patients under 65 in the last 10 years. Cementless knee market growing 24%. 85% of surgeons want to preserve bone with porous implants. Additive manufacturing (3D printing) in orthopaedics is growing 21% year on year. ',
         isProblem: false,
     },
     {
-        title: 'Growing Partial Knee Replacement Market',
+        title: 'High Patient Suitability for Partial Knee Replacement',
         stat: {
-            value: 12,
+            value: 50,
             decimalPlaces: 0,
             unit: '%',
-            arrow: 'up'
+            // arrow: 'up'
         },
-        description: 'Partial knee market is seeing significant growth especially in younger patients, allowing improved mobility.',
+        description: 'Partial knee market is seeing significant growth especially in younger patients, allowing improved mobility. 50% of patients are suitable to be treated with partial knee replacements (UKA). UKA is cost effective and ideal for active patients.',
         isProblem: false,
     },
 

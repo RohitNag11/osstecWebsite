@@ -70,7 +70,7 @@ export default function About() {
                     <div className={styles.title}>
                         <h1>About Us</h1>
                         <div className={styles.description}>
-                            OSSTEC is a London-based startup ...
+                            OSSTEC is a London based spinout founded in Imperial College London. We have brought together a team from a variety of backgrounds, balancing technical and market expertise with a blend of youthful drive and know-how gained through years of experience in medical devices. <br /><br /> To achieve our goal of providing a knee implant that improves the lives of millions of people yearly, we are working tirelessly to bring our device from the research and development phase to a product on the market, used in hospitals worldwide.
                         </div>
                     </div>
                 </div>

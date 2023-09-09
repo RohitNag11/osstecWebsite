@@ -8,7 +8,7 @@ const RenderContentItem = ({ item }) => {
         case 'internalLink':
             return <Link href={item.link} key={item.title} className={styles.link}>{item.title}</Link>;
         case 'externalLink':
-            return <a href={item.link} key={item.title} className={styles.link}>{item.title}</a>;
+            return <a href={item.link} target='_blank' key={item.title} className={styles.link}>{item.title}</a>;
         case 'text':
             return <div className={styles.text} key={item.title}>{item.title}</div>;
         default:

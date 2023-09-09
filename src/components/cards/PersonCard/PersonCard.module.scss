@@ -5,11 +5,11 @@
     gap: 0.6rem;
     padding-bottom: 2rem;
     align-items: stretch;
-    cursor: pointer;
     transform: translateY(0);
     transition: transform var(--speed-slow);
 
     .imageContainer {
+        cursor: pointer;
         width: 100%;
         aspect-ratio: 0.8;
         position: relative;
@@ -83,6 +83,7 @@
         flex-direction: column;
         gap: 0.3rem;
         color: var(--color-text-primary);
+        align-items: flex-start;
 
         .name {
             font-size: 1.3rem;
@@ -92,9 +93,27 @@
         .position {
             opacity: 0.8;
             // color: var(--color-text-primary);
-            font-weight: 400;
+            font-weight: 500;
             font-size: 1.2rem;
         }
+
+        .linkedinLink {
+            color: var(--color-text-primary);
+            font-weight: 400;
+            font-size: 0.8rem;
+            // background-color: #13455b3b;
+            padding: 0.3rem 0.6rem;
+            border-radius: var(--radius-extra-large);
+            border: var(--border-secondary);
+            border-color: var(--color-accent-primary);
+            transition: background-color var(--speed-slow), color var(--speed-slow);
+
+            &:hover {
+                background-color: var(--color-accent-primary);
+                color: var(--color-background-primary);
+            }
+        }
+
     }
 
 

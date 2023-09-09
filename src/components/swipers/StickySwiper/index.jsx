@@ -5,7 +5,11 @@ import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import { CoverImage } from '@/components/imageComponents';
 
+// const parser = new DOMParser();
+
 function CardContent({ data, index, setInViewIndex }) {
+    // const descriptionHtml = (parser.parseFromString(data.description, 'text/html')).body;
+
     const [inViewRef, inView] = useInView({
         threshold: 0.1,
         // triggerOnce: false
@@ -29,18 +33,16 @@ function CardContent({ data, index, setInViewIndex }) {
                         background: `linear-gradient(to bottom, ${data.stylesConfig.primaryColor} 20%, rgba(0,0,0,0) 100%)`
                     }}
                 />
-                {/* <Image
-                    src={data.image}
-                    layout="fill"
-                    objectFit="cover"
-                    alt={data.title}
-                /> */}
                 <CoverImage src={data.image} alt={data.title} placeholderColor={data.stylesConfig.primaryColor} />
 
             </div>
-            <div className={styles.description}>
-                {data.description}
-            </div>
+            {/* <div className={styles.description}>
+                {descriptionHtml}
+            </div> */}
+            <div
+                className={styles.description}
+                dangerouslySetInnerHTML={{ __html: data.description }}
+            />
         </div>
     )
 }

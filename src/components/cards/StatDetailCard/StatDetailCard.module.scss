@@ -29,13 +29,13 @@
         flex-wrap: wrap;
 
         .arrow {
-            font-size: var(--font-size-extra-large);
+            font-size: calc(1*var(--font-size-large));
             font-weight: 100;
             color: rgb(0, 152, 76);
         }
 
         .text {
-            font-size: var(--font-size-extra-large);
+            font-size: calc(1.5*var(--font-size-large));
             font-weight: 600;
             color: rgb(0, 59, 29);
             text-align: right;
@@ -43,7 +43,8 @@
             opacity: 0.6;
 
             .units {
-                font-size: calc(0.6*var(--font-size-extra-large));
+                font-size: calc(1*var(--font-size-large));
+                font-weight: 600;
                 // line-height: var(--font-size-extra-large);
                 // vertical-align: text-top;
             }

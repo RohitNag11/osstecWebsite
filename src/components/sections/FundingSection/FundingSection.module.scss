@@ -1,0 +1,26 @@
+.statsContainer {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    // div {
+    //     flex-basis: 0;
+    //     flex-grow: 1;
+    //     max-width: 100%;
+    // }
+}
+
+@media (max-width: 700px) {
+    .statsContainer {
+        flex-direction: column;
+        gap: 1rem;
+
+        div {
+            flex-basis: 100%;
+            flex-grow: 0;
+            max-width: 100%;
+        }
+    }
+}

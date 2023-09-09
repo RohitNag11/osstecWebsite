@@ -5,7 +5,7 @@ import styles from './Home.module.scss'
 import { useInView } from 'react-intersection-observer';
 import { MeshBallScene } from '@/components/3d'
 import { HorizontalSwiper, StickySwiper } from '@/components/swipers'
-import { innovationData, aboutData, companyData, clinicalNeedsData } from '../../data'
+import { innovationData, aboutData, companyData, clinicalNeedsData, fundingData, newsData } from '../../data'
 import { useState, useEffect, useRef, createRef } from 'react';
 import { PrimaryButton, TagButton } from '../components/buttons';
 import { StatCard } from '@/components/cards';
@@ -13,6 +13,7 @@ import { SectionBadge } from '@/components/badges';
 // import { ParallaxImage } from '@/components/imageComponents';
 import { CoverImage } from '@/components/imageComponents';
 import { StatDetailCard } from '@/components/cards';
+import { FundingSection, NewsSection } from '@/components/sections';
 
 
 export default function Home() {
@@ -77,7 +78,7 @@ export default function Home() {
           {/* <ParallaxImage src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" /> */}
           {/* <Image src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" layout="fill" objectFit="cover" /> */}
           <CoverImage
-            src="/images/general/lattice_structure_blue.png"
+            src="/images/general/lattice_structure_bg_2_blue.jpg"
             alt="OSSTEC Hero Image"
             placeholderColor='#222c42'
             shimmerPlaceholder={false}
@@ -141,9 +142,14 @@ export default function Home() {
       </div>
       <div className={styles.clinicalNeedsSection}>
         <div className={styles.sideBar}>
-          <SectionBadge>WHy OSSTEC</SectionBadge>
-          <h2>Clinical Needs & Future of Knee Implants</h2>
-          <p>“More and more patients require partial knee replacements, and it is critical to achieve a solution that can maintain bone quality to allow patients to continue living active, happy lives” - Mr. Alex </p>
+          <SectionBadge>Why OSSTEC</SectionBadge>
+          <h2>Clinical Needs & <br /> Future of Knee Implants</h2>
+          <div className={styles.imageContainer}>
+            <div className={styles.text}>
+              <p>“More and more patients require partial knee replacements, and it is critical to achieve a solution that can maintain bone quality to allow patients to continue living active, happy lives” - Dr. Alex </p>
+            </div>
+            <CoverImage src="/images/general/surgery.jpg" alt="Alex Liddle" style={{ boxShadow: 'var(--shadow-high)' }} />
+          </div>
         </div>
         <div className={styles.grid}>
           {/* <div className={styles.card}>
@@ -171,7 +177,9 @@ export default function Home() {
             </span>
           </div>
           <div className={styles.description}>
-            At OSSTEC, we have spent years pushing the boundaries of engineering and medical research to introduce STRIDE&trade;, a new generation of partial knee implant.
+            {/* At OSSTEC, we have spent years pushing the boundaries of engineering and medical research to introduce STRIDE&trade;, a new generation of partial knee implant. */}
+
+            At OSSTEC, we have spent years pushing the boundaries of engineering and medical research to introduce a new generation of partial knee implant.
           </div>
           <div className={styles.cardControlButtons}>
             {innovationData.map((item, index) => {
@@ -240,35 +248,13 @@ export default function Home() {
             })
           }
         </div>
-        <div className={styles.statsContainer}>
-          <div>
-            <StatCard
-              start={highlightsSecInView}
-              progressAlignment='left'
-              value={800000}
-              unit="£"
-              description={"total UK grant funding."}
-            />
-          </div>
-          <div>
-            <StatCard
-              decimalPlaces={2}
-              progressAlignment='right'
-              start={highlightsSecInView}
-              value={1200000}
-              unit="£"
-              description={"seed investment."}
-            />
-          </div>
+
+        <div className={styles.fundingSectionBadge}>
+          <SectionBadge>Funding</SectionBadge>
         </div>
+        <FundingSection data={fundingData} />
       </div>
-      {/* <div className={styles.newsSection}>
-        <div className={styles.header}>
-          <div className={styles.sectionBadge}>
-            <SectionBadge>Updates</SectionBadge>
-          </div>
-        </div>
-      </div> */}
+      <NewsSection data={newsData} mobile={mobile} />
     </main>
 
   )

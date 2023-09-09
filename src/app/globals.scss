@@ -1,6 +1,6 @@
 :root {
-  --font-default: -apple-system, BlinkMacSystemFont, Helvetica, Inter, Neue, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+  // --font-default: -apple-system, BlinkMacSystemFont, Helvetica, Inter, Neue, Segoe UI, Roboto, Oxygen,
+  //   Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
 
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
@@ -28,6 +28,18 @@
   --color-accent-tertiary: #65bcff;
   --color-accent-glass: #13406377;
   --color-glass: #ffffff49;
+
+  // --color-background-primary: #252525;
+  // --color-background-secondary: #32363a;
+  // --color-background-tertiary: #333f4415;
+  // --color-text-primary: rgb(185, 215, 248);
+  // --color-text-secondary: #a8adc6;
+  // --color-text-tertiary: #c2c2c258;
+  // --color-accent-primary: #2279bb;
+  // --color-accent-secondary: #7c99b3;
+  // --color-accent-tertiary: #0091ff;
+  // --color-accent-glass: #2271ad77;
+  // --color-glass: #ffffff49;
 
   --bg-tertiary-glow: radial-gradient(rgba(29, 30, 31, 0.213),
       rgba(255, 255, 255, 0));
@@ -67,7 +79,7 @@
 
 html,
 body {
-  font-family: var(--font-default);
+  // font-family: var(--font-default);
   max-width: 100%;
   color: var(--color-text-secondary);
   background: var(--color-background-primary);
