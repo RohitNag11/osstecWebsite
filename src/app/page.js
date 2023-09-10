@@ -80,27 +80,27 @@ export default function Home() {
         <div className={styles.heroImageContainer}>
           {/* <ParallaxImage src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" /> */}
           {/* <Image src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" layout="fill" objectFit="cover" /> */}
-          <CoverImage
+          {/* <CoverImage
             src="/images/general/lattice_structure_bg_2_blue.jpg"
             alt="OSSTEC Hero Image"
             placeholderColor='#222c42'
             shimmerPlaceholder={false}
-            borderRadius='0 0 var(--radius-extra-large) var(--radius-extra-large)' />
+            borderRadius='0 0 var(--radius-extra-large) var(--radius-extra-large)' /> */}
         </div>
         <div className={styles.center}>
           <div className={styles.logo}>
             <div className={styles.imageContainer}>
-              {/* <Image
+              <Image
                 src="/images/icons/logo_without_text_white.png"
                 alt="OSSTEC Logo"
                 fill
-              /> */}
-              <CoverImage
+              />
+              {/* <CoverImage
                 src="/images/icons/logo_without_text_white.png"
                 alt="OSSTEC Logo"
                 shimmerPlaceholder={false}
                 placeholderColor='transparent'
-              />
+              /> */}
             </div>
             <div className={styles.text}>
               OSSTEC
@@ -113,7 +113,7 @@ export default function Home() {
             </div>
             <div className={styles.tagLineSub}>
               <p>
-                Knee implants with innovative lattice technology closely matching native bone properties, improving fixation and long term bone health.
+                Knee implants with innovative lattice technology closely matching native bone properties for optimised implant fixation and a durable bone foundation.
               </p>
             </div>
           </div>
@@ -147,7 +147,9 @@ export default function Home() {
           <h2>Clinical Needs & <br /> Future of Knee Implants</h2>
           <div className={styles.imageContainer}>
             <div className={styles.text}>
-              <p>“More and more patients require partial knee replacements, and it is critical to achieve a solution that can maintain bone quality to allow patients to continue living active, happy lives” - Dr. Alex </p>
+              <p>“Cementless Unicompartmental knee replacement has advantages over cemented techniques with improved workflows, survival and clinical outcomes. OSSTEC&apos;s stiffness-matched 3D printing technology is an exciting new development in this area that promises cementless UKA with minimal bone resections and reduced risks associated with stress shielding.”
+                <br /><br />
+                - Mr. Alex Liddle, DPhil FRCS(Orth)</p>
             </div>
             <CoverImage src="/images/general/surgery.jpg" alt="Alex Liddle" style={{ boxShadow: 'var(--shadow-high)' }} />
           </div>

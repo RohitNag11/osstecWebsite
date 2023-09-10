@@ -5,7 +5,7 @@ export const teamData = [
         shortSummary: "As OSSTEC's Founder and Chief Executive Officer, Max's role focuses on company vision, strategy and growing OSSTEC's team.\nPrior to founding OSSTEC, Max worked with OSSTEC's founding team to research and develop OSSTEC's underlying technology; biomimetic 3D printed structures for orthopaedics.",
         longSummary: "Max completed his PhD at Imperial College London, developing biomimetic 3D printing for use in orthopaedics. His research has won awards across the field including places on some of Europe's best venture accelerator programs.\n\nAt OSSTEC, Max is the Founder and Chief Executive Officer. His role focuses on company vision, strategy and growing OSSTEC's team.\n\nMax has a passion for learning, growing the bounds of technology and for delivering impact across MedTech. These interests align perfectly with OSSTEC's values, so leading such a company is a previlege for him.",
         linkedin: "https://www.linkedin.com/in/mjmunford/",
-        image: "/images/headshots/MM.webp"
+        image: "/images/headshots/MM.png"
     },
     {
         name: "Prof. Jonathan Jeffers",

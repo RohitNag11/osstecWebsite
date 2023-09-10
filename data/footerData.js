@@ -32,14 +32,14 @@ export const footerData = {
                 },
                 {
                     type: 'externalLink',
-                    title: "+44 (0) 20 1234 5678",
-                    link: "tel:+44 (0) 20 1234 5678",
-                },
-                {
-                    type: 'externalLink',
                     title: "info@osstec.uk",
                     link: "mailto:info@osstec.uk",
-                }
+                },
+                {
+                    type: 'text',
+                    title: "Imperial College London, Exhibition Road, SW7 2AZ",
+                    // link: "tel:+44 (0) 20 1234 5678",
+                },
             ]
         },
     ]

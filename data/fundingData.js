@@ -1,13 +1,13 @@
 export const fundingData = [
     {
-        value: 1200000,
+        value: 2000000,
         decimalPlaces: 2,
         unit: "£",
-        description: "seed investment."
+        description: "secured in VC and grant funding."
     },
-    {
-        value: 800000,
-        unit: "£",
-        description: "total UK grant funding."
-    }
+    // {
+    //     value: 800000,
+    //     unit: "£",
+    //     description: "total UK grant funding."
+    // }
 ];
