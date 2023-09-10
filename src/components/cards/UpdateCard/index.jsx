@@ -33,7 +33,11 @@ function UpdateCardContent({ title, date, description, type, tags, image = null,
 export default function UpdateCard({ title, date, description, type, tags, image = null, link = null, ...props }) {
     if (link) {
         return (
-            <a href="link" className={[styles.updateCard, styles.linkCard].join(' ')}>
+            <a
+                href={link}
+                target="_blank"
+                className={[styles.updateCard, styles.linkCard].join(' ')}
+            >
                 <UpdateCardContent
                     title={title}
                     date={date}
