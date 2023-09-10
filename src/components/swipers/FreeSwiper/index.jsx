@@ -12,7 +12,7 @@ import { useMemo, useState, useEffect } from 'react';
 import { UpdateCard } from '@/components/cards';
 // import { SwiperControls } from '..';
 
-export default function FreeSwiper({ data = [1, 2, 3, 4, 5, 6, 7], mobile = false, defaultSlidesPerView = 2, setSwiper = null, setSwiperIsBeginning = null, setSwiperIsEnd = null }) {
+export default function FreeSwiper({ data = [1, 2, 3, 4, 5, 6, 7], mobile = false, tablet = false, defaultSlidesPerView = 2, setSwiper = null, setSwiperIsBeginning = null, setSwiperIsEnd = null }) {
     const [curIndex, setCurIndex] = useState(0);
 
     useEffect(() => {
@@ -29,12 +29,14 @@ export default function FreeSwiper({ data = [1, 2, 3, 4, 5, 6, 7], mobile = fals
     }
         , [curIndex, setSwiperIsBeginning, setSwiperIsEnd, data.length]);
 
+    const slidesPerView = tablet || mobile ? 1 : defaultSlidesPerView;
+
 
 
     return (
         <Swiper
             spaceBetween={10}
-            slidesPerView={mobile ? 1.1 : defaultSlidesPerView}
+            slidesPerView={slidesPerView}
             // centeredSlides
             grabCursor
             freeMode={false}

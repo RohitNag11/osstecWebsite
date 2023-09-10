@@ -15,7 +15,6 @@ import { CoverImage } from '@/components/imageComponents';
 import { StatDetailCard } from '@/components/cards';
 import { FundingSection, NewsSection } from '@/components/sections';
 
-
 export default function Home() {
   const [innovationSecInViewRef, innovationSecInView] = useInView({
     threshold: 0.1,
@@ -44,6 +43,7 @@ export default function Home() {
   const [inViewInvCardIndex, setInViewInvCardIndex] = useState(0);
 
   const [mobile, setMobile] = useState(false);
+  const [tablet, setTablet] = useState(false);
 
   const [passedInovationSec, setPassedInovationSec] = useState(false);
   useEffect(() => {
@@ -55,9 +55,12 @@ export default function Home() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 600) {
+      if (window.innerWidth < 1200 && window.innerWidth >= 600) {
+        setTablet(true);
+      } else if (window.innerWidth < 600) {
         setMobile(true);
       } else {
+        setTablet(false);
         setMobile(false);
       }
     }
@@ -254,7 +257,7 @@ export default function Home() {
         </div>
         <FundingSection data={fundingData} />
       </div>
-      <NewsSection data={newsData} mobile={mobile} />
+      <NewsSection data={newsData} mobile={mobile} tablet={tablet} />
     </main>
 
   )

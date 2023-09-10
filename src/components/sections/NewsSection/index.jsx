@@ -4,7 +4,7 @@ import { SectionBadge } from '@/components/badges';
 import { FreeSwiper } from '@/components/swipers';
 import { useState } from 'react';
 
-export function NewsSection({ data, mobile = false }) {
+export function NewsSection({ data, mobile = false, tablet = false }) {
     const [swiper, setSwiper] = useState(null);
     const [swiperIsEnd, setSwiperIsEnd] = useState(false);
     const [swiperIsBeginning, setSwiperIsBeginning] = useState(true);
@@ -47,7 +47,14 @@ export function NewsSection({ data, mobile = false }) {
                 <div
                     className={styles.sliderContainer}
                 >
-                    <FreeSwiper data={data} mobile={mobile} setSwiper={setSwiper} setSwiperIsBeginning={setSwiperIsBeginning} setSwiperIsEnd={setSwiperIsEnd} />
+                    <FreeSwiper
+                        data={data}
+                        mobile={mobile}
+                        tablet={tablet}
+                        setSwiper={setSwiper}
+                        setSwiperIsBeginning={setSwiperIsBeginning}
+                        setSwiperIsEnd={setSwiperIsEnd}
+                    />
                 </div>
             </div>
         </div>
