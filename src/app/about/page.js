@@ -105,7 +105,7 @@ export default function About() {
                             From Vision to Reality
                         </div>
                         <div className={styles.description}>
-                            From our 2013 roots researching 3D structures at Imperial College London to our evolving team and patent portfolio in 2023, OSSTEC's journey reflects a deep commitment to innovation in biomimetic structures.
+                            From our 2013 roots researching 3D structures at Imperial College London to our evolving team and patent portfolio in 2023, OSSTEC&apos;s journey reflects a deep commitment to innovation in biomimetic structures.
                         </div>
                     </div>
                     <Timeline
