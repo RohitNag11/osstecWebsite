@@ -61,9 +61,9 @@
 
     .stickyLabel {
         position: sticky;
-        top: 0;
+        top: 0rem;
         width: 100%;
-        padding: 4rem 2rem 2rem 2rem;
+        padding: 4rem 3rem 3rem 3rem;
         background: linear-gradient(to bottom, var(--color-background-primary) 80%, #00000000);
         z-index: 2;
         display: flex;
@@ -82,8 +82,9 @@
 
             .stickySideLabel {
                 flex-basis: 50%;
-                font-size: var(--font-size-large);
-                font-weight: 100;
+                font-size: var(--font-size-medium);
+                font-weight: 400;
+                color: var(--color-text-primary);
 
                 &.right {
                     padding-left: 3rem;
