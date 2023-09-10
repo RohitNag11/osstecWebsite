@@ -31,13 +31,13 @@
         transition: opacity var(--speed-extra-slow), transform var(--speed-extra-slow);
 
 
-        &.complete {
+        &.funding {
 
             background-color: #1ca1204c;
             color: rgb(0, 56, 2);
         }
 
-        &.recieved {
+        &.milestone {
             background-color: #1c8ba14c;
             color: rgb(0, 32, 56);
         }
@@ -56,7 +56,7 @@
 
     &.right {
         margin-left: 50%;
-        padding-right: 1rem;
+        // padding-right: 2rem;
         text-align: left;
         align-items: flex-start;
 
@@ -70,7 +70,7 @@
     &.left {
         left: 0;
         text-align: right;
-        padding-left: 1rem;
+        // padding-left: 2rem;
         align-items: flex-end;
 
         .eventDot {
@@ -98,6 +98,16 @@
 
         .eventDot {
             border-color: var(--color-text-primary);
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .event {
+        margin-bottom: 3rem;
+
+        .title {
+            font-size: 1rem;
         }
     }
 }

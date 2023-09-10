@@ -1,12 +1,13 @@
 .timeline {
-    --timeline-width: 12px;
+    --timeline-width: 2px;
     --dot-size: 12px;
-    --dot-border: 4px;
+    --dot-border: 2px;
     --dot-total-size: calc(var(--dot-size) + 2 * var(--dot-border));
 
     position: relative;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 10rem;
 
     &::before {
         content: '';

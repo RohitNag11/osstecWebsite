@@ -1,13 +1,13 @@
 export const clinicalNeedsData = [
     {
-        title: 'Increasing Prevalence of Knee Osteoarthritis',
+        title: 'Increasing Prevalence of Knee Osteoarthritis (OA)',
         stat: {
             value: 1300000,
             decimalPlaces: 1,
             unit: '',
             arrow: 'up'
         },
-        description: 'One in three people globally suffer with musculoskeletal disease and the number who receive knee replacement surgery has increased to 1.3M per year.',
+        description: 'Roughly a third of the global population suffer from musculoskeletal disorders, including OA. OA stands as a predominant factor in mobility impairment, leading to an upsurge in knee replacement surgeries, now tallying at 1.3M annually.',
         isProblem: true,
     },
     {
@@ -17,11 +17,11 @@ export const clinicalNeedsData = [
             decimalPlaces: 0,
             unit: '%'
         },
-        description: 'Current implants promote long term bone loss due to stress shielding, 35% implant failure rate in young patients. Cause complications due to bone cement use and see high cases of loosening, leading to poor patient outcomes requiring revisions after 7 years.',
+        description: 'Current implants induce long-term bone loss from stress shielding. With a 35% failure rate in younger patients, complications arise from bone cement usage. High instances of loosening result in subpar patient outcomes, necessitating revisions by year 7.',
         isProblem: true,
     },
     {
-        title: 'Increasing Demand for Cementless Implants',
+        title: 'Cementless Implants are the future',
         stat: {
             value: 25,
             decimalPlaces: 0,
@@ -32,7 +32,7 @@ export const clinicalNeedsData = [
         isProblem: false,
     },
     {
-        title: 'High Patient Suitability for Partial Knee Replacement',
+        title: 'Partial Knee Replacements are better for patients & providers',
         stat: {
             value: 50,
             decimalPlaces: 0,

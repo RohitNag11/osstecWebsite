@@ -4,8 +4,6 @@ import { TimelineEvent } from './TimelineEvent';
 import { SectionBadge } from '@/components/badges';
 
 const Timeline = ({ events, name }) => {
-    const [flash, setFlash] = useState(false);
-    const [shouldTransition, setShouldTransition] = useState(false);
     const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
     const timelineRef = useRef(null);
@@ -28,18 +26,6 @@ const Timeline = ({ events, name }) => {
             window.removeEventListener('scroll', updateProgressHeight);
         }
     }, []);
-
-    useEffect(() => {
-        setFlash(true);
-        setShouldTransition(false);
-    }, [currentYear]);
-
-    useEffect(() => {
-        if (flash) {
-            setShouldTransition(true);
-            setFlash(false);
-        }
-    }, [flash]);
 
     return (
         <div
@@ -64,11 +50,6 @@ const Timeline = ({ events, name }) => {
             <div
                 ref={stickyYearRef}
                 className={[styles.stickyYear].join(' ')}
-                style={{
-                    transition: shouldTransition ? "width var(--speed-extra-slow), box-shadow var(--speed-extra-slow)" : "",
-                    width: flash ? "5rem" : "4rem",
-                    boxShadow: flash ? "var(--shadow-high)" : "var(--shadow-medium)",
-                }}
             >
                 {currentYear}
             </div>
