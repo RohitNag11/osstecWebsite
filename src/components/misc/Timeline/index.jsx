@@ -3,7 +3,7 @@ import styles from './Timeline.module.scss';
 import { TimelineEvent } from './TimelineEvent';
 import { SectionBadge } from '@/components/badges';
 
-const Timeline = ({ events, name }) => {
+const Timeline = ({ events }) => {
     const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
     const timelineRef = useRef(null);
@@ -34,9 +34,6 @@ const Timeline = ({ events, name }) => {
             style={{ '--progress-height': `${progressHeight}px` }}
         >
             <div className={styles.stickyLabel}>
-                <div className={styles.nameBadge}>
-                    <SectionBadge>{name}</SectionBadge>
-                </div>
                 <div className={styles.sideLabels}>
 
                     <div className={[styles.stickySideLabel, styles.left].join(' ')}>

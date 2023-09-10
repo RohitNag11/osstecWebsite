@@ -46,12 +46,12 @@
         text-align: center;
         background-color: var(--color-text-primary);
         color: white;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0rem;
         // border-radius: 8px;
         border-radius: var(--radius-extra-large);
         left: 50%;
         transform: translateX(-50%);
-        width: 4rem;
+        width: 6ch;
         font-size: 0.8rem;
 
         &.flashAnimation {
@@ -64,7 +64,7 @@
         top: 0rem;
         width: 100%;
         padding: 4rem 3rem 3rem 3rem;
-        background: linear-gradient(to bottom, var(--color-background-primary) 80%, #00000000);
+        background: linear-gradient(to bottom, var(--color-timeline-section-bg) 80%, #00000000);
         z-index: 2;
         display: flex;
         flex-direction: column;

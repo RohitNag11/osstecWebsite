@@ -3,11 +3,12 @@
     margin-bottom: 5rem;
     position: relative;
     width: 50%;
-    color: #ddd;
-    transition: color var(--speed-extra-slow);
+    color: var(--color-text-primary);
+    transition: opacity var(--speed-extra-slow);
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+    opacity: 0.2;
 
     .year {
         font-size: 1.5rem;
@@ -81,7 +82,7 @@
     }
 
     &.passed {
-        color: var(--color-text-secondary);
+        opacity: 0.6;
 
         .eventDot {
             border-color: var(--color-text-secondary);
@@ -94,7 +95,7 @@
     }
 
     &.active {
-        color: var(--color-text-primary);
+        opacity: 1;
 
         .eventDot {
             border-color: var(--color-text-primary);

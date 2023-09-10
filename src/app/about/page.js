@@ -97,9 +97,20 @@ export default function About() {
                     </div>
                 </div>
                 <div className={styles.timelineSection}>
+                    <div className={styles.timelineHeader}>
+                        <div className={styles.badge}>
+                            <SectionBadge>Our Story</SectionBadge>
+                        </div>
+                        <div className={styles.title}>
+                            From Vision to Reality
+                        </div>
+                        <div className={styles.description}>
+                            From our 2013 roots researching 3D structures at Imperial College London to our evolving team and patent portfolio in 2023, OSSTEC's journey reflects a deep commitment to innovation in biomimetic structures.
+                        </div>
+                    </div>
                     <Timeline
                         events={timelineData}
-                        name='Our Story' />
+                    />
                 </div>
             </main>
         </>

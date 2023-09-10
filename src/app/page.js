@@ -87,8 +87,6 @@ export default function Home() {
             shimmerPlaceholder={false}
             borderRadius='0 0 var(--radius-extra-large) var(--radius-extra-large)' />
         </div>
-        <div className={[styles.fancyPattern, styles.f1].join(' ')} />
-        <div className={[styles.fancyPattern, styles.f2].join(' ')} />
         <div className={styles.center}>
           <div className={styles.logo}>
             <div className={styles.imageContainer}>

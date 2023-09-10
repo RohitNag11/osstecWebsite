@@ -5,6 +5,52 @@
   align-items: stretch;
   // position: relative;
 
+  &::after {
+    content: "";
+    position: fixed;
+    filter: blur(50px);
+    transform: translateZ(0);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    z-index: 0;
+    // animation: rotate 5s linear infinite;
+    width: 60%;
+    opacity: 0.5;
+    user-select: none;
+    pointer-events: none;
+    background: conic-gradient(from 0deg at 50% 50%,
+        #0091ff28 0deg,
+        #00ff7324 55deg,
+        #1e00ff33 120deg,
+        #0088ff40 160deg,
+        transparent 360deg);
+    bottom: 0;
+    left: 0%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    filter: blur(50px);
+    transform: translateZ(0);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    z-index: 0;
+    // animation: rotate 5s linear infinite;
+    width: 60%;
+    opacity: 0.5;
+    user-select: none;
+    pointer-events: none;
+    background: conic-gradient(from 180deg at 50% 50%,
+        #40ff0028 0deg,
+        #d000ff24 55deg,
+        #00ffd933 120deg,
+        #0099ff40 160deg,
+        transparent 360deg);
+    top: 0;
+    right: 0;
+  }
+
   .meshBallSceneWrapper {
     position: fixed;
     left: 0;
@@ -49,43 +95,6 @@
 
       img {
         position: fixed;
-      }
-    }
-
-    .fancyPattern {
-      position: fixed;
-      filter: blur(50px);
-      transform: translateZ(0);
-      aspect-ratio: 1;
-      border-radius: 50%;
-      z-index: -1;
-      // animation: rotate 5s linear infinite;
-      width: 60%;
-      opacity: 0.5;
-      user-select: none;
-      pointer-events: none;
-
-      &.f1 {
-        top: 0;
-        left: 0;
-        // background: var(--bg-primary-glow);
-        background: conic-gradient(from 180deg at 50% 50%,
-            #16f7ff4f 0deg,
-            #0885ff33 55deg,
-            #2be0f033 120deg,
-            #0088ff5e 160deg,
-            transparent 360deg);
-      }
-
-      &.f2 {
-        bottom: 0;
-        right: 0;
-        background: conic-gradient(from 180deg at 50% 50%,
-            #f04fff20 0deg,
-            #08f3ff26 55deg,
-            #2b2ef01d 120deg,
-            #0099ff36 160deg,
-            transparent 360deg);
       }
     }
 
@@ -517,15 +526,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }
