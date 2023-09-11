@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import styles from './Home.module.scss'
 import { useInView } from 'react-intersection-observer';
-import { MeshBallScene } from '@/components/3d'
+// import { MeshBallScene } from '@/components/3d'
 import { HorizontalSwiper, StickySwiper } from '@/components/swipers'
 import { innovationData, aboutData, companyData, clinicalNeedsData, fundingData, newsData } from '../../data'
 import { useState, useEffect, useRef, createRef } from 'react';
@@ -78,10 +78,9 @@ export default function Home() {
       </div> */}
       <div className={styles.heroSection}>
         <div className={styles.heroImageContainer}>
-          {/* <ParallaxImage src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" /> */}
           {/* <Image src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" layout="fill" objectFit="cover" /> */}
           {/* <CoverImage
-            src="/images/general/lattice_structure_bg_2_blue.jpg"
+            src="/images/general/lattice_structure_blue.png"
             alt="OSSTEC Hero Image"
             placeholderColor='#222c42'
             shimmerPlaceholder={false}
@@ -95,12 +94,6 @@ export default function Home() {
                 alt="OSSTEC Logo"
                 fill
               />
-              {/* <CoverImage
-                src="/images/icons/logo_without_text_white.png"
-                alt="OSSTEC Logo"
-                shimmerPlaceholder={false}
-                placeholderColor='transparent'
-              /> */}
             </div>
             <div className={styles.text}>
               OSSTEC
@@ -109,7 +102,6 @@ export default function Home() {
           <div className={styles.tagLine}>
             <div className={styles.tagLineMain}>
               <span className={styles.emph}>One Step Further</span>
-              {/* <span className={styles.emph}>Further.</span> */}
             </div>
             <div className={styles.tagLineSub}>
               <p>
@@ -119,21 +111,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {!innovationSecInView && !highlightsSecInView && <div className={styles.scrollDownButton}>
-        <PrimaryButton
-          onClick={() => {
-            aboutSectionRef.current.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }}
-        >
-          <div>Find out more</div>
-          <div>&darr;</div>
-          {/* {passedInovationSec && <div>Back to top</div>}
-          {passedInovationSec && <div>&uarr;</div>} */}
-        </PrimaryButton>
-      </div>}
+      <div
+        className={styles.scrollDownButton}
+        onClick={() => {
+          aboutSectionRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }}>
+        <div className={styles.mouseIcon}>
+          <div className={styles.scrollerIcon}>
+          </div>
+        </div>
+      </div>
       <div className={styles.aboutSection} ref={aboutSectionRef}>
         <HorizontalSwiper
           data={aboutData}
@@ -170,7 +160,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.technologySectionBadge}>
-        <SectionBadge>Technology</SectionBadge>
+        <SectionBadge>Our Technology</SectionBadge>
       </div>
       <div className={styles.innovationSection} ref={innovationSecInViewRef}>
         <div className={styles.header} ref={innovationSectionRef}>
