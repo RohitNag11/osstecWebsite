@@ -14,6 +14,7 @@ import { SectionBadge } from '@/components/badges';
 import { CoverImage } from '@/components/imageComponents';
 import { StatDetailCard } from '@/components/cards';
 import { FundingSection, NewsSection } from '@/components/sections';
+import { PiHandHeartFill, PiLightbulbFilamentFill, PiHandshakeFill, PiPiggyBankFill } from 'react-icons/pi';
 
 export default function Home() {
   const [innovationSecInViewRef, innovationSecInView] = useInView({
@@ -133,7 +134,7 @@ export default function Home() {
       </div>
       <div className={styles.clinicalNeedsSection}>
         <div className={styles.sideBar}>
-          <SectionBadge>Why OSSTEC</SectionBadge>
+          <SectionBadge><PiHandHeartFill /> Why OSSTEC</SectionBadge>
           <h2>Clinical Needs & <br /> Future of Knee Implants</h2>
           <div className={styles.imageContainer}>
             <div className={styles.text}>
@@ -160,7 +161,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.technologySectionBadge}>
-        <SectionBadge>Our Technology</SectionBadge>
+        <SectionBadge><PiLightbulbFilamentFill /> Our Technology</SectionBadge>
       </div>
       <div className={styles.innovationSection} ref={innovationSecInViewRef}>
         <div className={styles.header} ref={innovationSectionRef}>
@@ -221,7 +222,7 @@ export default function Home() {
         <div className={styles.header}>
 
           <div className={styles.sectionBadge}>
-            <SectionBadge>Partners</SectionBadge>
+            <SectionBadge><PiHandshakeFill />Partners</SectionBadge>
           </div>
           {/* <div className={styles.title}>Unity in Motion</div> */}
           <div className={styles.description}>
@@ -243,7 +244,7 @@ export default function Home() {
         </div>
 
         <div className={styles.fundingSectionBadge}>
-          <SectionBadge>Funding</SectionBadge>
+          <SectionBadge><PiPiggyBankFill />Funding</SectionBadge>
         </div>
         <FundingSection data={fundingData} />
       </div>

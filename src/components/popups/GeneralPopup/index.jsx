@@ -5,6 +5,8 @@ import styles from './GeneralPopup.module.scss';
 
 export function GeneralPopup({ isOpen, onClose, children }) {
 
+    const [closeHovered, setCloseHovered] = useState(false);
+
     if (typeof window === "object") {
         if (isOpen) {
             document.body.style.overflowY = 'hidden';
@@ -15,11 +17,32 @@ export function GeneralPopup({ isOpen, onClose, children }) {
 
     if (!isOpen) return null;
 
+    const handleClose = () => {
+        setCloseHovered(false);
+        onClose();
+    }
+
     return (
-        <div className={[styles.overlay, isOpen ? styles.open : styles.close].join(' ')} >
-            <div className={styles.popupContent}>
+        <div
+            className={[styles.overlay, isOpen ? styles.open : styles.close].join(' ')}
+            style={{
+                backgroundColor: closeHovered ? 'rgba(0, 0, 0, 0.4)' : 'rgba(0, 0, 0, 0.7)',
+            }}
+        >
+            <div
+                className={styles.popupContent}
+                style={{
+                    scale: closeHovered ? '0.99' : '1',
+                    filter: closeHovered ? 'grayscale(1)' : 'grayscale(0)',
+                }}
+            >
                 {children}
-                <div className={styles.closeButton} onClick={onClose}>
+                <div
+                    className={styles.closeButton}
+                    onClick={handleClose}
+                    onMouseEnter={() => setCloseHovered(true)}
+                    onMouseLeave={() => setCloseHovered(false)}
+                >
                     &#9587;
                 </div>
             </div>

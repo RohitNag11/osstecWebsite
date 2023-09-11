@@ -3,6 +3,7 @@ import styles from './NewsSection.module.scss';
 import { SectionBadge } from '@/components/badges';
 import { FreeSwiper } from '@/components/swipers';
 import { useState } from 'react';
+import { PiNewspaperClippingFill } from 'react-icons/pi';
 
 export function NewsSection({ data, mobile = false, tablet = false }) {
     const [swiper, setSwiper] = useState(null);
@@ -12,7 +13,7 @@ export function NewsSection({ data, mobile = false, tablet = false }) {
     return (
         <div className={styles.newsSection}>
             <div className={styles.header}>
-                <SectionBadge>News & Updates</SectionBadge>
+                <SectionBadge><PiNewspaperClippingFill />News & Updates</SectionBadge>
             </div>
             <div className={styles.cardsContainer}>
                 <div className={styles.titleCard}>

@@ -12,9 +12,14 @@
     transition: all 0.2s ease-in-out;
     padding: 0.5rem 1rem;
     border: var(--border-secondary);
+    gap: 1ch;
     // cursor: pointer;
     // &:hover {
     //     background-color: #000;
     //     color: #fff;
     // }
+
+    svg {
+        font-size: 1.3rem;
+    }
 }

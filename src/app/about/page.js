@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react'
 import { GeneralPopup } from '@/components/popups'
 import { CoverImage } from '@/components/imageComponents'
 import { Timeline } from '@/components/misc'
+import { PiUsersThreeFill, PiBookOpenTextFill } from 'react-icons/pi'
 
 
 export default function About() {
@@ -78,7 +79,7 @@ export default function About() {
                 </div>
                 <div className={styles.teamSection}>
                     <div className={styles.sideBar}>
-                        <SectionBadge>The Team</SectionBadge>
+                        <SectionBadge><PiUsersThreeFill />The Team</SectionBadge>
                         <h2>Meet the OSSTEC team</h2>
                         <p>OSSTEC&apos;s team combines engineers, surgeons and commercial expertise. We have decades of experience in developing and commercialising technologies at the forefront of science and bringing innovation from the ideation phase to life changing medical solutions.</p>
                     </div>
@@ -99,7 +100,7 @@ export default function About() {
                 <div className={styles.timelineSection}>
                     <div className={styles.timelineHeader}>
                         <div className={styles.badge}>
-                            <SectionBadge>Our Story</SectionBadge>
+                            <SectionBadge><PiBookOpenTextFill />Our Story</SectionBadge>
                         </div>
                         <div className={styles.title}>
                             From Vision to Reality
