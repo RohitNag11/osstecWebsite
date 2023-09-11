@@ -33,7 +33,7 @@ function CardContent({ data, index, setInViewIndex }) {
                         background: `linear-gradient(to bottom, ${data.stylesConfig.primaryColor} 20%, rgba(0,0,0,0) 100%)`
                     }}
                 />
-                <CoverImage src={data.image} alt={data.title} placeholderColor={data.stylesConfig.primaryColor} />
+                <CoverImage src={data.image} alt={data.title} placeholderColor={data.stylesConfig.primaryColor} borderRadius='0 0 0 0' />
 
             </div>
             {/* <div className={styles.description}>
