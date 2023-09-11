@@ -22,6 +22,7 @@
     transform-origin: top center;
     transition: scale var(--speed-extra-slow);
     overflow: hidden;
+    backdrop-filter: blur(100px);
 
     .cardContent {
         display: flex;

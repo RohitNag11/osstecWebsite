@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react'
 import styles from './StickySwiper.module.scss'
 import { useInView } from 'react-intersection-observer';
-import Image from 'next/image';
 import { CoverImage } from '@/components/imageComponents';
 
 // const parser = new DOMParser();
@@ -96,7 +95,7 @@ export default function StickySwiper({ data, headerRef, cardGapRem = 1.5, bottom
                             height: cardHeights[index],
                             scrollMarginTop: cardTops[index],
                             margin: `${index == 0 ? 0 : 20}rem ${bottomMarginRem}rem 0 ${bottomMarginRem}rem`,
-                            backgroundColor: itemData.stylesConfig.primaryColor,
+                            backgroundColor: `${itemData.stylesConfig.primaryColor}80`,
                             ...getCardDynamicStyle(index)
                         }}
                     >
