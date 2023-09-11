@@ -78,13 +78,13 @@ export default function Home() {
       </div> */}
       <div className={styles.heroSection}>
         <div className={styles.heroImageContainer}>
-          {/* <Image src="/images/general/lattice_structure_blue.png" alt="OSSTEC Hero Image" layout="fill" objectFit="cover" /> */}
-          {/* <CoverImage
-            src="/images/general/lattice_structure_blue.png"
+          <Image
+            // src="/images/general/lattice_structure_blue.png"
+            src="/images/general/lattice_structure_bg_2_blue-2.jpg"
             alt="OSSTEC Hero Image"
-            placeholderColor='#222c42'
-            shimmerPlaceholder={false}
-            borderRadius='0 0 var(--radius-extra-large) var(--radius-extra-large)' /> */}
+            layout="fill"
+            objectFit="cover" />
+          <div className={styles.overlay} />
         </div>
         <div className={styles.center}>
           <div className={styles.logo}>
@@ -137,11 +137,11 @@ export default function Home() {
           <h2>Clinical Needs & <br /> Future of Knee Implants</h2>
           <div className={styles.imageContainer}>
             <div className={styles.text}>
-              <p>“Cementless Unicompartmental knee replacement has advantages over cemented techniques with improved workflows, survival and clinical outcomes. OSSTEC&apos;s stiffness-matched 3D printing technology is an exciting new development in this area that promises cementless UKA with minimal bone resections and reduced risks associated with stress shielding.”
+              <p>“More and more patients require partial knee replacements, and it is critical to achieve a solution that can maintain bone quality to allow patients to continue living active, happy lives”
                 <br /><br />
                 - Mr. Alex Liddle, DPhil FRCS(Orth)</p>
             </div>
-            <CoverImage src="/images/general/surgery.jpg" alt="Alex Liddle" style={{ boxShadow: 'var(--shadow-high)' }} />
+            <CoverImage src="/images/headshots/AL.jpg" alt="Alex Liddle" style={{ boxShadow: 'var(--shadow-high)' }} />
           </div>
         </div>
         <div className={styles.grid}>

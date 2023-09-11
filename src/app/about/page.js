@@ -65,7 +65,7 @@ export default function About() {
 
                     <div className={styles.imageContainer}>
                         {/* <Image src='/images/general/team2.png' alt='OSSTEC team' layout='fill' objectFit='cover' /> */}
-                        <CoverImage src='/images/general/team2.png' alt='OSSTEC team' />
+                        <CoverImage src='/images/general/team.jpeg' alt='OSSTEC team' />
                     </div>
                     <div className={styles.title}>
                         <h1>About Us</h1>

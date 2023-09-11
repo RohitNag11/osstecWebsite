@@ -34,11 +34,11 @@ export default function FreeSwiper({ data = [1, 2, 3, 4, 5, 6, 7], mobile = fals
             wrapperClass={styles.swiperWrapper}
             slideClass={styles.swiperSlide}
             direction='horizontal'
-            autoplay={{
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-                // delay: 0,
-            }}
+            // autoplay={{
+            //     disableOnInteraction: false,
+            //     pauseOnMouseEnter: true,
+            //     // delay: 0,
+            // }}
             onSwiper={(swiper) => {
                 setSwiper(swiper)
             }}
@@ -57,25 +57,7 @@ export default function FreeSwiper({ data = [1, 2, 3, 4, 5, 6, 7], mobile = fals
                 return (
                     <SwiperSlide
                         key={index}
-                        style={{
-                            // maxWidth: '100%',
-                            // height: '50vh'
-                            // borderRadius: 'var(--radius-extra-large)',
-                            // overflow: 'hidden',
-                            // // boxShadow: 'var(--shadow-high)',
-                            // background: 'var(--color-glass)',
-                            // backdropFilter: 'blur(10px)',
-                            // width: '300px',
-                        }}
                     >
-                        {/* {parallax ?
-                            <ParallaxSlideCard
-                                slideData={itemData}
-                            /> :
-                            <SlideCard
-                                slideData={itemData}
-                            />
-                        } */}
                         <UpdateCard {...itemData} />
                     </SwiperSlide>
                 )
