@@ -223,7 +223,7 @@ export default function Home() {
           <div className={styles.sectionBadge}>
             <SectionBadge>Partners</SectionBadge>
           </div>
-          <div className={styles.title}>Unity in Motion</div>
+          {/* <div className={styles.title}>Unity in Motion</div> */}
           <div className={styles.description}>
             We are collaborating with the UK&apos;s leading medical institutions and organisations to develop the next generation of orthopaedic implants.
           </div>
