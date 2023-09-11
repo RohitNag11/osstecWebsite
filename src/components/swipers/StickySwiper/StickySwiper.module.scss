@@ -72,7 +72,7 @@
 
 @media (max-width: 600px) {
     .card {
-        // padding: 0;
+        padding: calc(0.8*var(--radius-extra-large));
 
         .cardContent {
 
@@ -102,6 +102,8 @@
 
             .description {
                 z-index: 2;
+                font-size: 1rem;
+                line-height: 1.3rem;
             }
 
         }

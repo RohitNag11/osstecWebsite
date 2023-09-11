@@ -1,6 +1,6 @@
 .event {
     padding: 0 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     position: relative;
     width: 50%;
     color: var(--color-text-primary);
@@ -105,7 +105,7 @@
 
 @media (max-width: 700px) {
     .event {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
 
         .title {
             font-size: 1rem;

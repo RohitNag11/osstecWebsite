@@ -29,7 +29,7 @@ function CardContent({ data, index, setInViewIndex }) {
                 <div
                     className={styles.overlay}
                     style={{
-                        background: `linear-gradient(to bottom, ${data.stylesConfig.primaryColor} 20%, rgba(0,0,0,0) 100%)`
+                        background: `linear-gradient(to bottom, ${data.stylesConfig.primaryColor} 40%, rgba(0,0,0,0) 100%)`,
                     }}
                 />
                 <CoverImage src={data.image} alt={data.title} placeholderColor={data.stylesConfig.primaryColor} borderRadius='0 0 0 0' />
@@ -41,6 +41,9 @@ function CardContent({ data, index, setInViewIndex }) {
             <div
                 className={styles.description}
                 dangerouslySetInnerHTML={{ __html: data.description }}
+                style={{
+                    textShadow: `0 0 10px ${data.stylesConfig.primaryColor}`,
+                }}
             />
         </div>
     )

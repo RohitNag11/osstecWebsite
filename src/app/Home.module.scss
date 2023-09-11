@@ -564,8 +564,17 @@
 
     .innovationSection {
       .header {
-        padding: 4.5rem 1rem 1rem 1rem;
-        gap: 1rem;
+        padding: 4rem 1rem 0.5rem 1rem;
+        gap: 0.5rem;
+
+        .title {
+          span {
+            &.primary {
+              font-size: var(--font-size-large);
+              line-height: var(--line-height-large);
+            }
+          }
+        }
 
         .cardControlButtons {
           gap: 0.5rem;
