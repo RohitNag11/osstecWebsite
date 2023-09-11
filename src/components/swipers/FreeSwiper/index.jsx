@@ -13,21 +13,7 @@ import { UpdateCard } from '@/components/cards';
 // import { SwiperControls } from '..';
 
 export default function FreeSwiper({ data = [1, 2, 3, 4, 5, 6, 7], mobile = false, tablet = false, defaultSlidesPerView = 2, setSwiper = null, setSwiperIsBeginning = null, setSwiperIsEnd = null }) {
-    const [curIndex, setCurIndex] = useState(0);
-
-    useEffect(() => {
-        if (curIndex == 0) {
-            setSwiperIsBeginning(true);
-        }
-        else if (curIndex == data.length - 1) {
-            setSwiperIsEnd(true);
-        }
-        else {
-            setSwiperIsBeginning(false);
-            setSwiperIsEnd(false);
-        }
-    }
-        , [curIndex, setSwiperIsBeginning, setSwiperIsEnd, data.length]);
+    // const [curIndex, setCurIndex] = useState(0);
 
     const slidesPerView = tablet || mobile ? 1 : defaultSlidesPerView;
 
@@ -48,9 +34,6 @@ export default function FreeSwiper({ data = [1, 2, 3, 4, 5, 6, 7], mobile = fals
             wrapperClass={styles.swiperWrapper}
             slideClass={styles.swiperSlide}
             direction='horizontal'
-            onSlideChange={(swiper) => {
-                setCurIndex(swiper.activeIndex)
-            }}
             autoplay={{
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
@@ -59,6 +42,10 @@ export default function FreeSwiper({ data = [1, 2, 3, 4, 5, 6, 7], mobile = fals
             onSwiper={(swiper) => {
                 setSwiper(swiper)
             }}
+            onSlideChange={(swiper) => {
+                !swiper.isBeginning && setSwiperIsBeginning(false)
+                !swiper.isEnd && setSwiperIsEnd(false)
+            }}
             onReachBeginning={() => {
                 setSwiperIsBeginning(true)
             }}
@@ -66,12 +53,6 @@ export default function FreeSwiper({ data = [1, 2, 3, 4, 5, 6, 7], mobile = fals
                 setSwiperIsEnd(true)
             }}
         >
-            {/* <SwiperControls
-                slidesPerView={mobile ? 1.1 : defaultSlidesPerView}
-                allowSlideNext={allowSlideNext}
-                allowSlidePrev={allowSlidePrev}
-                topPosition={parallax ? '40%' : '50%'}
-            /> */}
             {data.map((itemData, index) => {
                 return (
                     <SwiperSlide

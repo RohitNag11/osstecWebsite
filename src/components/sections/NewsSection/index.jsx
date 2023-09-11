@@ -9,8 +9,6 @@ export function NewsSection({ data, mobile = false, tablet = false }) {
     const [swiperIsEnd, setSwiperIsEnd] = useState(false);
     const [swiperIsBeginning, setSwiperIsBeginning] = useState(true);
 
-    console.log(swiper)
-
     return (
         <div className={styles.newsSection}>
             <div className={styles.header}>
