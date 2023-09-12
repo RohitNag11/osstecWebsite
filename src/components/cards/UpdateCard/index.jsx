@@ -1,5 +1,6 @@
 import styles from './UpdateCard.module.scss';
 import { CoverImage } from '@/components/imageComponents';
+import { PiArrowSquareOutBold } from 'react-icons/pi';
 
 function UpdateCardContent({ title, date, description, type, tags, image = null, link = null, ...props }) {
     return (
@@ -18,8 +19,10 @@ function UpdateCardContent({ title, date, description, type, tags, image = null,
                     </div>
                     <div className={styles.right}>
                         {link && <div className={styles.link}>
-                            <div className={styles.text}>Read more</div>
-                            <div className={styles.arrow}>&rarr;</div>
+                            <div className={styles.text}>read more</div>
+                            <div className={styles.arrow}>
+                                <PiArrowSquareOutBold />
+                            </div>
                         </div>}
                     </div>
                 </div>

@@ -47,13 +47,13 @@
             color: rgb(255, 255, 255);
             transition: color var(--speed-slow);
             display: flex;
-            gap: 0.5rem;
+            // gap: 0.5rem;
             text-shadow: var(--shadow-medium);
             border-radius: var(--radius-extra-large);
 
             .arrow {
                 transform: rotate(0deg);
-                transition: transform var(--speed-slow), color var(--speed-slow);
+                transition: transform var(--speed-slow), color var(--speed-slow), filter var(--speed-slow);
                 background-color: rgb(52, 59, 70);
                 border-radius: var(--radius-extra-large);
                 height: 2rem;
@@ -61,18 +61,20 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                filter: none;
             }
 
             .text {
                 transform: translateX(100%);
                 opacity: 0;
                 transition: transform var(--speed-slow), opacity var(--speed-slow), color var(--speed-slow);
-                padding: 1rem;
+                padding: 0.3rem 0.6rem;
                 padding-right: 0;
                 height: 2rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                font-size: 0.8rem;
             }
         }
     }
@@ -130,11 +132,12 @@
             }
 
             .openPopUpButton {
-                color: rgb(199, 218, 255);
+                color: var(--color-accent-tertiary);
                 background-color: rgb(52, 59, 70);
 
                 .arrow {
-                    transform: rotate(-45deg);
+                    transform: rotate(-90deg);
+                    // filter: drop-shadow(var(--shadow-glow-medium))
                 }
 
                 .text {

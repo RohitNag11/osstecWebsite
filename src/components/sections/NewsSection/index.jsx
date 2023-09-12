@@ -3,7 +3,7 @@ import styles from './NewsSection.module.scss';
 import { SectionBadge } from '@/components/badges';
 import { FreeSwiper } from '@/components/swipers';
 import { useState } from 'react';
-import { PiNewspaperClippingFill } from 'react-icons/pi';
+import { PiNewspaperClippingFill, PiCaretRightBold, PiCaretLeftBold } from 'react-icons/pi';
 
 export function NewsSection({ data, mobile = false, tablet = false }) {
     const [swiper, setSwiper] = useState(null);
@@ -26,20 +26,24 @@ export function NewsSection({ data, mobile = false, tablet = false }) {
                     </div>
                     <div className={styles.controlsContainer}>
                         <div
-                            className={[styles.button, swiperIsBeginning && styles.disabled].join(' ')}
+                            className={[styles.button,
+                            styles.prevButton,
+                            swiperIsBeginning && styles.disabled].join(' ')}
                             onClick={() => {
                                 swiper.slidePrev()
                             }}
                         >
-                            &larr;
+                            <PiCaretLeftBold />
                         </div>
                         <div
-                            className={[styles.button, swiperIsEnd && styles.disabled].join(' ')}
+                            className={[styles.button,
+                            styles.nextButton,
+                            swiperIsEnd && styles.disabled].join(' ')}
                             onClick={() => {
                                 swiper.slideNext()
                             }}
                         >
-                            &rarr;
+                            <PiCaretRightBold />
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import styles from './StatDetailCard.module.scss'
 import { CountUp } from 'use-count-up';
 import { useInView } from 'react-intersection-observer';
+import { PiArrowUpBold, PiArrowDownBold } from 'react-icons/pi';
 
 export default function StatDetailCard({ title, value, decimalPlaces, unit, description, isProblem, duration = 2, arrow = null, ...props }) {
 
@@ -11,7 +12,7 @@ export default function StatDetailCard({ title, value, decimalPlaces, unit, desc
     const numericalValue = parseFloat(formattedValue);
     const suffix = formattedValue.replace(numericalValue, '');
 
-    const arrowString = arrow ? arrow === 'up' ? '↑' : '↓' : null;
+    const arrowString = arrow ? arrow === 'up' ? <PiArrowUpBold /> : <PiArrowDownBold /> : null;
 
     const [inViewRef, inView] = useInView({
         threshold: 0.1,

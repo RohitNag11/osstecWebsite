@@ -1,5 +1,6 @@
 import styles from './PersonCard.module.scss'
 import { CoverImage } from '@/components/imageComponents';
+import { PiArrowsOutBold } from 'react-icons/pi';
 
 export default function PersonCard({ mobile, name, position, shortSummary, longSummary, linkedin, image, ...props }) {
     return (
@@ -11,7 +12,7 @@ export default function PersonCard({ mobile, name, position, shortSummary, longS
                 </div>}
                 <div className={styles.openPopUpButton}>
                     <div className={styles.text}>read more</div>
-                    <div className={styles.arrow}>&rarr;</div>
+                    <div className={styles.arrow}><PiArrowsOutBold /></div>
                 </div>
             </div>
             <div className={styles.description}>
