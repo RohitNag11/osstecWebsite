@@ -8,8 +8,8 @@ import { useState, useEffect } from 'react'
 import { GeneralPopup } from '@/components/popups'
 import { CoverImage } from '@/components/imageComponents'
 import { Timeline } from '@/components/misc'
-import { PiUsersThreeFill, PiBookOpenTextFill } from 'react-icons/pi'
-
+import { PiUsersThreeFill, PiCalendarCheckFill } from 'react-icons/pi'
+import { PublicationsSection } from '@/components/sections'
 
 export default function About() {
     const [showPopup, setShowPopup] = useState(false);
@@ -100,7 +100,7 @@ export default function About() {
                 <div className={styles.timelineSection}>
                     <div className={styles.timelineHeader}>
                         <div className={styles.badge}>
-                            <SectionBadge><PiBookOpenTextFill />Our Story</SectionBadge>
+                            <SectionBadge><PiCalendarCheckFill />Our Story</SectionBadge>
                         </div>
                         <div className={styles.title}>
                             From Vision to Reality
@@ -113,6 +113,7 @@ export default function About() {
                         events={timelineData}
                     />
                 </div>
+                <PublicationsSection />
             </main>
         </>
     )

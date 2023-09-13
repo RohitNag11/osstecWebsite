@@ -64,6 +64,7 @@
                 display: flex;
                 gap: 0.5rem;
                 justify-content: flex-start;
+                flex-wrap: wrap;
 
                 .date {
                     font-size: 0.8rem;
@@ -89,12 +90,26 @@
                     padding: 0.3rem 0.8rem;
                     justify-content: center;
                 }
+
+                .featured {
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    color: rgb(255, 255, 255);
+                    border-radius: var(--radius-extra-large);
+                    background-color: #200a3743;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.3rem 0.8rem;
+                    gap: 1ch;
+                }
             }
 
             .right {
                 display: flex;
                 gap: 0.5rem;
                 justify-content: flex-end;
+                align-items: flex-start;
 
                 .link {
                     color: var(--color-text-secondary);

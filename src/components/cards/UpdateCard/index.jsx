@@ -1,8 +1,12 @@
 import styles from './UpdateCard.module.scss';
 import { CoverImage } from '@/components/imageComponents';
-import { PiArrowSquareOutBold } from 'react-icons/pi';
+import { PiArrowSquareOutBold, PiSparkleFill } from 'react-icons/pi';
 
-function UpdateCardContent({ title, date, description, type, tags, image = null, link = null, ...props }) {
+function UpdateCardContent({ title, date, description, type, tags, image = null, link = null, featured = false, ...props }) {
+    const dateString = date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+    });
     return (
         <>
             {image && <div className={styles.imageContainer}>
@@ -14,8 +18,12 @@ function UpdateCardContent({ title, date, description, type, tags, image = null,
             <div className={styles.content}>
                 <div className={styles.header}>
                     <div className={styles.left}>
-                        <div className={styles.date}>{date}</div>
+                        <div className={styles.date}>{dateString}</div>
                         {type && <div className={styles.type}>{type}</div>}
+                        {featured && <div className={styles.featured}>
+                            <PiSparkleFill />
+                            latest
+                        </div>}
                     </div>
                     <div className={styles.right}>
                         {link && <div className={styles.link}>
@@ -33,7 +41,7 @@ function UpdateCardContent({ title, date, description, type, tags, image = null,
     )
 }
 
-export default function UpdateCard({ title, date, description, type, tags, image = null, link = null, ...props }) {
+export default function UpdateCard({ title, date, description, type, tags, image = null, link = null, featured = false, ...props }) {
     if (link) {
         return (
             <a
@@ -49,6 +57,7 @@ export default function UpdateCard({ title, date, description, type, tags, image
                     tags={tags}
                     image={image}
                     link={link}
+                    featured={featured}
                 />
             </a>
         )
@@ -62,6 +71,7 @@ export default function UpdateCard({ title, date, description, type, tags, image
                     type={type}
                     tags={tags}
                     image={image}
+                    featured={featured}
                 />
             </div>
         )

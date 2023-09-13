@@ -15,8 +15,8 @@ export const pagesData = [
         link: "/about"
     },
     // {
-    //     title: "Contact",
+    //     title: "Publications",
     //     description: "",
-    //     link: "/contact"
+    //     link: "/publications"
     // },
 ]

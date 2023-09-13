@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import styles from './GeneralPopup.module.scss';
+import { PiXBold } from 'react-icons/pi';
 
 export function GeneralPopup({ isOpen, onClose, children }) {
 
@@ -43,7 +44,7 @@ export function GeneralPopup({ isOpen, onClose, children }) {
                     onMouseEnter={() => setCloseHovered(true)}
                     onMouseLeave={() => setCloseHovered(false)}
                 >
-                    &#9587;
+                    <PiXBold />
                 </div>
             </div>
         </div>

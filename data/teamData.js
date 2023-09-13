@@ -50,8 +50,8 @@ export const teamData = [
     {
         name: "Frederik Masure",
         position: "R&D Engineer",
-        shortSummary: "Frederik joined as the first employee of OSSTEC after completion of his Masters of Mechanical Engineering at Imperial College London, where he worked for the company in his final year project. Working as an R&D Engineer at OSSTEC, he is mainly focused on the design of the implants.",
-        longSummary: "to do...",
+        shortSummary: "Frederik joined as the first employee of OSSTEC after completion of his Masters of Mechanical Engineering at Imperial College London, where he worked on designing the first tibial implants for the company in his final year project. Working as an R&D Engineer at OSSTEC, he is mainly focused on designing the implants.",
+        longSummary: "Frederik completed his Masters of Mechanical Engineering at Imperial College London, where he spent his final year project working on optimising the strength of additively manufactured tibial partial knee implants with OSSTEC. With a longstanding interest in design and medical engineering, Frederik's work at OSSTEC involves the design and development of the tibial and femoral implants. Through his own passion for sports, the outdoors and being active, Frederik is driven to create devices that will allow people to live the active lives they want after suffering from osteoarthritis.",
         linkedin: "https://www.linkedin.com/in/frederik-masure-a97415173/",
         image: "/images/headshots/FM.jpg"
     },

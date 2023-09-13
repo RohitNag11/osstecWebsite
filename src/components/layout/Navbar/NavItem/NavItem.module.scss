@@ -11,22 +11,26 @@
     .text {
         font-size: 0.8rem;
         color: var(--color-text-primary);
-        transition: color var(--speed-slow);
+        transition: color var(--speed-slow), text-shadow var(--speed-slow);
+        text-shadow: 0 0 25px #ffffff;
+        font-weight: 500;
     }
 
     &:hover {
-        background-color: var(--color-accent-glass);
+        background-color: var(--color-accent-primary);
 
         .text {
-            color: white;
+            color: var(--color-accent-tertiary);
+            text-shadow: none;
         }
     }
 
     &.active {
-        background-color: var(--color-accent-secondary);
+        background-color: var(--color-accent-primary);
 
         .text {
             color: white;
+            text-shadow: none;
         }
     }
 }

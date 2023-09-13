@@ -3,17 +3,33 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
+    cursor: pointer;
+    filter: none;
 
     span {
         font-size: 1rem;
         font-weight: 600;
         color: #154062;
         margin-left: 0.5rem;
+        text-shadow: 0 0 20px #ffffff;
+
     }
 
     .imageContainer {
         height: 100%;
         aspect-ratio: var(--logo-aspect);
         position: relative;
+        filter: drop-shadow(0 0 20px #ffffff);
+        overflow: visible;
+    }
+}
+
+@media (max-width: 600px) {
+    .logoContainer {
+        margin-left: 0.5rem;
+
+        span {
+            display: none;
+        }
     }
 }

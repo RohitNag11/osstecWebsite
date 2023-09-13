@@ -31,8 +31,9 @@ const Timeline = ({ events }) => {
         <div
             ref={timelineRef}
             className={styles.timeline}
-            style={{ '--progress-height': `${progressHeight}px` }}
+        // style={{ '--progress-height': `${progressHeight}px` }}
         >
+            <div className={styles.timelineProgress} style={{ height: `${progressHeight}px` }} />
             <div className={styles.stickyLabel}>
                 <div className={styles.sideLabels}>
 

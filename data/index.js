@@ -8,6 +8,7 @@ import { clinicalNeedsData } from "./clinicalNeedsData";
 import { timelineData } from "./timelineData";
 import { fundingData } from "./fundingData";
 import { newsData } from "./newsData";
+import { publicationsData } from "./publicationsData";
 
 export {
     aboutData,
@@ -19,5 +20,6 @@ export {
     clinicalNeedsData,
     timelineData,
     fundingData,
-    newsData
+    newsData,
+    publicationsData
 };

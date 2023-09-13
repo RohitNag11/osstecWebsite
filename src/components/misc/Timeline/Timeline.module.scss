@@ -7,16 +7,16 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 10rem;
 
-    &::before {
+    .timelineProgress {
         content: '';
         position: absolute;
         width: var(--timeline-width);
         background-color: var(--color-text-primary);
         background: linear-gradient(to bottom, #00000000, var(--color-text-primary));
         top: 0;
-        height: var(--progress-height);
+        // height: var(--progress-height);
+        transition: height 0.1s ease-out;
         // height: 10vh;
         /* 50vh for the stickyYear top position */
         left: 50%;

@@ -248,7 +248,7 @@ export default function Home() {
         </div>
         <FundingSection data={fundingData} />
       </div>
-      <NewsSection data={newsData} mobile={mobile} tablet={tablet} />
+      <NewsSection data={newsData.sort((a, b) => b.date - a.date)} mobile={mobile} tablet={tablet} />
     </main>
 
   )

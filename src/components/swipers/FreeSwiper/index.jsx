@@ -43,7 +43,7 @@ export default function FreeSwiper({ data = [1, 2, 3, 4, 5, 6, 7], mobile = fals
                     <SwiperSlide
                         key={index}
                     >
-                        <UpdateCard {...itemData} />
+                        <UpdateCard featured={index == 0} {...itemData} />
                     </SwiperSlide>
                 )
             })}
