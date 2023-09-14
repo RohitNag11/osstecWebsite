@@ -9,7 +9,7 @@ export const footerData = {
             alt: "OSSTEC logo"
         },
         companyNote: "OSSTEC Ltd is a company registered in England and Wales.",
-        companyNumber: "12345678",
+        companyNumber: "13500695",
         copyrightNote: "© OSSTEC Ltd 2023. All rights reserved.",
         designer: {
             name: "Rohit Nag",
