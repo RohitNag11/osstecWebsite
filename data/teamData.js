@@ -3,7 +3,7 @@ export const teamData = [
         name: "Dr. Maxwell Munford",
         position: "CEO",
         shortSummary: "As OSSTEC's Founder and Chief Executive Officer, Max's role focuses on company vision, strategy and growing OSSTEC's team.\nPrior to founding OSSTEC, Max worked with OSSTEC's founding team to research and develop OSSTEC's underlying technology; biomimetic 3D printed structures for orthopaedics.",
-        longSummary: "Max completed his PhD at Imperial College London, developing biomimetic 3D printing for use in orthopaedics. His research has won awards across the field including places on some of Europe's best venture accelerator programs.\n\nAt OSSTEC, Max is the Founder and Chief Executive Officer. His role focuses on company vision, strategy and growing OSSTEC's team.\n\nMax has a passion for learning, growing the bounds of technology and for delivering impact across MedTech. These interests align perfectly with OSSTEC's values, so leading such a company is a previlege for him.",
+        longSummary: "At OSSTEC, Max is the Founder and Chief Executive Officer. His role focuses on company vision, strategy and growing OSSTEC's team. Max has a passion for learning, growing the bounds of technology and for delivering impact across MedTech. These interests align perfectly with OSSTEC's values, so leading such a company is a previlege for him. Max completed his PhD at Imperial College London, developing biomimetic 3D printing for use in orthopaedics. His research has won awards across the field including places on some of Europe's best venture accelerator programs.",
         linkedin: "https://www.linkedin.com/in/mjmunford/",
         image: "/images/headshots/MM.png"
     },
@@ -11,15 +11,15 @@ export const teamData = [
         name: "Prof. Jonathan Jeffers",
         position: "CTO",
         shortSummary: "JJ is the Chief Technical Officer at OSSTEC where he is responsible for technology strategy, new product developemt, R&D and risk management. He was previously a R&D Engineer at Finsbury Orthopaedics and Founder/Director of Additive Instruments.",
-        longSummary: "to do...",
+        longSummary: "JJ's pioneering career spans the full scope of orthopaedic engineering, from R&D Engineer to NIHR Professor to successful startup founder. Prior to his role at OSSTEC, JJ co-founded Additive Instruments, a company specialising in battery-powered surgical tools. His past work includes contributions to the Embody Orthopaedic ceramic hip resurfacing design team, known for its exceptional 5-year follow-up results. His career bridges industry and academia, initially inspired by his tenure at Finsbury Orthopaedics. JJ leads Imperial COllege London's Biomechanics Research Group, driving research to enhance osteoarthritis surgical methods and is Enterprise Champion for MedTech.",
         linkedin: "https://www.linkedin.com/in/jonathan-jeffers-18819928/",
         image: "/images/headshots/JJ2.jpg"
     },
     {
         name: "Mr. Alex Liddle",
         position: "CCO",
-        shortSummary: "to do...",
-        longSummary: "to do...",
+        shortSummary: "Alex is the Chief Clinical Officer at OSSTEC where he leads on clinical design, ensuring that OSSTEC's products are designed with patient needs and surgeon usability at their heart. Alex is a consultant orthopaedic surgeon, internationally renowned for his expertise in partial knee replacement, and a leading researcher in orthopaedics.",
+        longSummary: "Alex is a Consultant Orthopaedic Surgeon specialising in knee and hip surgery at King Edward VII's Hospital and other London hospitals. He also holds academic positions as a Senior Lecturer in Orthopaedic Surgery at Imperial College and an Honorary Associate Professor at University College London. Mr. Liddle completed his orthopaedic training in the Imperial and Stanmore schemes, followed by a DPhil (PhD) at the University of Oxford. He's a leading researcher in orthopaedics, focusing on technology and big data to improve joint replacement outcomes. He's renowned for his expertise in partial knee replacement and has international recognition in this field.",
         linkedin: "https://www.linkedin.com/in/alexdliddle/",
         image: "/images/headshots/AL.jpg"
     },
@@ -58,7 +58,7 @@ export const teamData = [
     {
         name: "Hana Fox",
         position: "R&D Engineer",
-        shortSummary: "As an R&D Engineer, Hana's main role is the design and development of the surgical instrumentation.  Bringing design experience from industry and research, Hana was previously an R&D Engineer with DePuy Synthes, and a Test Engineer and Consultant specializing in early-stage medical devices and implants at Imperial College London.",
+        shortSummary: "As R&D Engineer, Hana's main role is the design and development of the surgical instrumentation.  Bringing experience from industry and research, Hana was previously an R&D Engineer with DePuy Synthes, and specialised in early-stage medical devices as a Researcher at Imperial College London.",
         longSummary: "Hana completed her Masters of Biomedical Engineering at Imperial College London, with her Masters project focusing on stress modulation of fracture fixation constructs.  This expertise translated into her work at Imperial developing orthopaedic implants, predominantly using additive manufacuring techniques.  Throughout her time at Imperial College London and DePuy Synthes she has gained experience in both the design of implants and instrumentation across research, start-ups, and industry; covering every stage of medical device development.  With her passion for innovation and healthcare, Hana is driven by successfully delivering new medical technologies to the public.",
         linkedin: "https://www.linkedin.com/in/hana-fox-a44080169/",
         image: "/images/headshots/HF2.jpg"
