@@ -5,9 +5,8 @@ export const clinicalNeedsData = [
             value: 1300000,
             decimalPlaces: 1,
             unit: '',
-            arrow: 'up'
         },
-        description: 'Roughly a third of the global population suffer from musculoskeletal disorders, including OA. OA stands as a predominant factor in mobility impairment, leading to an upsurge in knee replacement surgeries, now tallying at 1.3M annually.',
+        description: '1.3 million people globally receive knee replacement surgery every year, with more and more people being treated younger.',
         isProblem: true,
     },
     {
@@ -17,29 +16,28 @@ export const clinicalNeedsData = [
             decimalPlaces: 0,
             unit: '%'
         },
-        description: 'Current implants induce long-term bone loss from stress shielding. With a 35% failure rate in younger patients, complications arise from bone cement usage. High instances of loosening result in subpar patient outcomes, necessitating revisions by year 7.',
+        description: 'Existing implants see high failure rates in young patients and the leading cause of failure is loosening between the implant and bone.',
         isProblem: true,
     },
     {
-        title: 'Cementless Implants are the future',
-        stat: {
-            value: 25,
-            decimalPlaces: 0,
-            unit: '%',
-            arrow: 'up'
-        },
-        description: '25% growth in patients under 65 in the last 10 years. Cementless knee market growing 24%. 85% of surgeons want to preserve bone with porous implants. Additive manufacturing (3D printing) in orthopaedics is growing 21% year on year. ',
-        isProblem: false,
-    },
-    {
-        title: 'Partial Knee Replacements are better for patients & providers',
+        title: 'Cementless Implants Fail Less',
         stat: {
             value: 50,
             decimalPlaces: 0,
             unit: '%',
-            // arrow: 'up'
+            arrow: 'down'
         },
-        description: 'Partial knee market is seeing significant growth especially in younger patients, allowing improved mobility. 50% of patients are suitable to be treated with partial knee replacements (UKA). UKA is cost effective and ideal for active patients.',
+        description: 'Cementless implants reduce the risk of loosening by 50% and offer long-term biologic fixation without the need for cement in the body.',
+        isProblem: false,
+    },
+    {
+        title: 'Partial Knee Replacements are Better for Patients & Providers',
+        stat: {
+            value: 50,
+            decimalPlaces: 0,
+            unit: '%',
+        },
+        description: '50% of patients are suitable for partial knee replacements, which offer faster recovery and better outcomes for patients and are cost effective.',
         isProblem: false,
     },
 

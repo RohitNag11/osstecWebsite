@@ -141,9 +141,9 @@ export default function Home() {
           <h2>Clinical Needs & <br /> Future of Knee Implants</h2>
           <div className={styles.imageContainer}>
             <div className={styles.text}>
-              <p>“More and more patients require partial knee replacements, and it is critical to achieve a solution that can maintain bone quality to allow patients to continue living active, happy lives”
-                <br /><br />
-                - Mr. Alex Liddle, DPhil FRCS(Orth)</p>
+              <p>“More and more patients require partial knee replacements, and it is critical to achieve a solution that does not loosen and can maintain bone quality to allow patients to continue living active, happy lives.”
+                <br />
+                Mr. Alex Liddle, DPhil FRCS(Orth)</p>
             </div>
             <CoverImage src="/images/headshots/AL.jpg" alt="Alex Liddle" style={{ boxShadow: 'var(--shadow-high)' }} />
           </div>

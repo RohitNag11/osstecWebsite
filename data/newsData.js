@@ -1,7 +1,7 @@
 export const newsData = [
     {
         title: "OSSTEC: Recognized for Excellence in Technological Innovation",
-        date: new Date(2023, 0),
+        date: new Date(2023, 5),
         type: 'update',
         tags: ["Awards", "Innovation"],
         description: "OSSTEC is honored to announce nominations for three prestigious awards by the UK Business Angels Association and EISA. Our gratitude extends to the Royal Academy of Engineering and Innovate UK for their sponsorship. These nominations underscore our team's dedication to technological innovation.",
@@ -19,7 +19,7 @@ export const newsData = [
     },
     {
         title: "OSSTEC's £1.2M Funding Milestone: Paving the Way for MedTech Advancements",
-        date: new Date(2023, 1),
+        date: new Date(2023, 3),
         type: 'news',
         tags: ["Funding", "Innovation"],
         description: "OSSTEC successfully closes an oversubscribed £1.2M funding round, bolstering our journey from lab to operating room with our 3D printing and biomimetic implants. This boost empowers team growth and tech development. Immense gratitude to our investors and supporters, including SFC, Parkwalk Advisors, and Embryo Ventures. More updates soon.",
