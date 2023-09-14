@@ -1,44 +1,107 @@
-.navItem {
-    border-radius: var(--radius-large);
-    padding: 0.5rem 1rem;
-    transition: background-color var(--speed-slow);
-    place-content: center;
-    display: flex;
-    gap: 0.5rem;
-    overflow: hidden;
-    background-color: #00000000;
+.navItemContainer {
+    position: relative;
 
-    .text {
-        font-size: 0.8rem;
-        color: var(--color-text-primary);
-        transition: color var(--speed-slow), text-shadow var(--speed-slow);
-        text-shadow: 0 0 25px #ffffff;
-        font-weight: 500;
+    .navItem {
+        border-radius: var(--radius-large);
+        padding: 0.5rem 1rem;
+        transition: background-color var(--speed-slow);
+        place-content: center;
+        display: flex;
+        gap: 0.5rem;
+        // overflow: hidden;
+        background-color: #00000000;
+
+        .text {
+            font-size: 0.8rem;
+            color: var(--color-text-primary);
+            transition: color var(--speed-slow), text-shadow var(--speed-slow);
+            text-shadow: 0 0 25px #ffffff;
+            font-weight: 500;
+        }
+    }
+
+    .subNavContainer {
+        position: absolute;
+        top: calc(100% - 0.5rem);
+        left: 0;
+        padding-top: 1.4rem;
+
+        .subNav {
+            background-color: var(--color-glass);
+            backdrop-filter: blur(15px);
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-high);
+            z-index: -1;
+            display: none;
+            overflow: hidden;
+
+            .subItem {
+                white-space: nowrap;
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                font-size: 0.9rem;
+                color: var(--color-text-primary);
+                text-shadow: 0 0 25px #ffffff;
+                transition: color var(--speed-slow);
+
+                &:first-child {
+                    padding-top: 0.7rem;
+                }
+
+                &:last-child {
+                    padding-bottom: 0.7rem;
+                }
+
+                &:hover {
+                    background-color: rgba(0, 14, 33, 0.35);
+                    color: white;
+                }
+            }
+        }
     }
 
     &:hover {
-        background-color: var(--color-accent-primary);
 
-        .text {
-            color: var(--color-accent-tertiary);
-            text-shadow: none;
+        .navItem {
+            background-color: var(--color-accent-primary);
+
+            .text {
+                color: var(--color-accent-tertiary);
+                text-shadow: none;
+            }
+
+        }
+
+        .subNavContainer {
+            .subNav {
+                display: flex;
+            }
         }
     }
 
     &.active {
-        background-color: var(--color-accent-primary);
+        .navItem {
+            background-color: var(--color-accent-primary);
 
-        .text {
-            color: white;
-            text-shadow: none;
+            .text {
+                color: white;
+                text-shadow: none;
+            }
         }
     }
 }
 
+
 @media (max-width: 600px) {
-    .navItem {
+
+    .navItemContainer {
 
         &.hiddenInMobile {
+            display: none;
+        }
+
+        .subNavContainer {
             display: none;
         }
     }

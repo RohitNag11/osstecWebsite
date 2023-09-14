@@ -23,7 +23,7 @@ export function CoverImage({
             )}
             <Image
                 src={src}
-                layout="fill"
+                fill
                 objectFit={objectFit}
                 alt={alt}
                 onLoad={() => setLoaded(true)}

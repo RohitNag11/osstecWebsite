@@ -77,7 +77,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <div className={styles.teamSection}>
+                <div className={styles.teamSection} id={'the-team'}>
                     <div className={styles.sideBar}>
                         <SectionBadge><PiUsersThreeFill />The Team</SectionBadge>
                         <h2>Meet the OSSTEC team</h2>
@@ -97,7 +97,7 @@ export default function About() {
                         )}
                     </div>
                 </div>
-                <div className={styles.timelineSection}>
+                <div className={styles.timelineSection} id={'our-story'}>
                     <div className={styles.timelineHeader}>
                         <div className={styles.badge}>
                             <SectionBadge><PiCalendarCheckFill />Our Story</SectionBadge>

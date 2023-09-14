@@ -128,14 +128,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.aboutSection} ref={aboutSectionRef}>
+      <div className={styles.aboutSection} ref={aboutSectionRef} id={"mission"}>
         <HorizontalSwiper
           data={aboutData}
           mobile={mobile}
           defaultSlidesPerView={1.2}
           cardEffect />
       </div>
-      <div className={styles.clinicalNeedsSection}>
+      <div className={styles.clinicalNeedsSection} id={"why-osstec"}>
         <div className={styles.sideBar}>
           <SectionBadge><PiHandHeartFill /> Why OSSTEC</SectionBadge>
           <h2>Clinical Needs & <br /> Future of Knee Implants</h2>
@@ -163,7 +163,7 @@ export default function Home() {
           )}
         </div>
       </div>
-      <div className={styles.technologySectionBadge}>
+      <div className={styles.technologySectionBadge} id={"our-technology"}>
         <SectionBadge><PiLightbulbFilamentFill /> Our Technology</SectionBadge>
       </div>
       <div className={styles.innovationSection} ref={innovationSecInViewRef}>
@@ -181,27 +181,17 @@ export default function Home() {
           <div className={styles.cardControlButtons}>
             {innovationData.map((item, index) => {
               return (
-                // <div
-                //   key={index}
-                //   className={styles.cardControlButton}
-                //   onClick={() => {
-                //     invCardsRefs[index].current.scrollIntoView({
-                //       behavior: "smooth",
-                //     });
-                //   }}
-                // >
-                //   {item.title}
-                // </div>
                 <TagButton
                   key={index}
                   active={index === inViewInvCardIndex}
-                  clickable={index > inViewInvCardIndex}
                   color={item.stylesConfig.primaryColor}
-                  onClick={() => {
-                    invCardsRefs[index].current.scrollIntoView({
-                      behavior: "smooth",
-                    });
-                  }}
+                  // clickable={index > inViewInvCardIndex}
+                  // onClick={() => {
+                  //   invCardsRefs[index].current.scrollIntoView({
+                  //     behavior: "smooth",
+                  //   });
+                  // }}
+                  clickable={false}
                 >
                   {item.title}
                 </TagButton>
@@ -221,7 +211,7 @@ export default function Home() {
           cardGapRem={mobile ? 1 : 1.5}
         />
       </div>
-      <div className={styles.highlightsSection} ref={highlightsSecInViewRef}>
+      <div className={styles.highlightsSection} ref={highlightsSecInViewRef} id={'partners-funding'}>
         <div className={styles.header}>
 
           <div className={styles.sectionBadge}>

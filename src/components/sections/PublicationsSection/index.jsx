@@ -53,7 +53,7 @@ export default function PublicationsSection({ publicationsData }) {
     };
 
     return (
-        <div className={styles.publicationsSection}>
+        <div className={styles.publicationsSection} id={'publications'}>
             <div className={styles.header}>
                 <div className={styles.badge}>
                     <SectionBadge><PiBookOpenTextFill />Publications</SectionBadge>

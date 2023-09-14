@@ -40,6 +40,7 @@ export default function Navbar() {
                                         title={page.title}
                                         // hiddenInMobile={page.link == '/'}
                                         active={pathname == page.link}
+                                        subpages={page.subpages}
                                     />
                                 </div>
                             )

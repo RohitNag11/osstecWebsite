@@ -11,7 +11,7 @@ export function NewsSection({ data, mobile = false, tablet = false }) {
     const [swiperIsBeginning, setSwiperIsBeginning] = useState(true);
 
     return (
-        <div className={styles.newsSection}>
+        <div className={styles.newsSection} id={'news'}>
             <div className={styles.header}>
                 <SectionBadge><PiNewspaperClippingFill />News & Updates</SectionBadge>
             </div>
