@@ -66,42 +66,31 @@
                 justify-content: flex-start;
                 flex-wrap: wrap;
 
-                .date {
+                div {
                     font-size: 0.8rem;
                     font-weight: 400;
-                    color: var(--color-text-primary);
                     border-radius: var(--radius-extra-large);
-                    background-color: #00000020;
                     display: flex;
                     align-items: center;
                     padding: 0.3rem 0.8rem;
                     justify-content: center;
                     white-space: nowrap;
-                }
-
-                .type {
-                    font-size: 0.8rem;
-                    font-weight: 400;
-                    color: white;
-                    border-radius: var(--radius-extra-large);
-                    background-color: #12415a4c;
-                    display: flex;
-                    align-items: center;
-                    padding: 0.3rem 0.8rem;
-                    justify-content: center;
-                }
-
-                .featured {
-                    font-size: 0.8rem;
-                    font-weight: 400;
-                    color: rgb(255, 255, 255);
-                    border-radius: var(--radius-extra-large);
-                    background-color: #200a3743;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 0.3rem 0.8rem;
                     gap: 1ch;
+
+                    &.date {
+                        color: var(--color-text-primary);
+                        background-color: #00000020;
+                    }
+
+                    &.type {
+                        color: white;
+                        background-color: #12415a4c;
+                    }
+
+                    &.featured {
+                        background-color: #3300ff10;
+                        color: var(--color-accent-secondary);
+                    }
                 }
             }
 
@@ -121,7 +110,7 @@
 
                     .arrow {
                         transform: rotate(0deg);
-                        transition: color var(--speed-slow), filter var(--speed-slow);
+                        transition: color var(--speed-slow);
                         // background-color: rgba(0, 0, 0, 0.1);
                         border-radius: var(--radius-extra-large);
                         height: 2rem;
@@ -145,6 +134,7 @@
                         justify-content: center;
                         font-size: 0.8rem;
                         font-weight: 400;
+                        white-space: nowrap;
                     }
                 }
             }
@@ -175,11 +165,6 @@
                         color: var(--color-accent-tertiary);
                         background-color: #0a26501e;
 
-                        .arrow {
-                            // transform: rotate(-45deg);
-                            filter: drop-shadow(var(--shadow-glow-medium));
-                        }
-
                         .text {
                             transform: translateX(0);
                             opacity: 1;
@@ -190,44 +175,5 @@
             }
         }
 
-    }
-}
-
-@media (max-width: 600px) {
-    .updateCard {
-        .content {
-            .header {
-                .left {
-                    .date {}
-
-                    .type {}
-                }
-
-                .right {
-                    .link {
-                        // color: rgb(199, 218, 255);
-                        // background-color: rgb(52, 59, 70);
-
-                        .arrow {
-                            // transform: rotate(-45deg);
-                        }
-
-                        .text {
-                            display: none;
-                        }
-
-                        // .text {
-                        //     transform: translateX(0);
-                        //     opacity: 1;
-                        // }
-
-                    }
-                }
-            }
-
-            .title {}
-
-            .description {}
-        }
     }
 }

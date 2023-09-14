@@ -77,14 +77,10 @@
                     height: 2.5rem;
                     width: 2.5rem;
                     border-radius: var(--radius-extra-large);
-                    // background-color: #0000001e;
                     color: var(--color-accent-secondary);
                     font-size: 1.5rem;
-                    // font-size: var(--font-size-medium);
                     transition: background-color var(--speed-slow),
-                        color var(--speed-slow),
-                        text-shadow var(--speed-slow),
-                        filter var(--speed-slow);
+                        color var(--speed-slow);
 
                     svg {
                         transition: transform var(--speed-slow);
@@ -94,8 +90,6 @@
                     &:hover {
                         background-color: #0a26501e;
                         color: var(--color-accent-tertiary);
-                        text-shadow: var(--shadow-glow-medium);
-                        filter: drop-shadow(var(--shadow-glow-medium));
 
                         &.nextButton {
                             svg {
