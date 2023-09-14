@@ -3,7 +3,7 @@
 import styles from './PublicationsSection.module.scss';
 import { useFilter, useSearch } from '@/hooks';
 import { useEffect, useState } from 'react';
-import { PiBookOpenTextFill } from 'react-icons/pi';
+import { PiBookOpenTextFill, PiCaretDoubleDownBold } from 'react-icons/pi';
 import { SectionBadge } from '@/components/badges';
 import { PublicationCard } from '@/components/cards';
 import { SearchBar } from '@/components/inputs';
@@ -41,6 +41,17 @@ export default function PublicationsSection({ publicationsData }) {
         }
     }, [startDate, endDate]);
 
+    const [resultsToShow, setResultsToShow] = useState(5); // State for results to display
+
+    // Toggles the number of results to show
+    const toggleResults = () => {
+        if (resultsToShow === 5) {
+            setResultsToShow(results.length);
+        } else {
+            setResultsToShow(5);
+        }
+    };
+
     return (
         <div className={styles.publicationsSection}>
             <div className={styles.header}>
@@ -57,42 +68,19 @@ export default function PublicationsSection({ publicationsData }) {
             <div className={styles.content}>
                 <div className={styles.contentHeader}>
                     <div className={styles.filterPane}>
-                        {/* Search bar */}
-                        {/* <input
-                            type="text"
-                            value={query}
-                            onChange={e => setQuery(e.target.value)}
-                            className={styles.searchBar}
-                            placeholder="Search publications..."
-                        /> */}
                         <SearchBar
                             setQuery={setQuery}
                             placeholder='search publications...'
                             forceClear={forceClear}
                             setForceClear={setForceClear}
                         />
-                        {/* Date range selector */}
-                        {/* <div>
-                            <input
-                                type="date"
-                                value={startDate || ''}
-                                onChange={e => setStartDate(e.target.value)}
-                                placeholder="Start Date"
-                            />
-                            <input
-                                type="date"
-                                value={endDate || ''}
-                                onChange={e => setEndDate(e.target.value)}
-                                placeholder="End Date"
-                            />
-                        </div> */}
                         <div className={styles.count}>
-                            Showing {results.length} of {data.length} publications
+                            Showing {Math.min(resultsToShow, results.length)} of {results.length} publications
                         </div>
                     </div>
                 </div>
                 <div className={styles.contentBody}>
-                    {(results.sort((a, b) => b.date - a.date)).map((itemData, index) => {
+                    {((results.sort((a, b) => b.date - a.date)).slice(0, resultsToShow)).map((itemData, index) => {
                         return (
                             <PublicationCard
                                 key={index}
@@ -100,7 +88,7 @@ export default function PublicationsSection({ publicationsData }) {
                             />
                         );
                     })}
-                    <div className={[styles.noResults, results.length == 0 && styles.visible].join(' ')}>
+                    <div className={[styles.noResults, results.length === 0 && styles.visible].join(' ')}>
                         No results found. Please try another search or <span className={styles.clearButton} onClick={
                             () => {
                                 setQuery('');
@@ -112,6 +100,20 @@ export default function PublicationsSection({ publicationsData }) {
                             reset
                         </span> all filters.
                     </div>
+                    {results.length > 5 && (
+                        <div className={styles.showMoreResultsContainer}>
+                            <div
+                                onClick={toggleResults}
+                                className={[styles.showMoreResultsButton, resultsToShow > 5 && styles.active].join(' ')}
+                            >
+                                <PiCaretDoubleDownBold
+                                    className={styles.icon}
+                                />
+                                {resultsToShow === 5 ? 'Show all publications' : 'Show fewer publications'}
+                            </div>
+
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
