@@ -34,8 +34,8 @@ export const teamData = [
     {
         name: "Arron Hughes",
         position: "Senior R&D Engineer",
-        shortSummary: "to do...",
-        longSummary: "to do...",
+        shortSummary: "As Senior R&D Enigneer, Arron's main role is the design & development of the surgical instrumentation and implants. Arron brings over 10 years' experience working as an engineer in various fields of medical devices to the company, including experience of the orthopaedic industry from his time at Depuy Synthes.",
+        longSummary: "With a background in medical device development, and a Masters in Medical Engineering in Leeds, Arron brings a wealth of experience to OSSTEC's team. Having previously worked in orthopaedics on Revision Total Knee Replacement Instrumentation in a large multinational, to working on cardiovascular re-entry devices in a early stage start up, Arron's experience of working within a Medical Device Regulatory framework and delivery of multiple devices to market makes him well placed to ensure the succesful technical development of OSSTEC's partial knee, and to help improve the lives of many patients as possible.",
         linkedin: "https://www.linkedin.com/in/arron-hughes/",
         image: "/images/headshots/AH.jpg"
     },
@@ -59,7 +59,7 @@ export const teamData = [
         name: "Hana Fox",
         position: "R&D Engineer",
         shortSummary: "As an R&D Engineer, Hana's main role is the design and development of the surgical instrumentation.  Bringing design experience from industry and research, Hana was previously an R&D Engineer with DePuy Synthes, and a Test Engineer and Consultant specializing in early-stage medical devices and implants at Imperial College London.",
-        longSummary: "to do...",
+        longSummary: "Hana completed her Masters of Biomedical Engineering at Imperial College London, with her Masters project focusing on stress modulation of fracture fixation constructs.  This expertise translated into her work at Imperial developing orthopaedic implants, predominantly using additive manufacuring techniques.  Throughout her time at Imperial College London and DePuy Synthes she has gained experience in both the design of implants and instrumentation across research, start-ups, and industry; covering every stage of medical device development.  With her passion for innovation and healthcare, Hana is driven by successfully delivering new medical technologies to the public.",
         linkedin: "https://www.linkedin.com/in/hana-fox-a44080169/",
         image: "/images/headshots/HF2.jpg"
     },

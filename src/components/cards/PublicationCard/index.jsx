@@ -11,7 +11,10 @@ function MainContent({ title, authors, date, onlineLinks, expandable, isExpanded
     return (
         <>
             <div className={styles.left}>
-                <div className={styles.date}>{dateString}</div>
+                <div className={styles.leftHeader}>
+                    <div className={styles.date}>{dateString}</div>
+                    {expandable && <div className={styles.type}>multiple papers</div>}
+                </div>
                 <div className={styles.title}>{title}</div>
             </div>
             <div className={styles.right}>

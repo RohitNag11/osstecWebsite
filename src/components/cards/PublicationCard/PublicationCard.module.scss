@@ -48,17 +48,31 @@
                 // transition: color var(--speed-slow);
             }
 
-            .date {
-                font-size: 0.8rem;
-                font-weight: 400;
-                color: var(--color-text-primary);
-                border-radius: var(--radius-extra-large);
-                background-color: #00000010;
+            .leftHeader {
                 display: flex;
-                align-items: center;
-                padding: 0.3rem 0.8rem;
-                justify-content: center;
-                white-space: nowrap;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+
+                div {
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    border-radius: var(--radius-extra-large);
+                    display: flex;
+                    align-items: center;
+                    padding: 0.3rem 0.8rem;
+                    justify-content: center;
+                    white-space: nowrap;
+
+                    &.date {
+                        background-color: #00000010;
+                        color: var(--color-text-primary);
+                    }
+
+                    &.type {
+                        background-color: #3300ff10;
+                        color: var(--color-accent-secondary);
+                    }
+                }
             }
         }
 
