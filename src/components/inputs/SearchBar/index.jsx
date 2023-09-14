@@ -3,7 +3,7 @@ import styles from './SearchBar.module.scss'
 import { useState, useRef, useEffect } from 'react';
 import { PiMagnifyingGlassBold, PiXBold } from 'react-icons/pi';
 
-function SearchBar({ placeholder = 'Search...', setQuery }) {
+function SearchBar({ placeholder = 'Search...', setQuery, forceClear = false, setForceClear }) {
 
     const inputRef = useRef(null)
     const [message, setMessage] = useState('');
@@ -17,6 +17,14 @@ function SearchBar({ placeholder = 'Search...', setQuery }) {
         setMessage('');
         setQuery('');
     };
+
+    useEffect(() => {
+        if (forceClear) {
+            setMessage('');
+            setQuery('');
+            setForceClear(false);
+        }
+    }, [forceClear, setMessage, setQuery, setForceClear]);
 
     return (
         <div className={[styles.searchBar, message ? styles.active : ''].join(' ')}>

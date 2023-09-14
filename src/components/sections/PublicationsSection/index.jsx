@@ -23,6 +23,7 @@ export default function PublicationsSection() {
     // States for date range
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
+    const [forceClear, setForceClear] = useState(false);
 
     useEffect(() => {
         setData(publicationsData);
@@ -65,7 +66,12 @@ export default function PublicationsSection() {
                             className={styles.searchBar}
                             placeholder="Search publications..."
                         /> */}
-                        <SearchBar setQuery={setQuery} placeholder='Search publications...' />
+                        <SearchBar
+                            setQuery={setQuery}
+                            placeholder='search publications...'
+                            forceClear={forceClear}
+                            setForceClear={setForceClear}
+                        />
                         {/* Date range selector */}
                         {/* <div>
                             <input
@@ -101,6 +107,7 @@ export default function PublicationsSection() {
                                 setQuery('');
                                 setStartDate(null);
                                 setEndDate(null);
+                                setForceClear(true);
                             }
                         }>
                             reset
