@@ -84,7 +84,9 @@ export default function Home() {
             src="/images/general/lattice_structure_bg_2_blue-2.jpg"
             alt="OSSTEC Hero Image"
             layout="fill"
-            objectFit="cover" />
+            objectFit="cover"
+            key='heroImage'
+          />
           <div className={styles.overlay} />
         </div>
         <div className={styles.center}>
@@ -94,6 +96,7 @@ export default function Home() {
                 src="/images/icons/logo_without_text_white.png"
                 alt="OSSTEC Logo"
                 fill
+                key='logo'
               />
             </div>
             <div className={styles.text}>
@@ -235,7 +238,8 @@ export default function Home() {
             companyData.map((item, index) => {
               return (
                 <div className={styles.companyLogo} key={index}>
-                  <Image src={item.image} alt={item.name} layout="fill" objectFit="contain" />
+                  <Image src={item.image} alt={item.name} layout="fill" objectFit="contain"
+                    key={'company' + index} />
                   {/* <CoverImage src={item.image} alt={item.name} /> */}
                 </div>
               )

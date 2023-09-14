@@ -27,6 +27,7 @@ export function CoverImage({
                 objectFit={objectFit}
                 alt={alt}
                 onLoad={() => setLoaded(true)}
+                key={src}
             />
         </div>
     );
