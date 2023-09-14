@@ -1,20 +1,21 @@
 import { useState, useEffect } from 'react';
 
-export default function useSearch(initialData = []) {
+export default function useSearch(filteredData = []) {
     const [query, setQuery] = useState('');
-    const [results, setResults] = useState(initialData);
+    const [results, setResults] = useState(filteredData);
 
     useEffect(() => {
         if (query.trim() === '') {
-            setResults(initialData);
+            setResults(filteredData);
             return;
         }
 
-        const filtered = initialData.filter(item =>
-            item.title.includes(query) || item.description.includes(query)
+        const filtered = filteredData.filter(item =>
+            item.title.toLowerCase().includes(query.toLowerCase()) ||
+            (item.description && item.description.toLowerCase().includes(query.toLowerCase()))
         );
         setResults(filtered);
-    }, [query, initialData]);
+    }, [query, filteredData]);
 
     return {
         query,

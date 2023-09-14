@@ -2,42 +2,44 @@
 
 import styles from './PublicationsSection.module.scss';
 import { useFilter, useSearch } from '@/hooks';
+import { useEffect, useState } from 'react';
+import { PiBookOpenTextFill } from 'react-icons/pi';
 import { SectionBadge } from '@/components/badges';
-import { useEffect } from 'react';
-import { PiBookOpenTextFill } from 'react-icons/pi'
 import { PublicationCard } from '@/components/cards';
 import { publicationsData } from '../../../../data';
-
-// const products = [
-//     { id: 1, color: 'red', price: 15, size: 'M', rating: 4.5 },
-//     { id: 2, color: 'blue', price: 25, size: 'L', rating: 3.8 },
-//     { id: 3, color: 'green', price: 18, size: 'S', rating: 4.9 },
-//     { id: 4, color: 'red', price: 45, size: 'XL', rating: 4.0 },
-//     { id: 5, color: 'green', price: 22, size: 'L', rating: 3.5 }
-// ];
+import { SearchBar } from '@/components/inputs';
 
 export default function PublicationsSection() {
     const {
-        data, setData, filteredData, filterData, removeFilter, clearAllFilters, activeFilters
+        data,
+        setData,
+        filteredData,
+        filterData,
+        removeFilter
     } = useFilter();
 
-    const { query, setQuery, results } = useSearch(filteredData);
+    const { query, setQuery, results } = useSearch(filteredData); // Operating on filteredData
+
+    // States for date range
+    const [startDate, setStartDate] = useState(null);
+    const [endDate, setEndDate] = useState(null);
 
     useEffect(() => {
         setData(publicationsData);
     }, []);
 
-    function handleFilter() {
-        filterData({
-            // color: ['red', 'green'],
-            date: { start: new Date(2020, 0), end: new Date(2022, 2) },
-        });
-    }
-
+    // Update activeFilters based on date range changes
     useEffect(() => {
-        console.log('activeFilters', activeFilters);
-        console.log('filteredData', filteredData);
-    }, [activeFilters, filteredData]);
+        const dateFilter = {};
+        if (startDate) dateFilter.start = new Date(startDate);
+        if (endDate) dateFilter.end = new Date(endDate);
+
+        if (startDate || endDate) {
+            filterData({ date: dateFilter });
+        } else {
+            removeFilter('date');
+        }
+    }, [startDate, endDate]);
 
     return (
         <div className={styles.publicationsSection}>
@@ -48,30 +50,64 @@ export default function PublicationsSection() {
                 <div className={styles.title}>
                     Research at OSSTEC
                 </div>
+                <div className={styles.description}>
+                    Years of groundbreaking research at Imperial College London led to the development of the technology driving OSSTEC. Further research studies support the development of the innovative implants we have designed. Explore our publications below.
+                </div>
             </div>
             <div className={styles.content}>
                 <div className={styles.contentHeader}>
                     <div className={styles.filterPane}>
-                        <button
-                            onClick={handleFilter}
-                        >Apply Filters
-                        </button>
-                        <div>
-                            Showing {filteredData.length} of {data.length} publications
+                        {/* Search bar */}
+                        {/* <input
+                            type="text"
+                            value={query}
+                            onChange={e => setQuery(e.target.value)}
+                            className={styles.searchBar}
+                            placeholder="Search publications..."
+                        /> */}
+                        <SearchBar setQuery={setQuery} placeholder='Search publications...' />
+                        {/* Date range selector */}
+                        {/* <div>
+                            <input
+                                type="date"
+                                value={startDate || ''}
+                                onChange={e => setStartDate(e.target.value)}
+                                placeholder="Start Date"
+                            />
+                            <input
+                                type="date"
+                                value={endDate || ''}
+                                onChange={e => setEndDate(e.target.value)}
+                                placeholder="End Date"
+                            />
+                        </div> */}
+                        <div className={styles.count}>
+                            Showing {results.length} of {data.length} publications
                         </div>
                     </div>
                 </div>
                 <div className={styles.contentBody}>
-                    {filteredData.map((itemData, index) => {
+                    {results.map((itemData, index) => {
                         return (
                             <PublicationCard
                                 key={index}
                                 {...itemData}
                             />
-                        )
+                        );
                     })}
+                    <div className={[styles.noResults, results.length == 0 && styles.visible].join(' ')}>
+                        No results found. Please try another search or <span className={styles.clearButton} onClick={
+                            () => {
+                                setQuery('');
+                                setStartDate(null);
+                                setEndDate(null);
+                            }
+                        }>
+                            reset
+                        </span> all filters.
+                    </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }

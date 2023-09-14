@@ -1,0 +1,92 @@
+.searchBar {
+    display: flex;
+    position: relative;
+    color: var(--color-accent-secondary);
+    transition: color var(--speed-slow);
+    flex-grow: 1;
+
+    .icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0.8rem;
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        overflow: visible;
+        transition: color var(--speed-slow);
+    }
+
+    input {
+        color: var(--color-accent-primary);
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        padding-left: 2.1rem;
+        padding-right: 2.1rem;
+        border-radius: var(--radius-extra-large);
+        border: var(--border-secondary);
+        box-shadow: var(--shadow-high);
+        background: var(--color-glass);
+        transition: border-color var(--speed-slow), box-shadow var(--speed-slow);
+
+        &:active,
+        &:focus-within {
+            border-color: var(--color-accent-primary);
+            box-shadow: inset var(--shadow-medium-glow);
+        }
+    }
+
+    .clearButton {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: calc(100% - 10px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: none;
+        cursor: pointer;
+        opacity: 0;
+        transition: color var(--speed-slow), opacity var(--speed-slow), background-color var(--speed-slow);
+        color: var(--color-cancel);
+        cursor: default;
+        pointer-events: none;
+    }
+
+    &.active {
+        color: var(--color-accent-primary);
+
+        .icon {
+            text-shadow: var(--shadow-glow-medium);
+        }
+
+        input {
+            background: #00000010;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .clearButton {
+            opacity: 1;
+            cursor: pointer;
+            pointer-events: all;
+
+            &:hover {
+                color: var(--color-accent-tertiary);
+                background-color: #0000001e;
+            }
+        }
+    }
+
+    &:hover {
+
+        input {
+            box-shadow: var(--shadow-medium);
+        }
+
+    }
+}

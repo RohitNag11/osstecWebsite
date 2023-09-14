@@ -1,7 +1,7 @@
 export const publicationsData = [
     {
         title: "Stiffness matched implants enable more natural load transfer & bone growth (shown in human cadavers)",
-        date: new Date(2022, 1, 1),
+        date: new Date(2021, 1, 1),
         authors: [],
         tags: [],
         onlineLinks: ["https://boneandjoint.org.uk/Article/10.1302/2046-3758.112.BJR-2021-0304.R1"],
@@ -9,7 +9,7 @@ export const publicationsData = [
     },
     {
         title: "Biomimetic 3D printed titanium implants improve implant cementless fixation (shown in sheep)",
-        date: new Date(2023, 1, 1),
+        date: new Date(2022, 1, 1),
         authors: [],
         tags: [],
         onlineLinks: ["https://www.sciencedirect.com/science/article/pii/S2352940718307182"],

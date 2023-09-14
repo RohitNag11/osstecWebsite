@@ -1,0 +1,34 @@
+.sliderContainer {
+    position: relative;
+    width: 100%;
+
+    .sliderTrack {
+        position: relative;
+        height: 5px;
+        background: #ccc;
+    }
+
+    .sliderRange {
+        position: absolute;
+        height: 100%;
+        background: #0078D4; // Color for the selected range, you can adjust
+    }
+
+    .sliderHandle {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: white;
+        border: 2px solid #0078D4; // Handle border color
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .yearDisplay {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+}
