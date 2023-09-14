@@ -2,7 +2,7 @@
 import styles from './About.module.scss'
 import Image from 'next/image'
 import { SectionBadge } from '@/components/badges'
-import { timelineData, teamData } from '../../../data'
+import { timelineData, teamData, publicationsData } from '../../../data'
 import { PersonCard } from '@/components/cards'
 import { useState, useEffect } from 'react'
 import { GeneralPopup } from '@/components/popups'
@@ -113,7 +113,7 @@ export default function About() {
                         events={timelineData}
                     />
                 </div>
-                <PublicationsSection />
+                <PublicationsSection publicationsData={publicationsData} />
             </main>
         </>
     )

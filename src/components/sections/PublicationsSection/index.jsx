@@ -6,10 +6,9 @@ import { useEffect, useState } from 'react';
 import { PiBookOpenTextFill } from 'react-icons/pi';
 import { SectionBadge } from '@/components/badges';
 import { PublicationCard } from '@/components/cards';
-import { publicationsData } from '../../../../data';
 import { SearchBar } from '@/components/inputs';
 
-export default function PublicationsSection() {
+export default function PublicationsSection({ publicationsData }) {
     const {
         data,
         setData,
@@ -93,7 +92,7 @@ export default function PublicationsSection() {
                     </div>
                 </div>
                 <div className={styles.contentBody}>
-                    {results.map((itemData, index) => {
+                    {(results.sort((a, b) => b.date - a.date)).map((itemData, index) => {
                         return (
                             <PublicationCard
                                 key={index}

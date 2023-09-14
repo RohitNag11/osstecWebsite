@@ -1,7 +1,7 @@
 export const publicationsData = [
     {
         title: "Stiffness matched implants enable more natural load transfer & bone growth (shown in human cadavers)",
-        date: new Date(2021, 1, 1),
+        date: new Date(2022, 1, 1),
         authors: [],
         tags: [],
         onlineLinks: ["https://boneandjoint.org.uk/Article/10.1302/2046-3758.112.BJR-2021-0304.R1"],
@@ -9,7 +9,7 @@ export const publicationsData = [
     },
     {
         title: "Biomimetic 3D printed titanium implants improve implant cementless fixation (shown in sheep)",
-        date: new Date(2022, 1, 1),
+        date: new Date(2019, 5),
         authors: [],
         tags: [],
         onlineLinks: ["https://www.sciencedirect.com/science/article/pii/S2352940718307182"],
@@ -17,7 +17,7 @@ export const publicationsData = [
     },
     {
         title: "Patients see better clinical outcomes, satisfaction & mortality rates following partial knee replacement rather than total knee replacement",
-        date: new Date(2023, 1, 1),
+        date: new Date(2014, 6),
         authors: [],
         tags: [],
         onlineLinks: ["https://pubmed.ncbi.nlm.nih.gov/26033059/", "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(14)60419-0/fulltext"],
@@ -25,7 +25,7 @@ export const publicationsData = [
     },
     {
         title: "Partial knee surgeries are cost effective in the short & long-term",
-        date: new Date(2023, 1, 1),
+        date: new Date(2018, 3, 29),
         authors: [],
         tags: [],
         onlineLinks: ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5931302/"],
@@ -33,7 +33,7 @@ export const publicationsData = [
     },
     {
         title: "50% of patients are suitable for partial knee surgery, but only 1 in 10 people receive this treatment",
-        date: new Date(2023, 1, 1),
+        date: new Date(2020, 10, 27),
         authors: [],
         tags: [],
         onlineLinks: ["https://pubmed.ncbi.nlm.nih.gov/33253887/"],
@@ -41,7 +41,7 @@ export const publicationsData = [
     },
     {
         title: "Stiffness matched orthopaedic implants enable better bone maintenance than solid devices (shown in sheep)",
-        date: new Date(2023, 1, 1),
+        date: new Date(2018, 10, 23),
         authors: [],
         tags: [],
         onlineLinks: ["https://pubmed.ncbi.nlm.nih.gov/30611115/"],
@@ -49,7 +49,7 @@ export const publicationsData = [
     },
     {
         title: "High resolution characterisation of bone's structure & properties",
-        date: new Date(2023, 1, 1),
+        date: new Date(2020, 8, 13),
         authors: [],
         tags: [],
         onlineLinks: ["https://onlinelibrary.wiley.com/doi/full/10.1002/adfm.202004323"],
@@ -57,7 +57,7 @@ export const publicationsData = [
     },
     {
         title: "Bone strain & healing can be controlled with OSSTEC's technology",
-        date: new Date(2023, 1, 1),
+        date: new Date(2021, 5, 4),
         authors: [],
         tags: [],
         onlineLinks: ["https://onlinelibrary.wiley.com/doi/full/10.1002/jor.25114"],
@@ -65,7 +65,7 @@ export const publicationsData = [
     },
     {
         title: "Extensive characterisation of 3D printed biomimetic porous structures for orthopaedic applications",
-        date: new Date(2023, 1, 1),
+        date: new Date(2022, 2, 1),
         authors: [],
         tags: [],
         onlineLinks: ["https://www.sciencedirect.com/science/article/pii/S2214860419315829", "https://www.sciencedirect.com/science/article/pii/S2214860421002153", "https://www.sciencedirect.com/science/article/pii/S2214860421000142", "https://www.sciencedirect.com/science/article/pii/S2214860422001348", "https://www.sciencedirect.com/science/article/pii/S221486042100422X", "https://www.sciencedirect.com/science/article/pii/S2214860418301313", "https://www.sciencedirect.com/science/article/pii/S026412751730624X"],
@@ -73,7 +73,7 @@ export const publicationsData = [
     },
     {
         title: "Analysis of optimal conditions for implant fixation & bone growth",
-        date: new Date(2023, 1, 1),
+        date: new Date(2021, 4, 24),
         authors: [],
         tags: [],
         onlineLinks: ["https://pubmed.ncbi.nlm.nih.gov/34031476/"],
@@ -81,7 +81,7 @@ export const publicationsData = [
     },
     {
         title: "Stiffness matched implants avoid stress shielding (shown in sheep bioreactor study)",
-        date: new Date(2023, 1, 1),
+        date: new Date(2020, 8, 8),
         authors: [],
         tags: [],
         onlineLinks: ["https://boneandjoint.org.uk/article/10.1302/1358-992X.2021.2.102"],
