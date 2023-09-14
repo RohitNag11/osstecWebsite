@@ -9,6 +9,7 @@ import NavItem from './NavItem';
 import Logo from './Logo';
 
 export default function Navbar() {
+
     const pathname = usePathname();
     const [collapsed, setCollapsed] = useState(true);
     const toggleMenu = () => {

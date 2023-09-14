@@ -28,12 +28,12 @@
 
         .subNav {
             background-color: var(--color-glass);
-            backdrop-filter: blur(15px);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
             border-radius: 1rem;
             display: flex;
             flex-direction: column;
             box-shadow: var(--shadow-high);
-            z-index: -1;
             display: none;
             overflow: hidden;
 
@@ -54,28 +54,9 @@
                 }
 
                 &:hover {
-                    background-color: rgba(0, 14, 33, 0.35);
+                    background-color: var(--color-accent-secondary);
                     color: white;
                 }
-            }
-        }
-    }
-
-    &:hover {
-
-        .navItem {
-            background-color: var(--color-accent-primary);
-
-            .text {
-                color: var(--color-accent-tertiary);
-                text-shadow: none;
-            }
-
-        }
-
-        .subNavContainer {
-            .subNav {
-                display: flex;
             }
         }
     }
@@ -87,6 +68,25 @@
             .text {
                 color: white;
                 text-shadow: none;
+            }
+        }
+    }
+
+    &:hover {
+
+        .navItem {
+            background-color: var(--color-accent-secondary);
+
+            .text {
+                color: var(--color-accent-tertiary);
+                text-shadow: none;
+            }
+
+        }
+
+        .subNavContainer {
+            .subNav {
+                display: flex;
             }
         }
     }
