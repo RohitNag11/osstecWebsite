@@ -123,8 +123,10 @@
             .showMoreResultsContainer {
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                margin-top: -2rem;
+                align-items: flex-end;
+                z-index: 2;
+                // height: 10rem;
+                background: linear-gradient(to bottom, transparent 0%, var(--color-background-primary) 100%);
 
                 .showMoreResultsButton {
                     display: flex;
@@ -147,8 +149,13 @@
                         background-color: #00000010;
                         color: var(--color-accent-tertiary);
                     }
+                }
 
-                    &.active {
+                &.active {
+                    // transform: translateY(-5rem);
+                    // height: auto;
+
+                    .showMoreResultsButton {
                         .icon {
                             transform: rotate(-180deg);
                         }

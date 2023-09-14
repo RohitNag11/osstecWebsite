@@ -101,10 +101,10 @@ export default function PublicationsSection({ publicationsData }) {
                         </span> all filters.
                     </div>
                     {results.length > 5 && (
-                        <div className={styles.showMoreResultsContainer}>
+                        <div className={[styles.showMoreResultsContainer, resultsToShow > 5 && styles.active].join(' ')}>
                             <div
                                 onClick={toggleResults}
-                                className={[styles.showMoreResultsButton, resultsToShow > 5 && styles.active].join(' ')}
+                                className={styles.showMoreResultsButton}
                             >
                                 <PiCaretDoubleDownBold
                                     className={styles.icon}
