@@ -79,7 +79,8 @@
         }
     }
 
-    &:hover {
+    &:hover,
+    &:active {
 
         .navItem {
             background-color: var(--color-accent-secondary);
@@ -113,8 +114,8 @@
             display: none;
         }
 
-        .subNavContainer {
-            display: none;
-        }
+        // .subNavContainer {
+        //     display: none;
+        // }
     }
 }

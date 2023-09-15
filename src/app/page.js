@@ -3,14 +3,11 @@
 import Image from 'next/image'
 import styles from './Home.module.scss'
 import { useInView } from 'react-intersection-observer';
-// import { MeshBallScene } from '@/components/3d'
 import { HorizontalSwiper, StickySwiper } from '@/components/swipers'
 import { innovationData, aboutData, companyData, clinicalNeedsData, fundingData, newsData } from '../../data'
 import { useState, useEffect, useRef, createRef } from 'react';
-import { PrimaryButton, TagButton } from '../components/buttons';
-import { StatCard } from '@/components/cards';
+import { TagButton } from '../components/buttons';
 import { SectionBadge } from '@/components/badges';
-// import { ParallaxImage } from '@/components/imageComponents';
 import { CoverImage } from '@/components/imageComponents';
 import { StatDetailCard } from '@/components/cards';
 import { FundingSection, NewsSection } from '@/components/sections';
@@ -74,13 +71,9 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      {/* <div className={styles.meshBallSceneWrapper}>
-        <MeshBallScene mobile={mobile} />
-      </div> */}
       <div className={styles.heroSection}>
         <div className={styles.heroImageContainer}>
           <Image
-            // src="/images/general/lattice_structure_blue.png"
             src="/images/general/lattice_structure_bg_2_blue-2.jpg"
             alt="OSSTEC Hero Image"
             layout="fill"
@@ -174,8 +167,6 @@ export default function Home() {
             </span>
           </div>
           <div className={styles.description}>
-            {/* At OSSTEC, we have spent years pushing the boundaries of engineering and medical research to introduce STRIDE&trade;, a new generation of partial knee implant. */}
-
             At OSSTEC, we have spent years pushing the boundaries of engineering and medical research to introduce a new generation of partial knee implant.
           </div>
           <div className={styles.cardControlButtons}>
@@ -217,7 +208,6 @@ export default function Home() {
           <div className={styles.sectionBadge}>
             <SectionBadge><PiHandshakeFill />Partners</SectionBadge>
           </div>
-          {/* <div className={styles.title}>Unity in Motion</div> */}
           <div className={styles.description}>
             We are collaborating with the UK&apos;s leading medical institutions and organisations to develop the next generation of orthopaedic implants.
           </div>
@@ -230,7 +220,6 @@ export default function Home() {
                 <div className={styles.companyLogo} key={index}>
                   <Image src={item.image} alt={item.name} layout="fill" objectFit="contain"
                     key={'company' + index} />
-                  {/* <CoverImage src={item.image} alt={item.name} /> */}
                 </div>
               )
             })
@@ -244,6 +233,5 @@ export default function Home() {
       </div>
       <NewsSection data={newsData.sort((a, b) => b.date - a.date)} mobile={mobile} tablet={tablet} />
     </main>
-
   )
 }

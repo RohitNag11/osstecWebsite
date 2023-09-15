@@ -1,4 +1,4 @@
-import { aboutData } from "./aboutData";
+import { missionData } from "./missionData";
 import { pagesData } from "./pagesData";
 import { innovationData } from "./innovationData";
 import { companyData } from "./companyData";
@@ -11,7 +11,7 @@ import { newsData } from "./newsData";
 import { publicationsData } from "./publicationsData";
 
 export {
-    aboutData,
+    missionData as aboutData,
     pagesData,
     innovationData,
     companyData,
