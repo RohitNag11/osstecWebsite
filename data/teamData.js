@@ -70,5 +70,13 @@ export const teamData = [
         longSummary: "As the Regulatory and Quality Lead, Jess is pivotal in securing OSSTEC's market access, expertly navigating submissions and audits. She is responsible for regulatory compliance and oversees the quality management system. With a decade of experience, a substantial portion of which has been in Orthopaedics, Jess adeptly manages CE, UKCA, 510k, and various global submissions and audits. Her expertise extends across all risk classes of medical devices, encompassing joint replacements, custom-made devices, and additive manufacturing processes. Her career spans startups to multinationals, even the public sector. Holding a pharmaceutical chemistry degree, Jess transitioned from pharma to medical devices and holds British Toxicology Society membership. ",
         linkedin: "https://www.linkedin.com/in/jessica-allen-raqa/",
         image: "/images/headshots/JA2.JPG"
+    },
+    {
+        name: "Dr. Ruben Doyle",
+        position: "Advisor",
+        shortSummary: "Ruben advises OSSTEC on commercial partnerships as well as aspects of device development. His experience from his own successful partnership and exit to one of the 'big-4' orthopaedic companies gives Ruben a unique perspective to advise on OSSTEC's ambitious journey.",
+        longSummary: "By taking his research from lab to successful startup, Ruben has extensive experience of the deeptech journey. In 2019, Ruben took his PhD research on cementless implants and founded Additive Instruments. As CEO, Ruben was responsible for fundraising, building an effective team and delivering his technology to surgery -  working closely with medtech companies in the US.Ruben holds a Masters and PhD from Imperial College London. He has won numerous translation awards from INNOVATE UK, Royal Academy of Engineering, NIHR, Wellcome Trust and EPSRC. He is founder-CEO of Impact Surgical and is an advisor to 4 deeptech startups.",
+        // linkedin: "",
+        image: "/images/headshots/RD.jpg"
     }
 ]
