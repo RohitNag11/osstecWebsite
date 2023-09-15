@@ -22,9 +22,16 @@
 
     .subNavContainer {
         position: absolute;
-        top: calc(100% - 0.5rem);
+        // top: calc(100% - 3rem);
         left: 0;
         padding-top: 1.4rem;
+        bottom: calc(100% + 1.4rem);
+        top: auto;
+        opacity: 0;
+        transform: translateY(-1rem);
+        transition: opacity var(--speed-slow), transform var(--speed-slow);
+        // overflow: hidden;
+
 
         .subNav {
             background-color: var(--color-glass);
@@ -85,6 +92,11 @@
         }
 
         .subNavContainer {
+            opacity: 1;
+            transform: translateY(0);
+            top: calc(100% - 0.5rem);
+            bottom: auto;
+
             .subNav {
                 display: flex;
             }
