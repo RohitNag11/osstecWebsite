@@ -13,6 +13,7 @@ export const metadata = {
   icons: {
     icon: '/icons/favicon.ico',
     apple: '/icons/apple-icon.png',
+
   },
   generator: 'Next.js',
   applicationName: 'OSSTEC Website',
