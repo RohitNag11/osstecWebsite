@@ -28,9 +28,7 @@ export default function Navbar() {
                         <MenuToggle onclick_event={toggleMenu} expanded={!collapsed} />
                     </div>
 
-                    <div className={styles.logoContainer}>
-                        <Logo />
-                    </div>
+                    <Logo />
 
                     <div className={styles.navItems}>
                         {pagesData.map((page) => {

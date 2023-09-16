@@ -50,17 +50,11 @@
             max-width: 100%;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
+            align-items: stretch;
+            gap: 0.4rem;
 
             .menuToggleContainer {
                 display: none;
-            }
-
-            .logoContainer {
-                display: flex;
-                height: 1rem;
-                width: auto;
             }
 
             .navItems {

@@ -7,7 +7,6 @@ import { CoverImage } from '@/components/imageComponents';
 // const parser = new DOMParser();
 
 function CardContent({ data, index, setInViewIndex }) {
-    // const descriptionHtml = (parser.parseFromString(data.description, 'text/html')).body;
 
     const [inViewRef, inView] = useInView({
         threshold: 0.1,
@@ -32,12 +31,14 @@ function CardContent({ data, index, setInViewIndex }) {
                         background: `linear-gradient(to bottom, ${data.stylesConfig.primaryColor} 40%, rgba(0,0,0,0) 100%)`,
                     }}
                 />
-                <CoverImage src={data.image} alt={data.title} placeholderColor={data.stylesConfig.primaryColor} shimmerPlaceholder borderRadius='0 0 0 0' />
-
+                <CoverImage
+                    src={data.image}
+                    alt={data.title}
+                    placeholderColor={data.stylesConfig.primaryColor}
+                    shimmerPlaceholder
+                    borderRadius='0 0 0 0'
+                />
             </div>
-            {/* <div className={styles.description}>
-                {descriptionHtml}
-            </div> */}
             <div
                 className={styles.description}
                 dangerouslySetInnerHTML={{ __html: data.description }}
@@ -102,14 +103,6 @@ export default function StickySwiper({ data, headerRef, cardGapRem = 1.5, bottom
                             ...getCardDynamicStyle(index)
                         }}
                     >
-                        {/* <div className={styles.cardContent}>
-                            <div className={styles.title}>
-                                {itemData.title}
-                            </div>
-                            <div className={styles.description}>
-                                {itemData.description}
-                            </div>
-                        </div> */}
                         <CardContent data={itemData} index={index} setInViewIndex={setInViewIndex} />
                     </div>
                 )
