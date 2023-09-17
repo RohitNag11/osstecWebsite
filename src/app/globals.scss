@@ -10,55 +10,77 @@
 
   --font-size-extra-large: 5rem;
   --line-height-extra-large: 4.8rem;
-  --font-size-large: 2rem;
+  --font-size-large: 2rem; //used
   --line-height-large: 2.8rem;
-  --font-size-medium: 1.5rem;
+  --font-size-medium: 1.5rem; //used
   --line-height-medium: 1.4rem;
 
   --navbar-total-height: 5rem;
 
-  --color-background-primary: #f1f1f2;
-  --color-background-secondary: #e1f0fe;
+  --color-background-primary: #f1f1f2; //used
+  --color-background-secondary: #e1f0fe; //used
   --color-background-tertiary: #819fac15;
-  --color-text-primary: rgb(40, 60, 83);
-  --color-text-secondary: #6a6d7e;
+  --color-background-contrast-primary: black; //used
+  --color-text-primary: rgb(40, 60, 83); //used
+  --color-text-secondary: #6a6d7e; //used
   --color-text-tertiary: #81818158;
-  --color-accent-primary: #134063;
+  --color-text-contrast-primary: white; //used
+  --color-text-contrast-secondary: rgba(255, 255, 255, 0.8); //used
+  --color-accent-primary: #134063; //used
   --color-accent-secondary: #5d7488;
   --color-accent-tertiary: #65bcff;
-  --color-accent-glass: #13406377;
+  --color-accent-glass: hsla(206, 68%, 23%, 0.5);
   --color-glass: #ffffff49;
-
-  // --color-background-primary: #252525;
-  // --color-background-secondary: #32363a;
-  // --color-background-tertiary: #333f4415;
-  // --color-text-primary: rgb(185, 215, 248);
-  // --color-text-secondary: #a8adc6;
-  // --color-text-tertiary: #c2c2c258;
-  // --color-accent-primary: #2279bb;
-  // --color-accent-secondary: #7c99b3;
-  // --color-accent-tertiary: #0091ff;
-  // --color-accent-glass: #2271ad77;
-  // --color-glass: #ffffff49;
+  --color-image-placeholder: #00000029; //used
 
   --bg-tertiary-glow: radial-gradient(rgba(29, 30, 31, 0.213),
       rgba(255, 255, 255, 0));
-  --bg-text-gradient-primary: linear-gradient(45deg, rgba(213, 99, 255, 1) 0%, rgba(143, 101, 255, 1) 25%, rgba(84, 147, 255, 1) 50%, rgba(73, 200, 255, 1) 75%, rgba(76, 255, 233, 1) 100%);
+  --bg-text-gradient-primary: linear-gradient(45deg,
+      hsl(280, 100%, 86%) 0%,
+      hsl(250, 100%, 86%) 25%,
+      hsl(220, 100%, 86%) 50%,
+      hsl(190, 100%, 86%) 75%,
+      hsl(160, 100%, 86%) 100%);
   --bg-text-gradient-secondary: linear-gradient(45deg, #798d9d, #91b1db);
   --bg-text-gradient-tertiary: linear-gradient(45deg, #4b799f, #4788dc);
   --bg-gradient-light: linear-gradient(to top right, #e5ebf2, #f0ebf6);
-
+  --bg-gradient-pattern-1: conic-gradient(from 0deg at 50% 50%,
+      hsla(200, 100%, 50%, 0.1) 0deg,
+      hsla(210, 100%, 50%, 0.1) 72deg,
+      hsla(220, 100%, 50%, 0.1) 144deg,
+      hsla(240, 100%, 50%, 0.1) 216deg,
+      transparent 288deg); //used
+  --bg-gradient-pattern-2: conic-gradient(from 180deg at 50% 50%,
+      hsla(160, 100%, 50%, 0.1) 0deg,
+      hsla(220, 100%, 50%, 0.1) 72deg,
+      hsla(180, 100%, 50%, 0.1) 144deg,
+      hsla(200, 100%, 50%, 0.1) 216deg,
+      transparent 288deg); //used
+  --bg-gradient-pattern-3: conic-gradient(from 90deg at 50% 50%,
+      hsla(200, 100%, 50%, 0.1) 0deg,
+      hsla(210, 100%, 50%, 0.1) 72deg,
+      hsla(220, 100%, 50%, 0.1) 144deg,
+      hsla(240, 100%, 50%, 0.1) 216deg,
+      transparent 288deg); //used
+  --bg-gradient-pattern-4: conic-gradient(from 270deg at 50% 50%,
+      hsla(160, 100%, 50%, 0.1) 0deg,
+      hsla(220, 100%, 50%, 0.1) 72deg,
+      hsla(180, 100%, 50%, 0.1) 144deg,
+      hsla(200, 100%, 50%, 0.1) 216deg,
+      transparent 288deg); //used
 
   --border-primary: 2px solid #ffffff;
   --border-secondary: 1px solid #d5d5d52b;
-  --radius-extra-large: 2rem;
-  --radius-large: 1rem;
+  --radius-extra-large: 2rem; //used
+  --radius-large: 1rem; //used
   --radius-medium: 0.5rem;
   --radius-small: 0.25rem;
 
   --blur-glass: blur(10px);
+  --blur-glass-large: blur(30px);
+  --blur-glass-extra-large: blur(50px); //used
 
-  --shadow-high: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  --shadow-high: 0px 0px 20px rgba(0, 0, 0, 0.1); //used
   --shadow-medium: 0px 0px 5px rgba(0, 0, 0, 0.1);
   --shadow-glow-high: 0px 0px 20px #65bcff7b;
   --shadow-glow-medium: 0px 0px 5px #0091ff;

@@ -10,7 +10,7 @@ import { TagButton } from '../components/buttons';
 import { SectionBadge } from '@/components/badges';
 import { CoverImage } from '@/components/imageComponents';
 import { StatDetailCard } from '@/components/cards';
-import { FundingSection, NewsSection } from '@/components/sections';
+import { FundingSection, NewsSection, ClinicalNeedsSection } from '@/components/sections';
 import { PiHandHeartFill, PiLightbulbFilamentFill, PiHandshakeFill, PiPiggyBankFill } from 'react-icons/pi';
 
 export default function Home() {
@@ -128,34 +128,7 @@ export default function Home() {
           defaultSlidesPerView={1.2}
           cardEffect />
       </div>
-      <div className={styles.clinicalNeedsSection} id={"why-osstec"}>
-        <div className={styles.sideBar}>
-          <SectionBadge><PiHandHeartFill /> Why OSSTEC</SectionBadge>
-          <h2>Clinical Needs & <br /> Future of Knee Implants</h2>
-          <div className={styles.imageContainer}>
-            <div className={styles.text}>
-              <p>“More and more patients require partial knee replacements, and it is critical to achieve a solution that does not loosen and can maintain bone quality to allow patients to continue living active, happy lives.”
-                <br />
-                Mr. Alex Liddle, DPhil FRCS(Orth)</p>
-            </div>
-            <CoverImage src="/images/headshots/AL.jpg" alt="Alex Liddle" style={{ boxShadow: 'var(--shadow-high)' }} />
-          </div>
-        </div>
-        <div className={styles.grid}>
-          {/* <div className={styles.card}>
-            <StatCard value={1000000} decimalPlaces={2} description="knee replacements per year in the US." style={{ height: '100%' }} />
-          </div>
-          <div className={styles.card} />
-          <div className={styles.card} />
-          <div className={styles.card} /> */}
-          {clinicalNeedsData.map((item, index) => {
-            return (
-              <StatDetailCard key={index} {...item} {...item.stat} />
-            )
-          }
-          )}
-        </div>
-      </div>
+      <ClinicalNeedsSection clinicalNeedsData={clinicalNeedsData} id='why-osstec' />
       <div className={styles.technologySectionBadge} id={"our-technology"}>
         <SectionBadge><PiLightbulbFilamentFill /> Our Technology</SectionBadge>
       </div>

@@ -2,13 +2,8 @@
     // cursor: pointer;
     padding: 0.5rem 1rem;
     border-radius: var(--radius-extra-large);
-    // background-color: white;
     border: var(--border-primary);
-    // box-shadow: var(--shadow-high);
     color: var(--color-text-primary);
     transition: background-color var(--speed-extra-slow), color var(--speed-extra-slow);
-    // &:hover {
-    //     background-color: white;
-    //     box-shadow: var(--shadow-glow-high);
-    // }
+    text-align: center;
 }
