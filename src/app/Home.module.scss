@@ -71,8 +71,7 @@
       width: 100%;
       opacity: 0.9;
       // background: black;
-      filter: sepia(100%) hue-rotate(180deg) saturate(300%) brightness(0.3);
-      // filter: brightness(0.2);
+      filter: sepia(100%) hue-rotate(180deg) saturate(300%) brightness(0.1);
       border-radius: 0 0 var(--radius-extra-large) var(--radius-extra-large);
       background: radial-gradient(ellipse at bottom, #25364a 0%, rgb(0, 0, 0) 100%);
       overflow: hidden;
