@@ -27,7 +27,7 @@
         border-radius: var(--radius-extra-large);
         border: var(--border-secondary);
         box-shadow: var(--shadow-high);
-        background: var(--color-glass);
+        background: white;
         transition: border-color var(--speed-slow), box-shadow var(--speed-slow);
 
         &:active,

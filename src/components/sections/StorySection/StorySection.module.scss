@@ -37,4 +37,12 @@
             width: clamp(300px, 80%, 600px);
         }
     }
+
+    @media (max-width: 600px) {
+        .timelineHeader {
+            .description {
+                width: auto;
+            }
+        }
+    }
 }
