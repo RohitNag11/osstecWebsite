@@ -3,6 +3,7 @@
     --dot-size: 12px;
     --dot-border: 2px;
     --dot-total-size: calc(var(--dot-size) + 2 * var(--dot-border));
+    --left: 50%;
 
     position: relative;
     width: 100%;
@@ -19,9 +20,9 @@
         // transition: height 0.1s ease-out;
         // height: 10vh;
         /* 50vh for the stickyYear top position */
-        left: 50%;
+        left: var(--left);
         margin-left: calc(-1 * var(--timeline-width) / 2);
-        z-index: 0;
+        z-index: 1;
         border-radius: var(--timeline-width);
         /* Make sure it stays behind the stickyYear and event dots */
     }
@@ -30,12 +31,12 @@
         content: '';
         position: absolute;
         width: var(--timeline-width);
-        background-color: #ddd;
+        background-color: var(--color-background-primary);
         top: 0;
         bottom: 0;
-        left: 50%;
+        left: var(--left);
         margin-left: calc(-1 * var(--timeline-width) / 2);
-        z-index: -1;
+        z-index: 0;
         border-radius: var(--timeline-width);
     }
 
@@ -49,7 +50,7 @@
         padding: 0.5rem 0rem;
         // border-radius: 8px;
         border-radius: var(--radius-extra-large);
-        left: 50%;
+        left: var(--left);
         transform: translateX(-50%);
         width: 6ch;
         font-size: 0.8rem;
@@ -81,7 +82,7 @@
             justify-content: stretch;
 
             .stickySideLabel {
-                flex-basis: 50%;
+                flex-basis: calc(100% - var(--left));
                 font-size: var(--font-size-medium);
                 font-weight: 400;
                 color: var(--color-text-primary);
@@ -95,6 +96,20 @@
                     padding-right: 3rem;
                     text-align: right;
                 }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        --left: 3rem;
+
+        .stickyLabel {
+            padding: 8rem 3rem 3rem 3rem;
+            background: linear-gradient(to bottom, var(--color-timeline-section-bg) 50%, #00000000);
+            pointer-events: none;
+
+            >div {
+                visibility: hidden;
             }
         }
     }

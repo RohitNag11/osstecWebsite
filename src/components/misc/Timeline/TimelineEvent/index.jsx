@@ -41,15 +41,19 @@ export function TimelineEvent({ currentYear, setCurrentYear, stickyYearRef, inde
             ].join(' ')}
             {...props}
         >
-            <div className={styles.year}>{event.year}</div>
+            <div className={styles.header}>
+                <div className={[styles.tag, styles.year].join(' ')}>
+                    {event.year}
+                </div>
+                {event.type === 'milestone' &&
+                    <div className={[styles.tag, styles.milestone].join(' ')}>milestone</div>
+                }
+                {event.type === 'funding' &&
+                    <div className={[styles.tag, styles.funding].join(' ')}>funding</div>
+                }
+            </div>
             <div className={styles.title}>{event.title}</div>
             <div className={styles.description}>{event.description}</div>
-            {event.type === 'milestone' && event.complete &&
-                <div className={[styles.tag, styles.complete].join(' ')}>complete</div>
-            }
-            {event.type === 'funding' && event.complete &&
-                <div className={[styles.tag, styles.recieved].join(' ')}>recieved</div>
-            }
             <div ref={eventDotRef} className={styles.eventDot} />
         </div>
     )
