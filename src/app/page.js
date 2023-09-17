@@ -97,14 +97,10 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.tagLine}>
-            <div className={styles.tagLineMain}>
-              <span className={styles.emph}>One Step Further</span>
-            </div>
-            <div className={styles.tagLineSub}>
-              <p>
-                Knee implants with innovative lattice technology closely matching native bone properties for optimised implant fixation and a durable bone foundation.
-              </p>
-            </div>
+            One Step Further
+          </div>
+          <div className={styles.description}>
+            Knee implants with innovative lattice technology closely matching native bone properties for optimised implant fixation and a durable bone foundation.
           </div>
         </div>
       </div>
