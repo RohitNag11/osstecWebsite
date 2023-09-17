@@ -6,10 +6,10 @@ import SectionBadge from '@/components/badges/SectionBadge';
 export default function StorySection({ timelineData, children, id, ...props }) {
     return (
         <div className={styles.timelineSection} id={id}>
+            <div className={styles.badge}>
+                <SectionBadge><PiCalendarCheckFill />Our Story</SectionBadge>
+            </div>
             <div className={styles.timelineHeader}>
-                <div className={styles.badge}>
-                    <SectionBadge><PiCalendarCheckFill />Our Story</SectionBadge>
-                </div>
                 <div className={styles.title}>
                     From Vision to Reality
                 </div>

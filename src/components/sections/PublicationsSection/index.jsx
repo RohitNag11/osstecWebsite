@@ -54,10 +54,10 @@ export default function PublicationsSection({ publicationsData, id }) {
 
     return (
         <div className={styles.publicationsSection} id={id}>
+            <div className={styles.badge}>
+                <SectionBadge><PiBookOpenTextFill />Publications</SectionBadge>
+            </div>
             <div className={styles.header}>
-                <div className={styles.badge}>
-                    <SectionBadge><PiBookOpenTextFill />Publications</SectionBadge>
-                </div>
                 <div className={styles.title}>
                     Research at OSSTEC
                 </div>

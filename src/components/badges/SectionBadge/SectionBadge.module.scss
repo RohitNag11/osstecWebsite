@@ -3,21 +3,18 @@
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-extra-large);
-    background-color: #395c6c84;
+    background-color: #395c6c6a;
     color: white;
     font-size: 0.8rem;
     // font-weight: 700;
     text-transform: uppercase;
     // letter-spacing: 0.1rem;
     transition: all 0.2s ease-in-out;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     border: var(--border-secondary);
+    backdrop-filter: var(--blur-glass);
     gap: 1ch;
-    // cursor: pointer;
-    // &:hover {
-    //     background-color: #000;
-    //     color: #fff;
-    // }
+    font-size: 0.8rem;
 
     svg {
         font-size: 1.3rem;

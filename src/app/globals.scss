@@ -11,7 +11,7 @@
   --font-size-extra-large: 5rem;
   --line-height-extra-large: 4.8rem;
   --font-size-large: 2rem; //used
-  --line-height-large: 2.8rem;
+  --line-height-large: 1.8rem;
   --font-size-medium: 1.5rem; //used
   --line-height-medium: 1.4rem;
 
@@ -135,15 +135,25 @@ button {
 //     color-scheme: dark;
 //   }
 // }
+@media (max-width: 900px) {
+  :root {
+    --font-size-extra-large: 3.2rem;
+    --line-height-extra-large: 3rem;
+    --font-size-large: 2rem;
+    --line-height-large: 1.9rem;
+    --font-size-medium: 1.3rem;
+    --line-height-medium: 1.2rem;
+  }
+}
 
 @media (max-width: 700px) {
   :root {
-    --font-size-extra-large: 4rem;
-    --line-height-extra-large: 3.9rem;
-    --font-size-large: 2.5rem;
-    --line-height-large: 2.4rem;
-    --font-size-medium: 1.8rem;
-    --line-height-medium: 1.7rem;
+    --font-size-extra-large: 3rem;
+    --line-height-extra-large: 2.9rem;
+    --font-size-large: 1.9rem;
+    --line-height-large: 1.8rem;
+    --font-size-medium: 1.2rem;
+    --line-height-medium: 1.1rem;
   }
 }
 
@@ -153,7 +163,7 @@ button {
     --line-height-extra-large: 2.9rem;
     --font-size-large: 2rem;
     --line-height-large: 1.9rem;
-    --font-size-medium: 1.2rem;
-    --line-height-medium: 1.1rem;
+    --font-size-medium: 1.1rem;
+    --line-height-medium: 1rem;
   }
 }
