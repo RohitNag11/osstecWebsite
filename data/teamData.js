@@ -76,7 +76,15 @@ export const teamData = [
         position: "Advisor",
         shortSummary: "Ruben advises OSSTEC on commercial partnerships as well as aspects of device development. His experience from his own successful partnership and exit to one of the 'big-4' orthopaedic companies gives Ruben a unique perspective to advise on OSSTEC's ambitious journey.",
         longSummary: "By taking his research from lab to successful startup, Ruben has extensive experience of the deeptech journey. In 2019, Ruben took his PhD research on cementless implants and founded Additive Instruments. As CEO, Ruben was responsible for fundraising, building an effective team and delivering his technology to surgery -  working closely with medtech companies in the US.Ruben holds a Masters and PhD from Imperial College London. He has won numerous translation awards from INNOVATE UK, Royal Academy of Engineering, NIHR, Wellcome Trust and EPSRC. He is founder-CEO of Impact Surgical and is an advisor to 4 deeptech startups.",
-        // linkedin: "",
+        linkedin: "",
         image: "/images/headshots/RD.jpg"
+    },
+    {
+        name: "Dr. Shaaz Ghouse",
+        position: "Advisor",
+        shortSummary: "Shaaz advises OSSTEC on all things additive manufacturing, with over 10 years experience in the field of AM and orthopaedics. He was previously head of additive manufacturing development at Stanmore Implants and was Founder, Director and CTO of Additive Instruments.",
+        longSummary: "With over 10 years experience in the field of AM and orthopaedics, Shaaz provides key insight to Osstec's additive manufacturing (AM) technology roadmap. In 2015 he began developing AM lattice technology for bone in-growth applications during his PhD at Imperial College, which has spawned numerous publications, patent applications and startups. He also brings industrial experience from years at GE and Stanmore implants as well as entrepreneurial and commercial experience from his time as CTO, Director and Founder of Additive Instruments. Between Imperial College and Additive Instruments he has raised over £3,000,000 in funding from Innovate UK, NIHR, Wellcome Trust, EPSRC and UKRI.",
+        linkedin: "",
+        image: "/images/headshots/SG.jpg"
     }
 ]
