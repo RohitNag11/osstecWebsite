@@ -1,4 +1,14 @@
 export const newsData = [
+
+    {
+        title: "OSSTEC Exhibit at ISTA, New York",
+        date: new Date(2023, 9),
+        type: 'update',
+        tags: ["Awards", "Innovation"],
+        description: "OSSTEC had an amazing time exhibiting at International Society for Technology in Arthroplasty (ISTA), New York, in September. It was a pleasure to unveil our first product to surgeons and industry. Some key highlights include podium presentations from our team demonstrating research at OSSTEC and surgical usability sessions trialling our devices.",
+        // image: "/images/news/awards.jpeg",
+        link: "https://www.linkedin.com/posts/osstec_cementless-fixation-patient-activity-7118312197675462657-ZWAc?utm_source=share&utm_medium=member_desktop"
+    },
     {
         title: "OSSTEC: Recognized for Excellence in Technological Innovation",
         date: new Date(2023, 5),
