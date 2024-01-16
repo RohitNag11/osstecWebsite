@@ -5,7 +5,7 @@ export const newsData = [
         date: new Date(2024, 0),
         type: 'update',
         tags: ["Awards", "Innovation"],
-        description: "As 2024 kicks off, we're taking a moment to reflect on an incredible journey in 2023. \n - Closed our oversubscribed investment round totalling £2M. \n - Grew our team to 8 people. \n - Unveiled our first product to the world. \n - Expanded reach in our target markets including trips to ISTA (New York), AAHKS (Dallas) and AAOS (Las Vegas).", 
+        description: "As 2024 kicks off, we're taking a moment to reflect on an incredible journey in 2023. <br> - Closed our oversubscribed investment round totalling £2M. <br> - Grew our team to 8 people. <br> - Unveiled our first product to the world. <br> - Expanded reach in our target markets including trips to ISTA (New York), AAHKS (Dallas) and AAOS (Las Vegas).", 
         // image: "/images/news/awards.jpeg",
         link: "https://www.linkedin.com/feed/update/urn:li:activity:7152244929858052096/"
     },
