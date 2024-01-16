@@ -77,7 +77,7 @@ export const teamData = [
         shortSummary: "Joining OSSTEC as a Test Engineer, Colin's main role is the physical testing of implants and surgical instruments. Graduating from the University of Bath with a Masters in Mechanical Engineering and bringing industry experience, Colin will be using physical testing to inform design decisions and validate devices. ",
         longSummary: "Colin joined OSSTEC following the completion of his Masters in Mechanical Engineering at The University Of Bath. His degree included an industrial placement at DePuy Synthes as a Biomechanics Test Engineer with focus on testing and validation of new devices and research into impaction mechanics. Through placement and his degree, Colin was able to explore a range of medical engineering fields, including his work with Team Bath Heart, working to design a fully mechanical heart to replace the native human heart and his Master’s project investigating the wider potential of biosensing technology. With his passion for combining engineering and healthcare as well as his love for sport, Colin is driven to develop devices that will improve patient quality of life and keep people active.",
         linkedin: "https://www.linkedin.com/in/jessica-allen-raqa/",
-        image: "/images/headshots/CDH.JPG"
+        image: "/images/headshots/CDH2.jpg"
     },
     {
         name: "Dr. Ruben Doyle",
