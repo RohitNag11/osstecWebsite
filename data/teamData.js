@@ -33,15 +33,15 @@ export const teamData = [
     },
     {
         name: "Arron Hughes",
-        position: "Senior R&D Engineer",
-        shortSummary: "As Senior R&D Enigneer, Arron's main role is the design & development of the surgical instrumentation and implants. Arron brings over 10 years' experience working as an engineer in various fields of medical devices to the company, including experience of the orthopaedic industry from his time at Depuy Synthes.",
+        position: "Principal Engineer",
+        shortSummary: "As Senior R&D Engineer, Arron's main role is the design & development of the surgical instrumentation and implants. Arron brings over 10 years' experience working as an engineer in various fields of medical devices to the company, including experience of the orthopaedic industry from his time at Depuy Synthes.",
         longSummary: "With a background in medical device development, and a Masters in Medical Engineering in Leeds, Arron brings a wealth of experience to OSSTEC's team. Having previously worked in orthopaedics on Revision Total Knee Replacement Instrumentation in a large multinational, to working on cardiovascular re-entry devices in a early stage start up, Arron's experience of working within a Medical Device Regulatory framework and delivery of multiple devices to market makes him well placed to ensure the succesful technical development of OSSTEC's partial knee, and to help improve the lives of many patients as possible.",
         linkedin: "https://www.linkedin.com/in/arron-hughes/",
         image: "/images/headshots/AH.jpg"
     },
     {
         name: "Dr. Jennifer Stoddart",
-        position: "R&D Engineer",
+        position: "Engineering Lead",
         shortSummary: "Jennifer brings expertise from her computational PhD focused on bone health and partial knee replacements to her role as an R&D Engineer at OSSTEC. Within the company, she is involved with the testing of the implant to ensure its safety, function and stiffness-matching ability, as well as lending her broad knowledge of the orthopaedic scientific literature to aid in design and development.",
         longSummary: "Jennifer completed her PhD alongside Max at Imperial College London, where their interests in partial knees and the benefits of matching bone and implant strains for long-term bone health aligned. This resulted in them working together to publish Max's landmark research paper showing how biomimetic 3d printed structures can better recreate the natural stresses experienced by bone than conventional solid implants. Jennifer's PhD focussed on assessing the impact of using multiple partial implants together in one knee on the surrounding bone, using computational methods. As such, the move to OSSTEC to work as an R&D Engineer was both natural, and exciting to be able to put her passion for both partial knee replacements and for bone-supporting technology into action.",
         linkedin: "https://www.linkedin.com/in/jennifer-stoddart-22a26bbb/",
@@ -49,7 +49,7 @@ export const teamData = [
     },
     {
         name: "Frederik Masure",
-        position: "R&D Engineer",
+        position: "Engineering Lead",
         shortSummary: "Frederik joined as the first employee of OSSTEC after completion of his Masters of Mechanical Engineering at Imperial College London, where he worked on designing the first tibial implants for the company in his final year project. Working as an R&D Engineer at OSSTEC, he is mainly focused on designing the implants.",
         longSummary: "Frederik completed his Masters of Mechanical Engineering at Imperial College London, where he spent his final year project working on optimising the strength of additively manufactured tibial partial knee implants with OSSTEC. With a longstanding interest in design and medical engineering, Frederik's work at OSSTEC involves the design and development of the tibial and femoral implants. Through his own passion for sports, the outdoors and being active, Frederik is driven to create devices that will allow people to live the active lives they want after suffering from osteoarthritis.",
         linkedin: "https://www.linkedin.com/in/frederik-masure-a97415173/",
@@ -57,7 +57,7 @@ export const teamData = [
     },
     {
         name: "Hana Fox",
-        position: "R&D Engineer",
+        position: "Engineering Lead",
         shortSummary: "As R&D Engineer, Hana's main role is the design and development of the surgical instrumentation.  Bringing experience from industry and research, Hana was previously an R&D Engineer with DePuy Synthes, and specialised in early-stage medical devices as a Researcher at Imperial College London.",
         longSummary: "Hana completed her Masters of Biomedical Engineering at Imperial College London, with her Masters project focusing on stress modulation of fracture fixation constructs.  This expertise translated into her work at Imperial developing orthopaedic implants, predominantly using additive manufacuring techniques.  Throughout her time at Imperial College London and DePuy Synthes she has gained experience in both the design of implants and instrumentation across research, start-ups, and industry; covering every stage of medical device development.  With her passion for innovation and healthcare, Hana is driven by successfully delivering new medical technologies to the public.",
         linkedin: "https://www.linkedin.com/in/hana-fox-a44080169/",
@@ -70,6 +70,14 @@ export const teamData = [
         longSummary: "As the Regulatory and Quality Lead, Jess is pivotal in securing OSSTEC's market access, expertly navigating submissions and audits. She is responsible for regulatory compliance and oversees the quality management system. With a decade of experience, a substantial portion of which has been in Orthopaedics, Jess adeptly manages CE, UKCA, 510k, and various global submissions and audits. Her expertise extends across all risk classes of medical devices, encompassing joint replacements, custom-made devices, and additive manufacturing processes. Her career spans startups to multinationals, even the public sector. Holding a pharmaceutical chemistry degree, Jess transitioned from pharma to medical devices and holds British Toxicology Society membership. ",
         linkedin: "https://www.linkedin.com/in/jessica-allen-raqa/",
         image: "/images/headshots/JA2.JPG"
+    },
+    {
+        name: "Colin Dudrey-Harvey",
+        position: "Test Engineer",
+        shortSummary: "Joining OSSTEC as a Test Engineer, Colin's main role is the physical testing of implants and surgical instruments. Graduating from the University of Bath with a Masters in Mechanical Engineering and bringing industry experience, Colin will be using physical testing to inform design decisions and validate devices. ",
+        longSummary: "Colin joined OSSTEC following the completion of his Masters in Mechanical Engineering at The University Of Bath. His degree included an industrial placement at DePuy Synthes as a Biomechanics Test Engineer with focus on testing and validation of new devices and research into impaction mechanics. Through placement and his degree, Colin was able to explore a range of medical engineering fields, including his work with Team Bath Heart, working to design a fully mechanical heart to replace the native human heart and his Master’s project investigating the wider potential of biosensing technology. With his passion for combining engineering and healthcare as well as his love for sport, Colin is driven to develop devices that will improve patient quality of life and keep people active.",
+        linkedin: "https://www.linkedin.com/in/jessica-allen-raqa/",
+        image: "/images/headshots/CDH.JPG"
     },
     {
         name: "Dr. Ruben Doyle",
