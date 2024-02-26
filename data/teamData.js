@@ -45,7 +45,7 @@ export const teamData = [
         shortSummary: "Jennifer brings expertise from her computational PhD focused on bone health and partial knee replacements to her role as an R&D Engineer at OSSTEC. Within the company, she is involved with the testing of the implant to ensure its safety, function and stiffness-matching ability, as well as lending her broad knowledge of the orthopaedic scientific literature to aid in design and development.",
         longSummary: "Jennifer completed her PhD alongside Max at Imperial College London, where their interests in partial knees and the benefits of matching bone and implant strains for long-term bone health aligned. This resulted in them working together to publish Max's landmark research paper showing how biomimetic 3d printed structures can better recreate the natural stresses experienced by bone than conventional solid implants. Jennifer's PhD focussed on assessing the impact of using multiple partial implants together in one knee on the surrounding bone, using computational methods. As such, the move to OSSTEC to work as an R&D Engineer was both natural, and exciting to be able to put her passion for both partial knee replacements and for bone-supporting technology into action.",
         linkedin: "https://www.linkedin.com/in/jennifer-stoddart-22a26bbb/",
-        image: "/images/headshots/JS.jpg"
+        image: "/images/headshots/Jen_New_Cropped.jpg"
     },
     {
         name: "Frederik Masure",
