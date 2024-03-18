@@ -29,7 +29,7 @@ export const pagesData = [
     {
         title: "About",
         description: [
-            "OSSTEC is a London based spinout founded in Imperial College London. We have brought together a team from a variety of backgrounds, balancing technical and market expertise with a blend of ambitious drive and expertise gained through years of experience in medical devices.",
+            "OSSTEC is a London based start-up at Imperial College London. We have brought together a team from a variety of backgrounds, balancing technical and market expertise with a blend of ambitious drive and expertise gained through years of experience in medical devices.",
 
             "To achieve our goal of providing a knee implant that improves the lives of millions of people, we are working to bring our device from lab to the operating room, used in hospitals worldwide."
         ],
