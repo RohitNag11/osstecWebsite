@@ -33,7 +33,7 @@ export const pagesData = [
 
             "To achieve our goal of providing a knee implant that improves the lives of millions of people, we are working to bring our device from lab to the operating room, used in hospitals worldwide."
         ],
-        image: "/images/general/team.jpeg",
+        image: "/images/general/Team3_Compressed.JPG",
         link: "/about",
         subpages: [
             {
