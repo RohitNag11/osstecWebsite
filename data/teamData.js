@@ -16,9 +16,9 @@ export const teamData = [
         image: "/images/headshots/JJ2.jpg"
     },
     {
-        name: "Mr. Alex Liddle",
-        position: "CCO",
-        shortSummary: "Alex is the Chief Clinical Officer at OSSTEC where he leads on clinical design, ensuring that OSSTEC's products are designed with patient needs and surgeon usability at their heart. Alex is a consultant orthopaedic surgeon, internationally renowned for his expertise in partial knee replacement, and a leading researcher in orthopaedics.",
+        name: "Alex Liddle, MD",
+        position: "CMO",
+        shortSummary: "Alex is the Chief Medical Officer at OSSTEC where he leads on clinical design, ensuring that OSSTEC's products are designed with patient needs and surgeon usability at their heart. Alex is a consultant orthopaedic surgeon, internationally renowned for his expertise in partial knee replacement, and a leading researcher in orthopaedics.",
         longSummary: "Alex is a Consultant Orthopaedic Surgeon specialising in knee and hip surgery at King Edward VII's Hospital and other London hospitals. He also holds academic positions as a Senior Lecturer in Orthopaedic Surgery at Imperial College and an Honorary Associate Professor at University College London. Mr. Liddle completed his orthopaedic training in the Imperial and Stanmore schemes, followed by a DPhil (PhD) at the University of Oxford. He's a leading researcher in orthopaedics, focusing on technology and big data to improve joint replacement outcomes. He's renowned for his expertise in partial knee replacement and has international recognition in this field.",
         linkedin: "https://www.linkedin.com/in/alexdliddle/",
         image: "/images/headshots/AL.jpg"
@@ -90,49 +90,31 @@ export const teamData = [
     {
         name: "Chloe Scott, MD",
         position: "Clinical Advisory Board - Design Surgeon",
-        shortSummary: "",
-        longSummary: "",
-        linkedin: "",
         image: "/images/headshots/Ms-Chloe-Scott.jpg"
     },
     {
         name: "Thomas Aleto, MD",
         position: "Clinical Advisory Board - Design Surgeon",
-        shortSummary: "",
-        longSummary: "",
-        linkedin: "",
         image: "/images/headshots/thomas-j-aleto-md.jpg"
     },
     {
         name: "Jonathan Vigdorchik, MD",
         position: "Clinical Advisory Board - Design Surgeon",
-        shortSummary: "",
-        longSummary: "",
-        linkedin: "",
         image: "/images/headshots/jonathan-vigdorchik-headshot.jpg"
     },
     {
         name: "Kevin Fricka, MD",
         position: "Clinical Advisory Board - Design Surgeon",
-        shortSummary: "",
-        longSummary: "",
-        linkedin: "",
         image: ""
     },
     {
         name: "Andrew Pearle, MD",
         position: "Clinical Advisory Board - Faculty Surgeon",
-        shortSummary: "",
-        longSummary: "",
-        linkedin: "",
         image: "/images/headshots/andrew-pearle-headshot.jpg"
     },
     {
         name: "John Barrington, MD",
         position: "Clinical Advisory Board - Faculty Surgeon",
-        shortSummary: "",
-        longSummary: "",
-        linkedin: "",
         image: ""
     },
     {
