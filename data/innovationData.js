@@ -1,6 +1,6 @@
 export const innovationData = [
     {
-        title: "Stiffness Matched to Bone",
+        title: "3D Printing to Mimic Bone",
         description: "Our innovative fully 3D printed lattice implants mimic the porous trabecular structure of bone, allowing natural load transfer through the knee that <b>diminishes the negative effect of stress shielding</b>. This allows for healthier bone in the long term, leading to increased patient satisfaction and a higher quality of life.",
         image: "/images/general/lattice_structure_blue.png",
         stylesConfig: {
@@ -17,7 +17,7 @@ export const innovationData = [
         }
     },
     {
-        title: "Cementless Fixation & Bone Maintenance",
+        title: "Cementless Fixation & Biomimicry",
         description: "Our novel hybrid fixation features combined with the porous lattice allow for stable initial fixation as well as bone ingrowth into the implant, <b>causing revolutionary fixation without the consequences of bone cement</b>.",
         image: "/images/general/bone_ingrowth.jpg",
         stylesConfig: {

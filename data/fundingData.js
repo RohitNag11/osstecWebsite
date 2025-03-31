@@ -1,6 +1,6 @@
 export const fundingData = [
     {
-        value: 2000000,
+        value: 4500000,
         decimalPlaces: 2,
         unit: "£",
         description: "secured in VC and grant funding."

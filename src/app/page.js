@@ -100,7 +100,7 @@ export default function Home() {
             One Step Further
           </div>
           <div className={styles.description}>
-            Knee implants with innovative lattice technology closely matching native bone properties for optimised implant fixation and a durable bone foundation.
+            Knee implants which combine innovative 3D printed articulating implants with biomimetic cementless fixation, for optimized implant functionality, fixation and a durable bone foundation.
           </div>
         </div>
       </div>

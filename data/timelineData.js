@@ -74,4 +74,24 @@ export const timelineData = [
         year: 2023,
         type: "milestone",
     },
+    {
+        title: "Expanded clinical advisory board with global thought leaders.",
+        year: 2024,
+        type: "milestone",
+    },
+    {
+        title: "Succesfully completed surgical usability labs with our latest implants and surgical instruments, refining our innovation for real-world needs. ",
+        year: 2024,
+        type: "milestone",
+    },
+    {
+        title: "Closed investment round to fund regulatory approval and market launch",
+        year: 2025,
+        type: "funding",
+    },
+    {
+        title: "Expanded OSSTEC team to 9 people",
+        year: 2025,
+        type: "milestone",
+    },
 ]
