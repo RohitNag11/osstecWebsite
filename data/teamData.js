@@ -134,7 +134,7 @@ export const teamData = [
         name: "Dr. Ruben Doyle",
         position: "Advisor",
         shortSummary: "Ruben advises OSSTEC on commercial partnerships as well as aspects of device development. His experience from his own successful partnership and exit to one of the 'big-4' orthopaedic companies gives Ruben a unique perspective to advise on OSSTEC's ambitious journey.",
-        longSummary: "By taking his research from lab to successful startup, Ruben has extensive experience of the deeptech journey. In 2019, Ruben took his PhD research on cementless implants and founded Additive Instruments. As CEO, Ruben was responsible for fundraising, building an effective team and delivering his technology to surgery -  working closely with medtech companies in the US.Ruben holds a Masters and PhD from Imperial College London. He has won numerous translation awards from INNOVATE UK, Royal Academy of Engineering, NIHR, Wellcome Trust and EPSRC. He is founder-CEO of Impact Surgical and is an advisor to 4 deeptech startups.",
+        longSummary: "By taking his research from the lab to a successful startup, Ruben has extensive experience of the deeptech journey. In 2019, Ruben took his PhD research on cementless implants and founded Additive Instruments. As CEO, Ruben was responsible for fundraising, building an effective team and delivering his technology to surgery -  working closely with medtech companies in the US.Ruben holds a Masters and PhD from Imperial College London. He has won numerous translation awards from INNOVATE UK, Royal Academy of Engineering, NIHR, Wellcome Trust and EPSRC. He is founder-CEO of Impact Surgical and is an advisor to 4 deeptech startups.",
         linkedin: "",
         image: "/images/headshots/RD.jpg"
     },
