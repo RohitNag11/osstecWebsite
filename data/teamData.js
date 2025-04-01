@@ -90,6 +90,9 @@ export const teamData = [
     {
         name: "Chloe Scott, MD",
         position: "Clinical Advisory Board - Design Surgeon",
+        shortSummary: "Dr. Chloe Scott is a consultant orthopaedic surgeon specializing in knee and hip surgery, including complex knee replacements, partial knee replacements, revision surgeries, and robot-assisted MAKO procedures. Based at the Royal Infirmary of Edinburgh, she is also an active researcher, awarded the Hunter-Doig Medal for surgical excellence.",
+        longSummary: "Dr. Chloe Scott is a consultant orthopaedic surgeon specializing in knee and hip surgery, with expertise in complex knee replacements, partial knee replacements, revision surgeries, and robot-assisted MAKO procedures. Based at the Royal Infirmary of Edinburgh, she is also an active researcher focused on improving joint replacement outcomes and implant design. Dr. Scott was awarded the prestigious Hunter-Doig Medal for surgical excellence and is dedicated to advancing both clinical practice and research in her field.",
+        linkedin: "",
         image: "/images/headshots/Ms-Chloe-Scott.jpg"
     },
     {
