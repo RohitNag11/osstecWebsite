@@ -1,7 +1,7 @@
 export const innovationData = [
     {
         title: "Cementless Fixation & Biomimicry",
-        description: "Our novel hybrid fixation features, combined with a 3D-printed porous lattice that mimics the trabecular structure of bone, ensures stable initial fixation while promoting natural bone ingrowth. This breakthrough design delivers </b>revolutionary fixation without the drawbacks of bone cement.</b>.",
+        description: "Our novel hybrid fixation features, combined with a 3D-printed porous lattice that mimics the trabecular structure of bone, ensures stable initial fixation while promoting natural bone ingrowth. This breakthrough design delivers <b>revolutionary fixation without the drawbacks of bone cement.</b>.",
         image: "/images/general/bone_ingrowth.jpg",
         stylesConfig: {
             primaryColor: "#B9CCD2",
