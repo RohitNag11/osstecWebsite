@@ -100,7 +100,7 @@ export default function Home() {
             One Step Further
           </div>
           <div className={styles.description}>
-            Knee implants which combine innovative 3D printed articulating implants with biomimetic cementless fixation, for optimized implant functionality, fixation and a durable bone foundation.
+          Knee implants combining innovative 3D-printed articulating surfaces with biomimetic cementless fixation for enhanced functionality, superior fixation, and a long-lasting bone foundation.
           </div>
         </div>
       </div>
