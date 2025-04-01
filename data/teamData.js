@@ -5,7 +5,7 @@ export const teamData = [
         shortSummary: "As OSSTEC's Founder and Chief Executive Officer, Max's role focuses on company vision, strategy and growing OSSTEC's team.\nPrior to founding OSSTEC, Max worked with OSSTEC's founding team to research and develop OSSTEC's underlying technology; biomimetic 3D printed structures for orthopaedics.",
         longSummary: "At OSSTEC, Max is the Founder and Chief Executive Officer. His role focuses on company vision, strategy and growing OSSTEC's team. Max has a passion for learning, growing the bounds of technology and for delivering impact across MedTech. These interests align perfectly with OSSTEC's values, so leading such a company is a previlege for him. Max completed his PhD at Imperial College London, developing biomimetic 3D printing for use in orthopaedics. His research has won awards across the field including places on some of Europe's best venture accelerator programs.",
         linkedin: "https://www.linkedin.com/in/mjmunford/",
-        image: "/images/headshots/MM.png"
+        image: "/images/headshots/MaxMunfordHeadShot.png"
     },
     {
         name: "Prof. Jonathan Jeffers",
@@ -85,7 +85,7 @@ export const teamData = [
         shortSummary: "As an R&D Engineer, Pallavi's primary focus is on the fit of the femoral implant and the design of associated surgical instrumentation. She previously worked at Cambridge Medical Robotics on novel electrosurgery instruments, following her work on the femoral component of the implant for her Master's in Mechanical Engineering at Imperial College London.",
         longSummary: "As an R&D Engineer, Pallavi is passionate about innovation in medical technology. She completed her Masters in Mechanical Engineering at Imperial College London, where she worked on the femoral components of the implant as part of her final year project. This interest in the medical applications of mechanical engineering led her to Cambridge Medical Robotics, where she contributed to the development of novel electrosurgery instruments for laparoscopic surgery. Pallavi is committed to advancing medical device technologies that enhance patient quality of life.",
         linkedin: "",
-        image: "/images/headshots/Pallavi.jpg"
+        image: "/images/headshots/Pallavi2.jpg"
     },
     {
         name: "Chloe Scott, MD",

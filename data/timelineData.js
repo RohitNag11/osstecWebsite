@@ -9,11 +9,11 @@ export const timelineData = [
         year: 2013,
         type: "milestone",
     },
-    {
-        title: "Innovative software & method to prepare porous structures for metal 3D printing is developed",
-        year: 2013,
-        type: "milestone",
-    },
+   // {
+     //   title: "Innovative software & method to prepare porous structures for metal 3D printing is developed",
+      //  year: 2013,
+      //  type: "milestone",
+   // },
     {
         title: "Award winning research on bone structure and 3D printed biomimetic implants",
         year: 2018,
@@ -24,11 +24,11 @@ export const timelineData = [
         year: 2019,
         type: "milestone",
     },
-    {
-        title: "£75k Accelerator Funding: MedTech SuperConnector",
-        year: 2021,
-        type: "funding",
-    },
+ //   {
+ //       title: "£75k Accelerator Funding: MedTech SuperConnector",
+ //       year: 2021,
+ //       type: "funding",
+ //   },
     {
         title: "Opinion from 60+ key opinion leader surgeons globally",
         year: 2021,
@@ -39,11 +39,11 @@ export const timelineData = [
         year: 2022,
         type: "milestone",
     },
-    {
-        title: "£75k Accelerator Funding: Royal Academy of Engineering & InnovateUK",
-        year: 2022,
-        type: "funding",
-    },
+   // {
+  //      title: "£75k Accelerator Funding: Royal Academy of Engineering & InnovateUK",
+  //      year: 2022,
+   //     type: "funding",
+  //  },
     {
         title: "£800k Innovate UK Grant",
         year: 2022,
@@ -64,11 +64,11 @@ export const timelineData = [
         year: 2023,
         type: "milestone",
     },
-    {
-        title: "ISO:13485 QMS implemented",
-        year: 2023,
-        type: "milestone",
-    },
+  //  {
+  //      title: "ISO:13485 QMS implemented",
+   //     year: 2023,
+   //     type: "milestone",
+   // },
     {
         title: "IP portfolio growth (5 patents spanning global markets)",
         year: 2023,

@@ -9,14 +9,14 @@ export const innovationData = [
     },
     {
         title: "Built for Outpatient Care",
-        description: "",
+        description: "Our cementless partial knee implant’s advanced 3D-printed porous lattice enables immediate stability, allowing for <b>quicker recovery and same-day discharge<b>, making it ideal for outpatient care without the complications of bone cement.",
         image: "/images/general/lattice_structure_blue.png",
         stylesConfig: {
             primaryColor: "#ADC8E7",
         }
     },
     {
-        title: "Fully Additively Manufactured Implants",
+        title: "Fully Additively Manufactured",
         description: "Using next generation technology for next generation implants, additive manufacture allows for <b>ultimate design freedom</b> whilst reducing waste and costs per part.",
         image: "/images/general/am.gif",
         stylesConfig: {
