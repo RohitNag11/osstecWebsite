@@ -133,7 +133,7 @@ export const teamData = [
         shortSummary: "Dr. John W. Barrington, a California native, specializes in hip and knee reconstructive surgery with a focus on less invasive techniques. He trained at UC Davis, UNC, and Harvard-Massachusetts General. Dr. Barrington is a leading educator in partial knee replacements and co-director of the Joint Replacement Center at Baylor Scott & White Frisco.",
         linkedin: "",
         longSummary: "Dr. John W. Barrington, a California native, specializes in hip and knee reconstructive surgery, focusing on less invasive techniques for faster recovery and minimal pain. He earned his medical degree from UC Davis, completed his residency at the University of North Carolina, and a prestigious fellowship at Harvard-Massachusetts General. A leading educator in partial knee replacements, Dr. Barrington has taught more surgeons in North America than anyone else. He is actively involved in research and has presented at national conferences. As co-director of the Joint Replacement Center at Baylor Scott & White Frisco, Dr. Barrington sees patients in Plano and Frisco, TX.",
-        image: "/images/headshots/Barrington.jpg"
+      
     },
     {
         name: "Dr. Ruben Doyle",
