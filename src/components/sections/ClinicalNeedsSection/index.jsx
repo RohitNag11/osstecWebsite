@@ -12,9 +12,10 @@ export default function ClinicalNeedsSection({ clinicalNeedsData, id }) {
                 <h2>Clinical Needs & <br /> Future of Knee Implants</h2>
                 <div className={styles.imageContainer}>
                     <div className={styles.text}>
-                        <p>“Cementless Unicompartmental knee replacement offers advantages over cemented techniques, with improved workflows, survival, and clinical outcomes. OSSTEC's 3D printing technology enhances fixation, marking an exciting advancement in knee replacement surgery.”
+                        <p>“Cementless Unicompartmental knee replacement offers advantages over cemented techniques, with improved workflows, survival, and clinical outcomes. OSSTEC&apos;s 3D printing technology enhances fixation, marking an exciting advancement in knee replacement surgery.”
                             <br />
-                            Mr. Alex Liddle, DPhil FRCS(Orth)</p>
+                            Mr. Alex Liddle, DPhil FRCS(Orth)
+                        </p>
                     </div>
                     <CoverImage src="/images/headshots/AL.jpg" alt="Alex Liddle" style={{ boxShadow: 'var(--shadow-high)' }} />
                 </div>
