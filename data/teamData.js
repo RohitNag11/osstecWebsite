@@ -5,7 +5,7 @@ export const teamData = [
         shortSummary: "As OSSTEC's Founder and Chief Executive Officer, Max's role focuses on company vision, strategy and growing OSSTEC's team.\nPrior to founding OSSTEC, Max worked with OSSTEC's founding team to research and develop OSSTEC's underlying technology; biomimetic 3D printed structures for orthopaedics.",
         longSummary: "At OSSTEC, Max is the Founder and Chief Executive Officer. His role focuses on company vision, strategy and growing OSSTEC's team. Max has a passion for learning, growing the bounds of technology and for delivering impact across MedTech. These interests align perfectly with OSSTEC's values, so leading such a company is a previlege for him. Max completed his PhD at Imperial College London, developing biomimetic 3D printing for use in orthopaedics. His research has won awards across the field including places on some of Europe's best venture accelerator programs.",
         linkedin: "https://www.linkedin.com/in/mjmunford/",
-        image: "/images/headshots/MaxMunfordHeadShot.png"
+        image: "/images/headshots/MaxMunfordHeadShot2.jpg"
     },
     {
         name: "Prof. Jonathan Jeffers",
@@ -98,33 +98,48 @@ export const teamData = [
     {
         name: "Thomas Aleto, MD",
         position: "Clinical Advisory Board - Design Surgeon",
+        shortSummary: "Dr. Thomas Aleto, a St. Louis native, is a board-certified orthopaedic surgeon specializing in hip and knee replacement. He trained at the University of Missouri and completed a fellowship in adult reconstruction. A respected educator, he teaches nationally and internationally, focusing on partial knee replacement, rapid recovery, and outpatient arthroplasty.",
+        longSummary: "Dr. Thomas Aleto, a St. Louis native, is a board-certified orthopaedic surgeon specializing in hip and knee replacement. He earned his medical degree from the University of Missouri and completed a fellowship in adult reconstruction. With a passion for innovation and education, he lectures nationally and internationally on partial knee replacement, rapid recovery protocols, and outpatient arthroplasty. In addition to his clinical expertise, Dr. Aleto is dedicated to advancing surgical techniques to improve patient outcomes and recovery times.",
+        linkedin: "",
         image: "/images/headshots/thomas-j-aleto-md.jpg"
     },
     {
         name: "Jonathan Vigdorchik, MD",
         position: "Clinical Advisory Board - Design Surgeon",
+        shortSummary: "Dr. Vigdorchik is a national expert in knee surgery, specializing in knee replacement, knee preservation, and revision surgeries. He uses advanced techniques like robotic-assisted surgery and customized 3D surgical plans to ensure optimal outcomes and fast recovery. His focus is on improving knee function and quality of life for active patients.",
+        longSummary: "Dr. Vigdorchik is a national expert in knee surgery, specializing in knee replacement, knee preservation, and revision surgeries. He employs advanced techniques such as robotic-assisted surgery and customized 3D surgical plans to ensure the best possible outcomes and a quick recovery. Dr. Vigdorchik focuses on improving knee function and quality of life for active patients, helping them return to their previous activities. His patient-centered approach ensures that each individual understands their treatment plan, with a focus on minimizing complications and achieving long-term success.",
+        linkedin: "",
         image: "/images/headshots/jonathan-vigdorchik-headshot.jpg"
     },
     {
         name: "Kevin Fricka, MD",
         position: "Clinical Advisory Board - Design Surgeon",
+        shortSummary: "Dr. Fricka, a graduate of Harvard University and George Washington University, was one of the first surgeons at Inova to perform outpatient partial knee replacements. He specializes in minimally invasive knee and hip replacement, as well as complex revision surgeries. Dr. Fricka is also involved with Operation Walk Virginia.",
+        linkedin: "",
+        longSummary: "Dr. Fricka, a graduate of Harvard University and George Washington University, was one of the first surgeons at Inova to perform outpatient partial knee replacements, offering a less invasive option for knee arthritis patients. He specializes in minimally invasive knee and hip replacement surgeries, as well as complex revision procedures. Dr. Fricka has presented scientific papers and is an active member of the American Academy of Orthopaedic Surgeons. He also devotes time to Operation Walk Virginia, providing joint replacement surgeries to those without access to care.",
         image: "/images/headshots/kevin.jpeg"
     },
     {
         name: "Andrew Pearle, MD",
         position: "Clinical Advisory Board - Faculty Surgeon",
+        shortSummary: "Dr. Andrew D. Pearle, Chief Emeritus of Sports Medicine at HSS, specializes in arthroscopic and robotic surgery for the shoulder, knee, and ankle. He pioneered computer-assisted surgery in orthopedics and has performed more robotic procedures than any U.S. surgeon. Dr. Pearle also serves as an Associate Team Physician for the New York Mets.",
+        linkedin: "",
+        longSummary: "Dr. Andrew D. Pearle, Chief Emeritus of Sports Medicine at HSS, is a board-certified orthopedic surgeon specializing in arthroscopic and robotic surgery for the shoulder, knee, and ankle. He pioneered the use of computer-assisted surgery in orthopedics and has performed more robotic procedures than any surgeon in the U.S. Dr. Pearle also serves as an Associate Team Physician for the New York Mets, coordinating care for their minor league affiliates. His expertise extends to ACL reconstruction, robotic partial knee replacement, and computer-assisted surgery, with over 90 published manuscripts on these topics.",
         image: "/images/headshots/andrew-pearle-headshot.jpg"
     },
     {
         name: "John Barrington, MD",
         position: "Clinical Advisory Board - Faculty Surgeon",
+        shortSummary: "Dr. John W. Barrington, a California native, specializes in hip and knee reconstructive surgery with a focus on less invasive techniques. He trained at UC Davis, UNC, and Harvard-Massachusetts General. Dr. Barrington is a leading educator in partial knee replacements and co-director of the Joint Replacement Center at Baylor Scott & White Frisco.",
+        linkedin: "",
+        longSummary: "Dr. John W. Barrington, a California native, specializes in hip and knee reconstructive surgery, focusing on less invasive techniques for faster recovery and minimal pain. He earned his medical degree from UC Davis, completed his residency at the University of North Carolina, and a prestigious fellowship at Harvard-Massachusetts General. A leading educator in partial knee replacements, Dr. Barrington has taught more surgeons in North America than anyone else. He is actively involved in research and has presented at national conferences. As co-director of the Joint Replacement Center at Baylor Scott & White Frisco, Dr. Barrington sees patients in Plano and Frisco, TX.",
         image: "/images/headshots/Barrington.jpg"
     },
     {
         name: "Dr. Ruben Doyle",
         position: "Advisor",
         shortSummary: "Ruben advises OSSTEC on commercial partnerships as well as aspects of device development. His experience from his own successful partnership and exit to one of the 'big-4' orthopaedic companies gives Ruben a unique perspective to advise on OSSTEC's ambitious journey.",
-        longSummary: "By taking his research from lab to successful startup, Ruben has extensive experience of the deeptech journey. In 2019, Ruben took his PhD research on cementless implants and founded Additive Instruments. As CEO, Ruben was responsible for fundraising, building an effective team and delivering his technology to surgery -  working closely with medtech companies in the US.Ruben holds a Masters and PhD from Imperial College London. He has won numerous translation awards from INNOVATE UK, Royal Academy of Engineering, NIHR, Wellcome Trust and EPSRC. He is founder-CEO of Impact Surgical and is an advisor to 4 deeptech startups.",
+        longSummary: "By taking his research from the lab to a successful startup, Ruben has extensive experience of the deeptech journey. In 2019, Ruben took his PhD research on cementless implants and founded Additive Instruments. As CEO, Ruben was responsible for fundraising, building an effective team and delivering his technology to surgery -  working closely with medtech companies in the US.Ruben holds a Masters and PhD from Imperial College London. He has won numerous translation awards from INNOVATE UK, Royal Academy of Engineering, NIHR, Wellcome Trust and EPSRC. He is founder-CEO of Impact Surgical and is an advisor to 4 deeptech startups.",
         linkedin: "",
         image: "/images/headshots/RD.jpg"
     },

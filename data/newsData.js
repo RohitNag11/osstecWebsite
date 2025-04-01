@@ -2,10 +2,10 @@ export const newsData = [
 
     {
         title: "OSSTEC Close 2.5M funding round",
-        date: new Date(2025, 1),
+        date: new Date(2025, 2),
         type: 'update',
         tags: ["Awards", "Innovation"],
-        description: "A strong start to 2025 saw OSSTEC close their investment round to fund regulatory approval and market launch, as well as growing the team to 9 people!",
+        description: "OSSTEC kicked off 2025 with a strong start, successfully closing its investment round to fund regulatory approval and market launch, while also expanding the team to nine!",
         // image: "/images/news/awards.jpeg",
     },
     {
@@ -13,7 +13,7 @@ export const newsData = [
         date: new Date(2024, 11),
         type: 'update',
         tags: ["Awards", "Innovation"],
-        description: "2024 closed with a succesful cadaver lab held in HSS, New York. The world renowned team of surgeons on the OSSTEC clinical advisory board provided valuable feedback to perfect the OSSTEC implants and surgical instruments.",
+        description: "OSSTEC closed 2024 on a high note with a successful cadaver lab at HSS in New York. The world-renowned surgeons on our clinical advisory board provided invaluable feedback to refine OSSTEC implants and surgical instruments.",
         // image: "/images/news/awards.jpeg",
     },
     {

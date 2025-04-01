@@ -1,7 +1,7 @@
 export const innovationData = [
     {
         title: "Cementless Fixation & Biomimicry",
-        description: "Our novel hybrid fixation features combined with the 3D printed porous lattice, mimicing the trabecular structure of bone, allow for stable initial fixation as well as bone ingrowth into the implant, <b>causing revolutionary fixation without the consequences of bone cement</b>.",
+        description: "Our novel hybrid fixation features, combined with a 3D-printed porous lattice that mimics the trabecular structure of bone, ensures stable initial fixation while promoting natural bone ingrowth. This breakthrough design delivers <b>revolutionary fixation without the drawbacks of bone cement.</b>.",
         image: "/images/general/bone_ingrowth.jpg",
         stylesConfig: {
             primaryColor: "#B9CCD2",
@@ -9,7 +9,7 @@ export const innovationData = [
     },
     {
         title: "Built for Outpatient Care",
-        description: "Our cementless partial knee implant’s advanced 3D-printed porous lattice enables immediate stability, allowing for <b>quicker recovery and same-day discharge<b>, making it ideal for outpatient care without the complications of bone cement.",
+        description: "Our cementless partial knee implant's advanced 3D-printed porous lattice enables immediate stability, allowing for <b>quicker recovery and same-day discharge, </b>making it ideal for outpatient care without the complications of bone cement.",
         image: "/images/general/lattice_structure_blue.png",
         stylesConfig: {
             primaryColor: "#ADC8E7",
