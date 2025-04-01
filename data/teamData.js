@@ -105,7 +105,7 @@ export const teamData = [
     {
         name: "Kevin Fricka, MD",
         position: "Clinical Advisory Board - Design Surgeon",
-        image: ""
+        image: "/images/headshots/kevin.jpeg"
     },
     {
         name: "Andrew Pearle, MD",
@@ -115,7 +115,7 @@ export const teamData = [
     {
         name: "John Barrington, MD",
         position: "Clinical Advisory Board - Faculty Surgeon",
-        image: ""
+        image: "/images/headshots/Barrington.jpg"
     },
     {
         name: "Dr. Ruben Doyle",
