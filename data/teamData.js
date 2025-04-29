@@ -65,9 +65,9 @@ export const teamData = [
     },
     {
         name: "Jess Allen",
-        position: "Quality & Regulatory Lead",
-        shortSummary: "As the Regulatory and Quality Lead, Jess is pivotal in securing OSSTEC's market access, expertly navigating submissions and audits. She is responsible for regulatory compliance and oversees the quality management system. Jess brings 10 years of experience in regulatory compliance and quality assurance for medical devices. ",
-        longSummary: "As the Regulatory and Quality Lead, Jess is pivotal in securing OSSTEC's market access, expertly navigating submissions and audits. She is responsible for regulatory compliance and oversees the quality management system. With a decade of experience, a substantial portion of which has been in Orthopaedics, Jess adeptly manages CE, UKCA, 510k, and various global submissions and audits. Her expertise extends across all risk classes of medical devices, encompassing joint replacements, custom-made devices, and additive manufacturing processes. Her career spans startups to multinationals, even the public sector. Holding a pharmaceutical chemistry degree, Jess transitioned from pharma to medical devices and holds British Toxicology Society membership. ",
+        position: "Global Head of RA/QA",
+        shortSummary: "As the Global Head of RA/QA, Jess is pivotal in securing OSSTEC's market access, expertly navigating submissions and audits. She is responsible for regulatory compliance and oversees the quality management system. Jess brings 10 years of experience in regulatory compliance and quality assurance for medical devices. ",
+        longSummary: "As the Global Head of RA/QA, Jess is pivotal in securing OSSTEC's market access, expertly navigating submissions and audits. She is responsible for regulatory compliance and oversees the quality management system. With a decade of experience, a substantial portion of which has been in Orthopaedics, Jess adeptly manages CE, UKCA, 510k, and various global submissions and audits. Her expertise extends across all risk classes of medical devices, encompassing joint replacements, custom-made devices, and additive manufacturing processes. Her career spans startups to multinationals, even the public sector. Holding a pharmaceutical chemistry degree, Jess transitioned from pharma to medical devices and holds British Toxicology Society membership. ",
         linkedin: "https://www.linkedin.com/in/jessica-allen-raqa/",
         image: "/images/headshots/JA2.JPG"
     },
