@@ -1,14 +1,14 @@
 export const timelineData = [
     {
-        title: "Research grant funding",
+       title: "Grant funding to begin research on biomimetic 3D printed structures at Imperial College London's Biomechanics group",
         year: 2013,
-        type: "funding",
+       type: "funding",
     },
-    {
-        title: "Research on biomimetic 3D printed structures begins at Imperial College London's Biomechanics group",
-        year: 2013,
-        type: "milestone",
-    },
+   // {
+    //    title: "Research on biomimetic 3D printed structures begins at Imperial College London's Biomechanics group",
+    //    year: 2013,
+   //     type: "milestone",
+   // },
    // {
      //   title: "Innovative software & method to prepare porous structures for metal 3D printing is developed",
       //  year: 2013,
@@ -29,11 +29,11 @@ export const timelineData = [
  //       year: 2021,
  //       type: "funding",
  //   },
-    {
-        title: "Opinion from 60+ key opinion leader surgeons globally",
-        year: 2021,
-        type: "milestone",
-    },
+   // {
+   //     title: "Opinion from 60+ key opinion leader surgeons globally",
+   //     year: 2021,
+   //     type: "milestone",
+   // },
     {
         title: "First proof of concept in human cadaveric studies",
         year: 2022,
@@ -45,14 +45,9 @@ export const timelineData = [
    //     type: "funding",
   //  },
     {
-        title: "£800k Innovate UK Grant",
+        title: "£800k Innovate UK Grant and first 2 employees join OSSTEC",
         year: 2022,
         type: "funding",
-    },
-    {
-        title: "First 2 employees join OSSTEC",
-        year: 2022,
-        type: "milestone",
     },
     {
         title: "£1.2M oversubscribed seed round (VCs & subject experts)",
@@ -70,7 +65,7 @@ export const timelineData = [
    //     type: "milestone",
    // },
     {
-        title: "IP portfolio growth (5 patents spanning global markets)",
+        title: "Expanded robust IP portfolio",
         year: 2023,
         type: "milestone",
     },
